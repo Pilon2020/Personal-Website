@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Pilon2020/Personal-Website.git/static/css/main.74416ebb.css",
-    "main.js": "/Pilon2020/Personal-Website.git/static/js/main.ae8f33c8.js",
-    "static/js/453.ed3810f9.chunk.js": "/Pilon2020/Personal-Website.git/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/Pilon2020/Personal-Website.git/index.html",
-    "main.74416ebb.css.map": "/Pilon2020/Personal-Website.git/static/css/main.74416ebb.css.map",
-    "main.ae8f33c8.js.map": "/Pilon2020/Personal-Website.git/static/js/main.ae8f33c8.js.map",
-    "453.ed3810f9.chunk.js.map": "/Pilon2020/Personal-Website.git/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/Personal-Website/static/css/main.74416ebb.css",
+    "main.js": "/Personal-Website/static/js/main.8177e5b8.js",
+    "static/js/453.ed3810f9.chunk.js": "/Personal-Website/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/Personal-Website/index.html",
+    "main.74416ebb.css.map": "/Personal-Website/static/css/main.74416ebb.css.map",
+    "main.8177e5b8.js.map": "/Personal-Website/static/js/main.8177e5b8.js.map",
+    "453.ed3810f9.chunk.js.map": "/Personal-Website/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74416ebb.css",
-    "static/js/main.ae8f33c8.js"
+    "static/js/main.8177e5b8.js"
   ]
 }
