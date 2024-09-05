@@ -1,19 +1,19 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 
-const Home = () => {
+const racing = () => {
   return (
     <Box sx={{ display: 'left', flexDirection: 'column', gap: 4 }}>
       <div>
         <Typography variant="h1" gutterBottom>
-          Home
+          Racing
         </Typography>
         <Typography>
-          This is the projects I have been working on. Look at figma for design outline for this page.
+          Racing Stuffs
           </Typography>
       </div>
     </Box>
   );
 }
 
-export default Home;
+export default racing;
