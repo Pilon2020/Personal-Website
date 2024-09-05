@@ -30,9 +30,9 @@ export default function Projects() {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       <div>
         <Typography variant="h1" gutterBottom>
-          Blog
+          Projects
         </Typography>
-        <Typography>Stay in the loop with the latest about our products</Typography>
+        <Typography>This is the projects I have been working on. Look at figma for design outline for this page.</Typography>
       </div>
 
       <Masonry
