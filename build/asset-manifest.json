@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Personal-Website/static/css/main.2b3097cc.css",
+    "main.js": "/Personal-Website/static/js/main.3177265e.js",
+    "static/js/453.ed3810f9.chunk.js": "/Personal-Website/static/js/453.ed3810f9.chunk.js",
+    "static/media/finlandbikephoto.jpg": "/Personal-Website/static/media/finlandbikephoto.3a2f1b76e253abb56c27.jpg",
+    "static/media/sandiaview.jpg": "/Personal-Website/static/media/sandiaview.9d0ec8f804528f390d5a.jpg",
+    "index.html": "/Personal-Website/index.html",
+    "main.2b3097cc.css.map": "/Personal-Website/static/css/main.2b3097cc.css.map",
+    "main.3177265e.js.map": "/Personal-Website/static/js/main.3177265e.js.map",
+    "453.ed3810f9.chunk.js.map": "/Personal-Website/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b3097cc.css",
+    "static/js/main.3177265e.js"
+  ]
+}

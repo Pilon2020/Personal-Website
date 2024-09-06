@@ -38,3 +38,48 @@
   margin-bottom: 15px; /* Adjust for vertical spacing between items */
 }
 
+
+/* CSS LAYOUT FOR CARDITEM */
+.styledCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--background-paper-color); /* You can define this in your CSS variables or use a color */
+  transition: background-color 0.3s;
+}
+
+.styledCard:hover {
+  background-color: #bf00ff; /* Adjust as needed */
+  cursor: pointer;
+}
+
+.styledCard:focus-visible {
+  outline: 3px solid hsla(210, 98%, 48%, 0.5);
+  outline-offset: 2px;
+}
+
+/* Style for Tabs container */
+.tabsContainer {
+  width: 100%;
+}
+
+/* Style for Tabs indicator */
+.tabsIndicator {
+  background-color: #bf00ff; /* Customize the underline color */
+}
+
+/* Style for Tabs border */
+.tabsBorder {
+  border-bottom: 1px solid #bf00ff; /* Border for the Tabs container */
+}
+
+/* Style for Tabs background */
+.tabsBackground {
+  background-color: transparent; /* Background color for Tabs container */
+}
+
+/* Default Tab style */
+.tab {
+  color: white; /* Default color */
+}
+

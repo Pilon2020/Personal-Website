@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
-import LinkTab from "./LinkTab"; // Import LinkTab from the new file
 import Tab from '@mui/material/Tab';
+import LinkTab from "./LinkTab"; // Import LinkTab from the new file
 
 export default function MenuBar() {
   // Initialize state to track the active tab value
@@ -34,7 +34,7 @@ export default function MenuBar() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box className="tabsContainer">
       <Tabs
         value={value}
         onChange={handleChange}
@@ -44,10 +44,7 @@ export default function MenuBar() {
             backgroundColor: "#bf00ff", // Customize the underline color
           },
         }}
-        sx={{
-          borderBottom: "1px solid #ccc", // Border for the Tabs container
-          backgroundColor: "transparent", // Background color for Tabs container
-        }}
+        className="tabsBorder tabsBackground" // Apply CSS classes for Tabs container
       >
         {tabList.map((tab, index) => 
           tab.href ? (
