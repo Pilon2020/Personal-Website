@@ -63,11 +63,6 @@
   width: 100%;
 }
 
-/* Style for Tabs indicator */
-.tabsIndicator {
-  background-color: #bf00ff; /* Customize the underline color */
-}
-
 /* Style for Tabs border */
 .tabsBorder {
   border-bottom: 1px solid #bf00ff; /* Border for the Tabs container */

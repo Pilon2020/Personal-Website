@@ -2,9 +2,9 @@ import images from '../utils/imageLoader';
 
 const cardData = () => [
   {
-    img: images['finlandbikephoto.jpg'],
-    title: 'Project 1 Title',
-    description: 'This is a quick description of Project 1.',
+    img: images['TrainerTable/TrainerTable1.png'],
+    title: 'Indoor Trainer Table',
+    description: 'When training indoors it is nice to have a place near you to hold things like your phone and remote.',
   },
     {
       img: images['sandiaview.jpg'],
