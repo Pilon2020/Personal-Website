@@ -1,9 +1,10 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Masonry from 'react-masonry-css';
-import cardData from '../components/cardData'; // Adjust path if needed
-import CardItem from '../components/CardItem'; // Adjust path if needed
+import Masonry from '@mui/lab/Masonry'; // Make sure this import matches your MUI version
+import { Link } from 'react-router-dom';
+import cardData from '../components/cardData';
+import CardItem from '../components/CardItem';
+import { Box } from '@mui/material';
 
 export default function Projects() {
   const [focusedCardIndex, setFocusedCardIndex] = React.useState(null);
@@ -16,9 +17,8 @@ export default function Projects() {
     setFocusedCardIndex(null);
   };
 
-  const data = cardData(); // Call the function to get the data
+  const data = cardData;
 
-  // Define how many columns for each breakpoint
   const breakpointColumnsObj = {
     default: 4,
     1200: 3,
@@ -27,9 +27,9 @@ export default function Projects() {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <div>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h1">
           Projects
         </Typography>
         <Typography>This is the projects I have been working on. Look at figma for design outline for this page.</Typography>
@@ -39,16 +39,18 @@ export default function Projects() {
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
+        spacing={2} // Ensure this is set to the desired spacing
       >
         {data.map((item, index) => (
-          <CardItem
-            key={index}
-            item={item}
-            index={index}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            focusedCardIndex={focusedCardIndex}
-          />
+          <Link to={`/projects/${item.id}`} key={item.id} style={{ textDecoration: 'none' }}>
+            <CardItem
+              item={item}
+              index={index}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              focusedCardIndex={focusedCardIndex}
+            />
+          </Link>
         ))}
       </Masonry>
     </Box>

@@ -7,5 +7,5 @@ function importAll(r) {
 }
 
 const images = importAll(require.context('../media', true, /\.(jpg|jpeg|png)$/));
-
 export default images;
+

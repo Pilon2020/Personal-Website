@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
@@ -12,14 +12,14 @@ export default function MenuBar() {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  // Define a dynamic list of tabs
-  const tabList = [
+  // Memoize the list of tabs
+  const tabList = useMemo(() => [
     { label: "Home", to: "/" },
     { label: "Projects", to: "/projects" },
     { label: "Racing", to: "/racing" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/oliverpilon/" },
     { label: "GitHub", href: "https://github.com/Pilon2020" }  // External link
-  ];
+  ], []);
 
   // Update the selected tab based on the current path
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function MenuBar() {
     if (currentIndex !== -1) {
       setValue(currentIndex);
     }
-  }, [currentPath]);
+  }, [currentPath, tabList]); // Include tabList in the dependency array
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

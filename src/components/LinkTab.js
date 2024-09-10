@@ -23,9 +23,7 @@ function LinkTab(props) {
   const handleClick = (event) => {
     if (samePageLinkNavigation(event)) {
       // Handle custom logic for the Projects tab
-      if (props.label === "Projects") {
-        console.log("Projects tab clicked");
-      }
+      
     }
   };
 

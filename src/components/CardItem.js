@@ -13,8 +13,8 @@ const CardItem = ({ item, index, onFocus, onBlur, focusedCardIndex }) => (
     tabIndex={index}
     className={`styledCard ${focusedCardIndex === index ? 'Mui-focused' : ''}`}
   >
-    <CardImage image={item.img} />
-    <CardContentSection title={item.title} description={item.description} />
+    <CardImage image={item.images[0]} />
+    <CardContentSection title={item.title} description={item.description} date={item.date}/>
   </Card>
 );
 

@@ -1,51 +1,97 @@
 .App {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-header {
   background-color: #000000;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: left;
   justify-content: flex-start;
   font-size: calc(8px + 2vmin);
-  color: white;
-  padding: 20px;
+  padding-bottom: 15px;
 }
+
+.App-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #000000;
+  color: #ffffffff;
+}
+
+/* Style for Tabs container */
+.tabsContainer {
+  width: 100%;
+  padding-top:10px;
+  position: fixed;
+  background-color: #000; /* Background color of the bottom bar */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.tabsBorder {
+  border-bottom: 1px solid #bf00ff; /* Border for the Tabs container */
+  padding: 0;
+}
+
+.tabsBackground {
+  background-color: transparent; /* Background color for Tabs container */
+}
+
+.tab {
+  color: white; /* Default color */
+  padding-left:10px
+}
+
 
 .LinkTabs {
   background-color: white;
+  padding-left: 10px;
 }
 
+.MuiTypography-h1 {
+  text-transform: uppercase;
+  margin-left: 50px; /* Ensure margin-left has units */
+}
 
+/* Container for Masonry Grid */
+.masonry-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Full width of parent */
+}
 
 /* CSS for the Masonry grid */
 .my-masonry-grid {
   display: flex;
-  margin-left: -15px; /* Adjust to negative half of horizontal spacing */
-  width: auto;
+  width: 100%; /* Make sure it takes up full width */
+  align-items: flex-start; /* Align items to the top */
+  padding: 0; /* Remove padding */
 }
 
 /* CSS for each column */
 .my-masonry-grid_column {
-  padding-left: 15px; /* Adjust for horizontal spacing */
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px; /* Horizontal spacing between items */
   background-clip: padding-box;
 }
 
-/* Add spacing between cards */
+/* Ensure consistent vertical spacing */
 .my-masonry-grid_column > div {
-  margin-bottom: 15px; /* Adjust for vertical spacing between items */
+  margin-bottom: 20px; /* Vertical spacing between items */
 }
-
 
 /* CSS LAYOUT FOR CARDITEM */
 .styledCard {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--background-paper-color); /* You can define this in your CSS variables or use a color */
+  background-color: var(--background-paper-color); /* Define this in your CSS variables or use a color */
   transition: background-color 0.3s;
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
 }
 
 .styledCard:hover {
@@ -58,23 +104,4 @@
   outline-offset: 2px;
 }
 
-/* Style for Tabs container */
-.tabsContainer {
-  width: 100%;
-}
-
-/* Style for Tabs border */
-.tabsBorder {
-  border-bottom: 1px solid #bf00ff; /* Border for the Tabs container */
-}
-
-/* Style for Tabs background */
-.tabsBackground {
-  background-color: transparent; /* Background color for Tabs container */
-}
-
-/* Default Tab style */
-.tab {
-  color: white; /* Default color */
-}
 

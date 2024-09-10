@@ -5,7 +5,7 @@ const racing = () => {
   return (
     <Box sx={{ display: 'left', flexDirection: 'column', gap: 4 }}>
       <div>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h1">
           Racing
         </Typography>
         <Typography>
