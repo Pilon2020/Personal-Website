@@ -8,7 +8,7 @@ const Home = () => {
         <Typography variant="h1">
           Home
         </Typography>
-        <Typography>
+        <Typography variant="body1">
           This is the projects I have been working on. Look at figma for design outline for this page.
           </Typography>
       </div>

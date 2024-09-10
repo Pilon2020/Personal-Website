@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.c46569a0.css",
-    "main.js": "/Personal-Website/static/js/main.5585307c.js",
+    "main.css": "/Personal-Website/static/css/main.f2e92e69.css",
+    "main.js": "/Personal-Website/static/js/main.3e60a186.js",
     "static/js/453.ed3810f9.chunk.js": "/Personal-Website/static/js/453.ed3810f9.chunk.js",
     "static/media/TrainerTable1.png": "/Personal-Website/static/media/TrainerTable1.503a90d8720840bac125.png",
     "static/media/finlandbikephoto.jpg": "/Personal-Website/static/media/finlandbikephoto.3a2f1b76e253abb56c27.jpg",
+    "static/media/TrainerTable2.png": "/Personal-Website/static/media/TrainerTable2.3d5d11ff2ada4bc749a2.png",
     "static/media/sandiaview.jpg": "/Personal-Website/static/media/sandiaview.9d0ec8f804528f390d5a.jpg",
     "index.html": "/Personal-Website/index.html",
-    "main.c46569a0.css.map": "/Personal-Website/static/css/main.c46569a0.css.map",
-    "main.5585307c.js.map": "/Personal-Website/static/js/main.5585307c.js.map",
+    "main.f2e92e69.css.map": "/Personal-Website/static/css/main.f2e92e69.css.map",
+    "main.3e60a186.js.map": "/Personal-Website/static/js/main.3e60a186.js.map",
     "453.ed3810f9.chunk.js.map": "/Personal-Website/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c46569a0.css",
-    "static/js/main.5585307c.js"
+    "static/css/main.f2e92e69.css",
+    "static/js/main.3e60a186.js"
   ]
 }

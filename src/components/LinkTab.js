@@ -23,25 +23,28 @@ function LinkTab(props) {
   const handleClick = (event) => {
     if (samePageLinkNavigation(event)) {
       // Handle custom logic for the Projects tab
-      
     }
   };
 
   return (
     <Tab
-      component={Link}
-      to={props.to} // Ensure "to" prop is passed correctly for routing
-      onClick={handleClick}
-      aria-current={props.selected ? "page" : undefined}
-      sx={{
-        color: "White", // Default color for tabs
-        "&.Mui-selected": {
-          color: "#bf00ff ", // Text color for selected tab
-        },
-        ...props.sx, // Allow additional styling via props
-      }}
-      {...props}
-    />
+    component={Link}
+    to={props.to} // Ensure "to" prop is passed correctly for routing
+    onClick={handleClick}
+    aria-current={props.selected ? "page" : undefined}
+    sx={{
+      color: "White", // Default color for tabs
+      textDecoration: 'none', // Remove underline
+      borderBottom: 'none', // Remove underline
+      "&.Mui-selected": {
+        color: "White", // Text color for selected tab
+        backgroundColor: "rgba(0, 0, 0, 0.2)", // Less transparent grey for active tab
+      },
+      borderRadius: "10px",
+      ...props.sx, // Allow additional styling via props
+    }}
+    {...props}
+  />
   );
 }
 

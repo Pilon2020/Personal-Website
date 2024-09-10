@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
-import Tab from '@mui/material/Tab';
+import Tab from '@mui/material/Tab'; // Ensure Tab is imported
 import LinkTab from "./LinkTab"; // Import LinkTab from the new file
 
 export default function MenuBar() {
@@ -34,39 +34,57 @@ export default function MenuBar() {
   };
 
   return (
-    <Box className="tabsContainer">
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        role="navigation"
-        TabIndicatorProps={{
-          style: {
-            backgroundColor: "#bf00ff", // Customize the underline color
-          },
-        }}
-        className="tabsBorder tabsBackground" // Apply CSS classes for Tabs container
-      >
-        {tabList.map((tab, index) => 
-          tab.href ? (
-            <Tab
-              key={index}
-              label={tab.label}
-              component="a"
-              href={tab.href} // External link handling
-              target="_blank" // Open external link in a new tab
-              rel="noopener noreferrer"
-              sx={{
-                color: "White", // Default color
-                "&.Mui-selected": {
-                  color: "white", // Text color when selected
-                }
-              }}
-            />
-          ) : (
-            <LinkTab key={index} label={tab.label} to={tab.to} />
-          )
-        )}
-      </Tabs>
+    <Box className="tabsContainer" sx={{ position: 'relative' }}>
+      <Box sx={{ 
+        display: 'flex',
+        alignContent: 'center', 
+      }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          role="navigation"
+          sx={{
+            '& .MuiTab-root': {
+              fontWeight: 'Bold',
+              fontSize: '1.75vh',
+              textDecoration: 'none', // Ensure no underline
+              borderBottom: 'none', // Ensure no underline
+              fontFamily:"Isocpeur",
+              '&.Mui-selected': {
+                color: 'White', // Text color when selected
+                backgroundColor: 'rgba(0, 0, 0, 0.2)', // Less transparent grey for active tab
+              },
+            },
+            '& .MuiTabs-indicator': {
+              display: 'none', // Remove the default underline indicator
+            },
+          }}
+        >
+          {tabList.map((tab, index) =>
+            tab.href ? (
+              <Tab
+                key={index}
+                label={tab.label}
+                component="a"
+                href={tab.href} // External link handling
+                target="_blank" // Open external link in a new tab
+                rel="noopener noreferrer"
+                sx={{
+                  fontWeight: 'Bold',
+                  color: 'White', // Default text color
+                  textDecoration: 'none', // Ensure no underline
+                  borderBottom: 'none', // Ensure no underline
+                }}
+              />
+            ) : (
+              <LinkTab key={index} label={tab.label} to={tab.to}/>
+            )
+          )}
+        </Tabs>
+
+
+      </Box>
+
     </Box>
   );
 }

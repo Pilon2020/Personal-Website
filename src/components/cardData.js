@@ -42,5 +42,15 @@ const cardData = [
     additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
     date: 'Sept 9, 2024',
   },
+  {
+    id: 4,
+    images: [
+      images['finlandbikephoto.jpg'],
+    ],
+    title: 'Smartphone Alarm Clock',
+    description: 'Project 3 Description',
+    additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
+    date: 'Sept 9, 2024',
+  },
 ]
 export default cardData;
