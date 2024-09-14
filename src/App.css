@@ -15,7 +15,6 @@ body, .App, .App-header {
 }
 
 
-
 /* App Layout */
 .App {
   display: flex;
@@ -29,37 +28,59 @@ body, .App, .App-header {
   color: #000; /* Default text color */
 }
 
-/* Header */
-.App-header {
-  display: flex;
-  text-align: center; /* Align text to the left */
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
-  width: fit-content; /* Full width to ensure it spans the entire width */
-  margin: 0 auto; /* Center header horizontally */
-}
 
 /* Content */
 .App-content {
   flex: 1;
-  padding: 2em 60px;
+  padding: 7vh 60px;
   color: #ffffff; /* Corrected text color */
   text-align: left; /* Ensure text is aligned to the left */
 }
 
+.column {
+  float: left;
+  width: 50%;
+  max-width: 50vw;
+}
+
+.row {
+  width: 100%;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+  font-size: calc(10px + 2vmin);
+  width: fit-content; /* Adjust width based on content */
+  position: fixed; /* Ensure the header stays fixed at the top */
+  top: 1vh; /* Float 1vh below the top of the viewport */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000; /* Ensure it is above other content */
+  padding: 1vh;
+}
+
 /* Tabs Container */
 .tabsContainer {
-  width: 100%;
-  position: fixed;
+  position: relative; /* Position relative to allow for positioning inside header */
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
   -webkit-backdrop-filter: blur(10px); /* For Safari */
   border-radius: 10px; /* Radius for rounded corners */
-  margin-top: 2vh; /* Gap between header and top of the page */
-  padding: 1vh; /* Optional: padding for better content spacing */
-  color: #000; /* Text color for readability, adjust as needed */
+  padding: 1vh; /* Padding for better content spacing */
+  color: #000; /* Text color for readability */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a more polished look */
 }
+
 
 .tabsBackground {
   background-color: transparent; /* Background for Tabs container */

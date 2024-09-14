@@ -1,18 +1,19 @@
-import { Box, Typography } from '@mui/material';
 import React from 'react';
+import AboutMe from '../components/AboutMe';
 
 const Home = () => {
   return (
-    <Box sx={{ display: 'left', flexDirection: 'column', gap: 4 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      {/* Header Section */}
       <div>
-        <h1 style={{marginBottom: '0px'}}>
-          Home
-        </h1>
-        <p style={{marginTop:'0px'}}>
-          This is the projects I have been working on. Look at figma for design outline for this page.
-          </p>
+        <h1 style={{ marginBottom: '0px' }}>About Me</h1>
       </div>
-    </Box>
+
+      {/* AboutMe Section */}
+      <div style={{ marginTop: '5px', padding: '5px'}}>
+        <AboutMe />
+      </div>
+    </div>
   );
 }
 

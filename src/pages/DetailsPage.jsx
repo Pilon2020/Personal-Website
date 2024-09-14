@@ -42,7 +42,7 @@ const DetailsPage = () => {
           {/* Image[2] */}
           <ViewableImage 
             src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'} 
-            style={{ width: '100%', height: '50%', objectFit: 'c' }} 
+            style={{ width: '100%', height: '50%', objectFit: 'cover' }} 
             onError={(e) => { e.target.onerror = null; e.target.src = 'https://picsum.photos/200/300'; }}
           />
         </Grid>
