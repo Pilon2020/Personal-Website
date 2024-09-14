@@ -9,7 +9,15 @@ const cardData = [
     ],
     title: 'Indoor Trainer Table',
     description: 'When training indoors it is nice to have a place near you to hold things like your phone and remote.',
-    additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
+    features: `
+      <ul>
+        <li>Feature 1: Description</li>
+        <li>Feature 2: Description</li>
+        <li>Feature 3: Description</li>
+      </ul>
+    `,
+    additionalText: 'Here’s some more details about the project and its unique features.',
+    specifications: 'Here are some moore detailed technical specs about the project',
     date: 'Sept 9, 2024',
   },
   {
@@ -19,7 +27,15 @@ const cardData = [
     ],
     title: 'Wildland Firefighting Helmet',
     description: 'Project 2 description.',
-    additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
+    features: `
+      <ul>
+        <li>Feature 1: Description</li>
+        <li>Feature 2: Description</li>
+        <li>Feature 3: Description</li>
+      </ul>
+    `,
+    additionalText: 'Here’s some more details about the project and its unique features.',
+    specifications: 'Here are some moore detailed technical specs about the project',
     date: 'Sept 9, 2024',
   },
   {
@@ -29,7 +45,15 @@ const cardData = [
     ],
     title: 'Smartphone Alarm Clock',
     description: 'Project 3 Description',
-    additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
+    features: `
+      <ul>
+        <li>Feature 1: Description</li>
+        <li>Feature 2: Description</li>
+        <li>Feature 3: Description</li>
+      </ul>
+    `,
+    additionalText: 'Here’s some more details about the project and its unique features.',
+    specifications: 'Here are some moore detailed technical specs about the project',
     date: 'Sept 9, 2024',
   },
   {
@@ -39,7 +63,15 @@ const cardData = [
     ],
     title: 'Smartphone Alarm Clock',
     description: 'Project 3 Description',
-    additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
+    features: `
+      <ul>
+        <li>Feature 1: Description</li>
+        <li>Feature 2: Description</li>
+        <li>Feature 3: Description</li>
+      </ul>
+    `,
+    additionalText: 'Here’s some more details about the project and its unique features.',
+    specifications: 'Here are some moore detailed technical specs about the project',
     date: 'Sept 9, 2024',
   },
   {
@@ -49,7 +81,15 @@ const cardData = [
     ],
     title: 'Smartphone Alarm Clock',
     description: 'Project 3 Description',
-    additionalText: 'Here’s some more details about the Indoor Trainer Table project and its unique features.',
+    features: `
+      <ul>
+        <li>Feature 1: Description</li>
+        <li>Feature 2: Description</li>
+        <li>Feature 3: Description</li>
+      </ul>
+    `,
+    additionalText: 'Here’s some more details about the project and its unique features.',
+    specifications: 'Here are some moore detailed technical specs about the project',
     date: 'Sept 9, 2024',
   },
 ]

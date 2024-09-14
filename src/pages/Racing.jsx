@@ -5,12 +5,12 @@ const racing = () => {
   return (
     <Box sx={{ display: 'left', flexDirection: 'column', gap: 4 }}>
       <div>
-        <Typography variant="h1">
+      <h1 style={{marginBottom: '0px'}}>
           Racing
-        </Typography>
-        <Typography>
+        </h1>
+        <p style={{marginTop:'0px'}}>
           Racing Stuffs
-          </Typography>
+          </p>
       </div>
     </Box>
   );

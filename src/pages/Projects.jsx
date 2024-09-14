@@ -29,10 +29,10 @@ export default function Projects() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <div>
-        <Typography variant="h1">Projects</Typography>
-        <Typography>
+        <h1 style={{marginBottom: '0px'}}>Projects</h1>
+        <p style={{marginTop: '0px'}}>
           This is the projects I have been working on. Look at figma for design outline for this page.
-        </Typography>
+        </p>
       </div>
 
       <Box sx={{ width: '100%', minHeight: '500px' }}> {/* Adjust height as needed */}

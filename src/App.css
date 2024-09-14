@@ -9,7 +9,7 @@
 
 
 
-body, .App, .MuiTypography-root {
+body, .App, .App-header {
   font-family: "Isocpeur", Arial, sans-serif !important;
   font-weight: bold;
 }
@@ -90,6 +90,38 @@ body, .App, .MuiTypography-root {
   margin-left: 20px; /* Margin for h1 */
 }
 
+/* Typography Settings */
+h1 {
+  font-size: 10vh;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 6vh;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 2px;
+}
+
+h3 {
+  font-size: 4vh;
+  margin-bottom: 4px;
+}
+
+h4 {
+  font-size: 3vh;
+  margin-bottom: 2px;
+}
+
+p {
+  font-size: 2vh;
+}
+
+.indented {
+text-indent: 2vw;
+}
+
 /* Masonry Grid */
 .masonry-container {
   display: flex;
@@ -137,3 +169,34 @@ body, .App, .MuiTypography-root {
   outline: 3px solid hsla(210, 98%, 48%, 0.5);
   outline-offset: 2px;
 }
+
+
+/* Modal (Image Zoomin)*/
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: white;
+  background-color: rgba(82, 82, 82, 0.345);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  transition: all 0.5s;
+  opacity: 0; /* Default state */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content vertically */
+}
+
+/* New rule for showing the modal */
+.modal.show {
+  opacity: 1; /* Visible state */
+}
+
+.responsive-image {
+  max-width: 100%;
+  max-height: 90vh; /* Adjust based on your needs */
+  object-fit: contain; /* Ensure the image scales proportionally */
+}
+

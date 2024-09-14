@@ -5,12 +5,12 @@ const Home = () => {
   return (
     <Box sx={{ display: 'left', flexDirection: 'column', gap: 4 }}>
       <div>
-        <Typography variant="h1">
+        <h1 style={{marginBottom: '0px'}}>
           Home
-        </Typography>
-        <Typography variant="body1">
+        </h1>
+        <p style={{marginTop:'0px'}}>
           This is the projects I have been working on. Look at figma for design outline for this page.
-          </Typography>
+          </p>
       </div>
     </Box>
   );
