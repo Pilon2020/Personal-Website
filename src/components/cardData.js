@@ -3,6 +3,7 @@ import images from '../utils/imageLoader';
 const cardData = [
   {
     id: 1,
+    layout: 0,
     images: [
       images['TrainerTable/TrainerTable1.png'],
       images['TrainerTable/TrainerTable2.png'],
@@ -22,6 +23,7 @@ const cardData = [
   },
   {
     id: 2,
+    layout: 1,
     images: [
       images['finlandbikephoto.jpg'],
     ],
@@ -40,6 +42,7 @@ const cardData = [
   },
   {
     id: 3,
+    layout: 2,
     images: [
       images['sandiaview.jpg'],
     ],
