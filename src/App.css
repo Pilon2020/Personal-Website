@@ -140,6 +140,11 @@ p {
   font-size: 2vh;
 }
 
+.description{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .indented {
 text-indent: 2vw;
 }

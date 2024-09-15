@@ -61,11 +61,25 @@ const DetailsPage = () => {
       
       {/* Additional sections */}
       <Box mt={4}>
-        <h3>Technical Specifications:</h3>
-        <p>{card.specifications}</p>
-        <h3>Project Files</h3>
-        <h4 className='indented'>Cad Files:</h4>
-        <h4 className='indented'>Additional Photos:</h4>
+        {card.specifications && (
+          <>
+            <h3>Technical Specifications:</h3>
+            <p>{card.specifications}</p>
+          </> )}
+        {(card.cadFiles || card.AddPhotos) && (
+          <>
+          <h3>Project Files</h3>
+          {card.cadFiles && (
+            <>
+              <h4 className='indented'>Cad Files:</h4>
+              <p>{card.cadFiles}</p>
+            </> )}
+          {card.AddPhotos && (
+            <>
+              <h4 className='indented'>Additional Photos:</h4>
+              <p>{card.AddPhotos}</p>
+            </> )}</>
+        )}
       </Box>
     </Box>
   );

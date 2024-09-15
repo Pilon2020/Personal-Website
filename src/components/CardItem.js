@@ -14,7 +14,7 @@ const CardItem = ({ item, index, onFocus, onBlur, focusedCardIndex }) => (
     className={`styledCard ${focusedCardIndex === index ? 'Mui-focused' : ''}`}
   >
     <CardImage image={item.images[0]} />
-    <CardContentSection title={item.title} description={item.description} date={item.date}/>
+    <CardContentSection title={item.title} description={item.carddescription} date={item.date}/>
   </Card>
 );
 

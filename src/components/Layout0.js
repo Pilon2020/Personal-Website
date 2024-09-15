@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import cardData from './cardData'; // Adjust path if needed
+import cardData from '../components/cardData'; // Adjust path if needed
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import parse from 'html-react-parser';
-import ViewableImage from './ViewableImage';
+import ViewableImage from '../components/ViewableImage';
 
 const DetailsPage = () => {
   const { id } = useParams(); // Get the id from the URL
@@ -51,7 +51,7 @@ const DetailsPage = () => {
       {/* Main paragraph */}
       <Box mt={4}>
         <h2>{card.title}</h2>
-        <p>{card.description}</p>
+        <p className='description'>{parse(card.description)}</p>
       </Box>
 
       {/* Two-column section below the main paragraph */}
@@ -67,20 +67,34 @@ const DetailsPage = () => {
         </Grid>
 
         {/* Right column with more text */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} style={{maxWidth:'44%'}}>
           <h3>Features:</h3>
-          <p>{parse(card.features)}</p>
-          <p>{card.additionalText}</p>
+          <p className='description'>{parse(card.features)}</p>
+          <p className='description'>{card.additionalText}</p>
         </Grid>
       </Grid>
       
       {/* Additional sections */}
       <Box mt={4}>
-        <h3>Technical Specifications:</h3>
-        <p>{card.specifications}</p>
-        <h3>Project Files</h3>
-        <h4 className='indented'>Cad Files:</h4>
-        <h4 className='indented'>Additional Photos:</h4>
+        {card.specifications && (
+          <>
+            <h3>Technical Specifications:</h3>
+            <p>{card.specifications}</p>
+          </> )}
+        {(card.cadFiles || card.AddPhotos) && (
+          <>
+          <h3>Project Files</h3>
+          {card.cadFiles && (
+            <>
+              <h4 className='indented'>Cad Files:</h4>
+              <p>{card.cadFiles}</p>
+            </> )}
+          {card.AddPhotos && (
+            <>
+              <h4 className='indented'>Additional Photos:</h4>
+              <p>{card.AddPhotos}</p>
+            </> )}</>
+        )}
       </Box>
     </Box>
   );
