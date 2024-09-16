@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
 import Masonry from 'react-masonry-css';
 import { Link } from 'react-router-dom';
 import cardData from '../components/cardData';

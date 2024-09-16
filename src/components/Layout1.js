@@ -25,11 +25,11 @@ const DetailsPage = () => {
       {/* Top section with two images */}
       <Grid container spacing={2} style={{ width: '100%', justifyContent:'center',alignItems: 'center' }}>
         {/* Left image (card.images[0]) */}
-        <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', height: '800px'}}>
+        <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', height: '800px', width:'49%'}}>
           {/* Image[1] */}
           <ViewableImage 
             src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}  
-            style={{ width: '100%', height: '50%', objectFit: 'cover' }} 
+            style={{height: '50%', objectFit: 'cover', paddingBottom:'20px'}} 
           />
           {/* Image[2] */}
           <ViewableImage 
@@ -40,11 +40,11 @@ const DetailsPage = () => {
         </Grid>
 
         {/* Right side with two stacked images */}
-        <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', height: '800px'}}>
+        <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', height: '800px', width:'49%'}}>
           {/* Image[1] */}
           <ViewableImage 
             src={card.images[2] ? card.images[1] : 'https://picsum.photos/3000'}  
-            style={{ width: '100%', height: '50%', objectFit: 'cover' }} 
+            style={{ width: '100%', height: '50%', objectFit: 'cover', paddingBottom:'20px'}} 
           />
           {/* Image[2] */}
           <ViewableImage 

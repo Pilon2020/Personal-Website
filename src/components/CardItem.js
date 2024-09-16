@@ -1,8 +1,7 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-
-import CardImage from './CardImage'; // Adjust path if needed
-import CardContentSection from './CardContentSection'; // Adjust path if needed
+import CardImage from './CardImage'; 
+import CardContentSection from './CardContentSection';
 
 const CardItem = ({ item, index, onFocus, onBlur, focusedCardIndex }) => (
   <Card

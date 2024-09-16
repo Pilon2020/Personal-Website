@@ -1,5 +1,4 @@
 /* App.css */
-
 @font-face {
   font-family: "Isocpeur";
   src: url("fonts/isocpeur/isocpeur.ttf") format("truetype");
@@ -7,15 +6,12 @@
   font-style: normal;
 }
 
-
-
 body, .App, .App-header {
   font-family: "Isocpeur", Arial, sans-serif !important;
   font-weight: bold;
 }
 
-
-/* App Layout */
+/* Layout for phone screens */
 .App {
   display: flex;
   flex-direction: column;
@@ -32,16 +28,9 @@ body, .App, .App-header {
 /* Content */
 .App-content {
   flex: 1;
-  padding: 7vh 60px;
+  padding: 6em 60px 2em;
   color: #ffffff; /* Corrected text color */
   text-align: left; /* Ensure text is aligned to the left */
-}
-
-.column {
-  float: left;
-  width: 50%;
-  max-width: 45vw;
-  padding-right: 1vw;
 }
 
 .row {
@@ -49,6 +38,10 @@ body, .App, .App-header {
   content: "";
   display: table;
   clear: both;
+}
+
+.column {
+  float: left;
 }
 
 img {
@@ -106,17 +99,11 @@ img {
   display: none !important; /* Remove default underline indicator */
 }
 
-/* Typography */
-.MuiTypography-h1 {
-  text-transform: uppercase;
-  margin-left: 20px; /* Margin for h1 */
-}
-
 /* Typography Settings */
 h1 {
-  font-size: 10vh;
+  font-size: 17vw;
   text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
 }
 
 h2 {
@@ -138,6 +125,36 @@ h4 {
 
 p {
   font-size: 2vh;
+}
+
+.CardText{
+  font-size: 3vh;
+  padding-bottom:2px;
+  margin: 0px;
+}
+p.CardText{
+  font-size: 1.75vh;
+  font-weight: 100;
+}
+
+p.DateContainer{
+  font-size: 1.75vh;
+  font-weight: 100;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0px;
+}
+
+.StyledCardContent{
+  display:flex;
+  flex-direction: column;
+  gap: 10;
+  padding-top: 16px;
+  flex-grow: 1;
+  height: fit-content;
+  padding-bottom: 3vh;
+  position: relative;
 }
 
 .description{
@@ -228,8 +245,560 @@ text-indent: 2vw;
 }
 
 .AboutMeIMG {
-  height: 30vw;
-  width: 40vw;
+  height: 45vh;
+  width: 70vw;
   object-fit: cover;
-  overflow: hidden;
+  overflow:hidden;
 }
+
+.AboutMe {
+    float: left;
+    width: 100%;
+    max-width: 70vw;
+}
+
+.ProjectImgs0{
+  padding: 0px;
+}
+
+.MainImage > * {
+  flex: 3; /* Adjust the proportion of space it takes, compared to the stacked images */
+  width: 100%;
+  height: auto;
+}
+
+.StackedImg {
+  display: none;
+}
+
+.FeatureColumn {
+  display: flex;
+  flex-wrap: wrap; /* Ensure image and text are side by side */
+}
+
+.FeatureImg {
+  width: 100%; /* Adjust width to fit next to the text */
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+
+
+/* Layout for Tablets */
+@media only screen and (min-width:768px){
+  /* App Layout */
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+    background: 
+      linear-gradient(rgb(198, 59, 216), transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    color: #000; /* Default text color */
+  }
+
+
+  /* Content */
+  .App-content {
+    flex: 1;
+    padding: 6em 60px 2em;
+    color: #ffffff; /* Corrected text color */
+    text-align: left; /* Ensure text is aligned to the left */
+  }
+
+  .row {
+    width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  /* Header */
+  .App-header {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    font-size: calc(10px + 2vmin);
+    width: fit-content; /* Adjust width based on content */
+    position: fixed; /* Ensure the header stays fixed at the top */
+    top: 1vh; /* Float 1vh below the top of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1000; /* Ensure it is above other content */
+    padding: 1vh;
+  }
+
+  /* Tabs Container */
+  .tabsContainer {
+    position: relative; /* Position relative to allow for positioning inside header */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 10px; /* Radius for rounded corners */
+    padding: 1vh; /* Padding for better content spacing */
+    color: #000; /* Text color for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a more polished look */
+  }
+
+
+  .tabsBackground {
+    background-color: transparent; /* Background for Tabs container */
+  }
+
+  /* Tabs and LinkTabs */
+  .tab {
+    color: White; /* Default text color for tabs */
+  }
+
+  .tab.Mui-selected {
+    color: White; /* Text color when selected */
+    background-color: rgba(116, 116, 116, 0.2); /* Less transparent grey for active tab */
+  }
+
+  .MuiTab-root {
+    text-decoration: none !important; /* Ensure no underline */
+    border-bottom: none !important; /* Ensure no underline */
+  }
+
+  .MuiTabs-indicator {
+    display: none !important; /* Remove default underline indicator */
+  }
+
+  /* Typography Settings */
+  h1 {
+    font-size: 10vw;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 2px;
+  }
+
+  h3 {
+    font-size: 4vh;
+    margin-bottom: 4px;
+  }
+
+  h4 {
+    font-size: 3vh;
+    margin-bottom: 2px;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+
+  .description{
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .indented {
+  text-indent: 2vw;
+  }
+
+  /* Masonry Grid */
+  .masonry-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Prevent layout jumps */
+  }
+
+  .my-masonry-grid {
+    display: flex;
+    width: 100%; /* Full width */
+    align-items: flex-start; /* Align items to the top */
+    padding: 0; /* Remove padding */
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Prevent layout jumps */
+  }
+
+  .my-masonry-grid_column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px; /* Horizontal spacing between items */
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 20px; /* Add vertical spacing between items */
+  }
+
+  /* Add margin-bottom to all the tiles (card items) */
+  .styledCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #bf00ff; /* Define this or use a color */
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Includes padding and borders in element's total width and height */
+    margin-bottom: 10px; /* Add spacing between rows */
+  }
+
+  .styledCard:hover {
+    background-color: #bf00ff; /* Hover background color */
+    cursor: pointer;
+  }
+
+  .styledCard:focus-visible {
+    outline: 3px solid hsla(210, 98%, 48%, 0.5);
+    outline-offset: 2px;
+  }
+
+
+  /* Modal (Image Zoomin)*/
+  .modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: white;
+    background-color: rgba(82, 82, 82, 0.345);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    transition: all 0.5s;
+    opacity: 0; /* Default state */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+  }
+
+  /* New rule for showing the modal */
+  .modal.show {
+    opacity: 1; /* Visible state */
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    max-height: 90vh; /* Adjust based on your needs */
+    object-fit: contain; /* Ensure the image scales proportionally */
+  }
+
+  .AboutMeIMG {
+    height: 50vw;
+    width: 80vw;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  .AboutMe {
+      float: left;
+      max-width: 80vw;
+  }
+
+  .ProjectImgs0{
+    padding: 4px;
+  }
+
+  .ImgColumns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: auto; /* Ensure that both the main image and the stacked images are within the same height */
+  }
+  
+  .MainImage > * {
+    flex: 3; /* Adjust the proportion of space it takes, compared to the stacked images */
+    width: 100%;
+    height: auto;
+  }
+  
+  .StackedImg {
+    display: none;
+  }
+  
+  .FeatureColumn {
+    display: flex;
+    flex-wrap: wrap; /* Ensure image and text are side by side */
+  }
+  
+  .FeatureImg {
+    width: 100%; /* Adjust width to fit next to the text */
+    max-height: 70vh;
+    object-fit: cover;
+  }
+}
+/* Layout for Desktops */
+@media only screen and (min-width:1400px){
+  /* App Layout */
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: 
+      linear-gradient(rgb(198, 59, 216), transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    color: #000; /* Default text color */
+  }
+
+
+  /* Content */
+  .App-content {
+    flex: 1;
+    padding: 6em 60px 2em;
+    color: #ffffff; /* Corrected text color */
+    text-align: left; /* Ensure text is aligned to the left */
+  }
+  .row {
+    width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  /* Header */
+  .App-header {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    font-size: calc(10px + 2vmin);
+    width: fit-content; /* Adjust width based on content */
+    position: fixed; /* Ensure the header stays fixed at the top */
+    top: 1vh; /* Float 1vh below the top of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1000; /* Ensure it is above other content */
+    padding: 1vh;
+  }
+
+  /* Tabs Container */
+  .tabsContainer {
+    position: relative; /* Position relative to allow for positioning inside header */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 10px; /* Radius for rounded corners */
+    padding: 1vh; /* Padding for better content spacing */
+    color: #000; /* Text color for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a more polished look */
+  }
+
+
+  .tabsBackground {
+    background-color: transparent; /* Background for Tabs container */
+  }
+
+  /* Tabs and LinkTabs */
+  .tab {
+    color: White; /* Default text color for tabs */
+  }
+
+  .tab.Mui-selected {
+    color: White; /* Text color when selected */
+    background-color: rgba(116, 116, 116, 0.2); /* Less transparent grey for active tab */
+  }
+
+  .MuiTab-root {
+    text-decoration: none !important; /* Ensure no underline */
+    border-bottom: none !important; /* Ensure no underline */
+  }
+
+  .MuiTabs-indicator {
+    display: none !important; /* Remove default underline indicator */
+  }
+
+  /* Typography */
+  .MuiTypography-h1 {
+    text-transform: uppercase;
+    margin-left: 20px; /* Margin for h1 */
+  }
+
+  /* Typography Settings */
+  h1 {
+    font-size: 10vmin;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 2px;
+  }
+
+  h3 {
+    font-size: 4vh;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+
+  h4 {
+    font-size: 3vh;
+    margin-bottom: 2px;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+
+  .description{
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .indented {
+  text-indent: 2vw;
+  }
+
+  /* Masonry Grid */
+  .masonry-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Prevent layout jumps */
+  }
+
+  .my-masonry-grid {
+    display: flex;
+    width: 100%; /* Full width */
+    align-items: flex-start; /* Align items to the top */
+    padding: 0; /* Remove padding */
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Prevent layout jumps */
+  }
+
+  .my-masonry-grid_column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px; /* Horizontal spacing between items */
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 20px; /* Add vertical spacing between items */
+  }
+
+  /* Add margin-bottom to all the tiles (card items) */
+  .styledCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #bf00ff; /* Define this or use a color */
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Includes padding and borders in element's total width and height */
+    margin-bottom: 10px; /* Add spacing between rows */
+  }
+
+  .styledCard:hover {
+    background-color: #bf00ff; /* Hover background color */
+    cursor: pointer;
+  }
+
+  .styledCard:focus-visible {
+    outline: 3px solid hsla(210, 98%, 48%, 0.5);
+    outline-offset: 2px;
+  }
+
+
+  /* Modal (Image Zoomin)*/
+  .modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: white;
+    background-color: rgba(82, 82, 82, 0.345);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    transition: all 0.5s;
+    opacity: 0; /* Default state */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+  }
+
+  /* New rule for showing the modal */
+  .modal.show {
+    opacity: 1; /* Visible state */
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    max-height: 90vh; /* Adjust based on your needs */
+    object-fit: contain; /* Ensure the image scales proportionally */
+  }
+
+  .AboutMeIMG {
+    height: 30vw;
+    width: 40vw;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .AboutMe {
+    float: left;
+    margin: 0;
+    max-width: 50vw;
+    padding-left:3vw;
+}
+
+.ProjectImgs0 {
+  padding: 20px;
+}
+
+.ImgColumns {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 70vh; /* Ensure that both the main image and the stacked images are within the same height */
+}
+
+.MainImage > * {
+  flex: 3; /* Adjust the proportion of space it takes, compared to the stacked images */
+  width: 60vw;
+  height: 100%;
+}
+
+.StackedImg {
+  flex: 1; /* The stacked images should take up one-third of the available width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.StackedImg > * {
+  flex: 1; /* Ensure both images in StackedImg take equal space */
+  height: calc(50% - 5px);
+}
+
+.FeatureColumn {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure image and text are side by side */
+  gap: 32px;
+  margin:0;
+  align-items: flex-start; /* Vertically align items if needed */
+}
+
+.FeatureImg {
+  width: 100%; /* Adjust width to fit next to the text */
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.FeatureText {
+  flex: 1; /* Take the remaining space next to the image */
+  width: 50%; /* Ensure the text section is next to the image */
+  align-self: flex-start; /* Align the text to the top left of the column */
+}
+
+}
+

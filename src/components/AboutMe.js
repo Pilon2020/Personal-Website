@@ -8,11 +8,10 @@ const AboutMe = () => {
                 <img 
                     src={AboutMeImg}
                     className='AboutMeIMG'
-                    style={{width:'100%', height:'100%'}}
                     alt='Headshot'
                 />
             </div>
-            <div className="column">
+            <div className='column, AboutMe'>
                 <p>
                     I am not sure what I am going to put here but I don't want to duplicate my resume here just to have it linked at the bottom of the page.
                 </p>
