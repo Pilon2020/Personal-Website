@@ -19,19 +19,22 @@ const DetailsPage = () => {
   }
 
   return (
-    <div className='ProjectImgs0'>
-      <div className='ImgColumns'>
-        <div className='MainImage'>
+    <div className='ProjectImgs' >
+      <div className='ImgColumns' >
+        <div className ='Layout1'>
           <ViewableImage 
-            src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}  
+            src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
+            className='MainImage'  
           />
-        </div>
+          </div>
         <div className='StackedImg'>
           <ViewableImage
-            src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'} 
+            src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'}
+            className='SubImage' 
           />
           <ViewableImage
             src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'}
+            className='SubImage' 
           />
         </div>
       </div>

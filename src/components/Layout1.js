@@ -1,109 +1,97 @@
+// DetailsPage.jsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import cardData from './cardData'; // Adjust path if needed
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid2';
+import cardData from './cardData';
 import parse from 'html-react-parser';
 import ViewableImage from './ViewableImage';
 
 const DetailsPage = () => {
-  const { id } = useParams(); // Get the id from the URL
-
-  // Use cardData directly as it's an array
+  const { id } = useParams();
   const card = cardData.find((item) => item.id === parseInt(id, 10));
 
   if (!card) {
     return (
-      <Box>
-        <h1 style={{ color: 'Black' }}>No Project Found</h1>
-      </Box>
+      <div style={{ padding: '20px' }}>
+        <h1>No Project Found</h1>
+      </div>
     );
   }
 
   return (
-    <Box p={4}>
+    <div className='ProjectImgs'>
       {/* Top section with two images */}
-      <Grid container spacing={2} style={{ width: '100%', justifyContent:'center',alignItems: 'center' }}>
-        {/* Left image (card.images[0]) */}
-        <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', height: '800px', width:'49%'}}>
-          {/* Image[1] */}
-          <ViewableImage 
-            src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}  
-            style={{height: '50%', objectFit: 'cover', paddingBottom:'20px'}} 
-          />
-          {/* Image[2] */}
-          <ViewableImage 
-            src={card.images[1] ? card.images[2] : 'https://picsum.photos/3000'} 
-            style={{ width: '100%', height: '50%', objectFit: 'cover' }} 
-            onError={(e) => { e.target.onerror = null; e.target.src = 'https://picsum.photos/200/300'; }}
-          />
-        </Grid>
+      <div className="ImgColumns">
+        {/* Left images */}
+        <div className="StackedImg">
+            <ViewableImage 
+            src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
+            className='MainImage'/>
+            <ViewableImage 
+              src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'}
+              className='SubImage'/>
+        </div>
 
-        {/* Right side with two stacked images */}
-        <Grid item xs={6} style={{ display: 'flex', flexDirection: 'column', height: '800px', width:'49%'}}>
-          {/* Image[1] */}
+        {/* Right images */}
+        <div className="StackedImg">
           <ViewableImage 
-            src={card.images[2] ? card.images[1] : 'https://picsum.photos/3000'}  
-            style={{ width: '100%', height: '50%', objectFit: 'cover', paddingBottom:'20px'}} 
-          />
-          {/* Image[2] */}
+            src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'}
+            className='SubImage'/>
+
           <ViewableImage 
-            src={card.images[3] ? card.images[2] : 'https://picsum.photos/3000'} 
-            style={{ width: '100%', height: '50%', objectFit: 'cover' }} 
-            onError={(e) => { e.target.onerror = null; e.target.src = 'https://picsum.photos/200/300'; }}
-          />
-        </Grid>
-      </Grid>
+            src={card.images[3] ? card.images[3] : 'https://picsum.photos/3000'}
+            className='SubImage'/>
+        </div>
+      </div>
 
       {/* Main paragraph */}
-      <Box mt={4}>
+      <div>
         <h2>{card.title}</h2>
-        <p>{card.description}</p>
-      </Box>
+        <p className='description'>{card.description}</p>
+      </div>
 
       {/* Two-column section below the main paragraph */}
-      <Grid container spacing={4} mt={4}>
-        {/* Left column with an image */}
-        <Grid item xs={12} md={6}>
-          <img                                                                                              /* THIS NEEDS TO BE UPDATED TO A CLICKABLE IMAGE, BUT AT THE MOMENT I CANT FIGURE OUT*/
-            src={card.images[3] ? card.images[3] : 'https://picsum.photos/5000/3000'}                       /* HOW TO DO THIS WHILE ALSO KEEPING IT THE RIGHT SIZE */
+      <div className='FeatureColumn'>
+        <div>
+          <img 
+            className='FeatureImg'
+            src={card.images[3] ? card.images[3] : 'https://picsum.photos/5000/3000'}
             alt={card.title} 
-            style={{ width: '100%', maxHeight: '60vh', objectFit: 'contain' }} 
-            onError={(e) => { e.target.onerror = null; e.target.src = 'https://picsum.photos/200/300'; }}
           />
-        </Grid>
-
-        {/* Right column with more text */}
-        <Grid item xs={12} md={6}>
+        </div>
+        <div className='FeatureText'>
           <h3>Features:</h3>
-          <p>{parse(card.features)}</p>
-          <p>{card.additionalText}</p>
-        </Grid>
-      </Grid>
-      
+          <p className='description'>{parse(card.features)}</p>
+          <p className='description'>{card.additionalText}</p>
+        </div>
+      </div>
+
       {/* Additional sections */}
-      <Box mt={4}>
+      <div style={{ marginTop: '32px' }}>
         {card.specifications && (
           <>
             <h3>Technical Specifications:</h3>
             <p>{card.specifications}</p>
-          </> )}
+          </>
+        )}
         {(card.cadFiles || card.AddPhotos) && (
           <>
-          <h3>Project Files</h3>
-          {card.cadFiles && (
-            <>
-              <h4 className='indented'>Cad Files:</h4>
-              <p>{card.cadFiles}</p>
-            </> )}
-          {card.AddPhotos && (
-            <>
-              <h4 className='indented'>Additional Photos:</h4>
-              <p>{card.AddPhotos}</p>
-            </> )}</>
+            <h3>Project Files</h3>
+            {card.cadFiles && (
+              <>
+                <h4 className='indented'>Cad Files:</h4>
+                <p>{card.cadFiles}</p>
+              </>
+            )}
+            {card.AddPhotos && (
+              <>
+                <h4 className='indented'>Additional Photos:</h4>
+                <p>{card.AddPhotos}</p>
+              </>
+            )}
+          </>
         )}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

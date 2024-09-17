@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import ModalContent from "./ModalContent"; // Ensure the path is correct
 
-const ViewableImage = ({ src, width, maxHeight, style }) => {
+const ViewableImage = ({ src, className, width, maxHeight, style }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
       <div
-        className="image-container"
-        style={{ width, maxHeight, ...style, cursor: 'pointer' }} // Apply width and maxHeight
+        className={`image-container ${className}`} // Apply className directly
+        style={{ width, maxHeight, ...style, cursor: 'pointer' }} // Apply inline styles
         onClick={() => setShowModal(true)}
       >
         <img 

@@ -14,27 +14,27 @@ const DetailsPage = () => {
 
   if (!card) {
     return (
-      <Box>
-        <h1 style={{ color: 'Black' }}>No Project Found</h1>
-      </Box>
+      <div style={{ padding: '20px' }}>
+        <h1>No Project Found</h1>
+      </div>
     );
   }
 
   return (
-    <Box p={4}>
+    <Box>
       {/* Top section with two images */}
-      <Grid container spacing={2} style={{ width: '100%', justifyContent:'center',alignItems: 'center' }}>
+      <Grid container style={{ width: '100%', justifyContent:'center',alignItems: 'center' }}>
         {/* Left image (card.images[0]) */}
         <Grid item xs={6}>
           <ViewableImage 
             src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}  
-            style={{ width: '90vw', height: 800, objectFit: 'cover' }} 
+            className='MainImage'
           />
         </Grid>
       </Grid>
 
       {/* Main paragraph */}
-      <Box mt={4}>
+      <Box>
         <h2>{card.title}</h2>
         <p>{card.description}</p>
       </Box>

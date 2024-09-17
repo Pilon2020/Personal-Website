@@ -1,7 +1,6 @@
 // DetailsPage.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Box from '@mui/material/Box';
 import cardData from '../components/cardData';
 import renderLayout from '../components/renderLayout';
 
@@ -13,16 +12,16 @@ const DetailsPage = () => {
 
   if (!card) {
     return (
-      <Box>
+      <div>
         <h1 style={{ color: 'Black' }}>No Project Found</h1>
-      </Box>
+      </div>
     );
   }
 
   return (
-    <Box>
+    <div>
       {renderLayout(card)}
-    </Box>
+    </div>
   );
 };
 
