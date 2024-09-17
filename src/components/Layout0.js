@@ -68,19 +68,25 @@ const DetailsPage = () => {
             <p>{card.specifications}</p>
           </>
         )}
-        {(card.cadFiles || card.AddPhotos) && (
+        {(card.cadFiles || card.AddPhotos || card.extraFiles) && (
           <>
             <h3>Project Files</h3>
+            {card.extraFiles && (
+              <>
+                <h4 className='indented'>Extra Files:</h4>
+                <p className='indented'>{parse(card.extraFiles)}</p>
+              </>
+            )}
             {card.cadFiles && (
               <>
                 <h4 className='indented'>Cad Files:</h4>
-                <p>{card.cadFiles}</p>
+                <p className='indented'>{card.cadFiles}</p>
               </>
             )}
             {card.AddPhotos && (
               <>
                 <h4 className='indented'>Additional Photos:</h4>
-                <p>{card.AddPhotos}</p>
+                <p className='indented'>{card.AddPhotos}</p>
               </>
             )}
           </>

@@ -104,7 +104,14 @@ h4 {
 p {
   margin:0;
   font-size: 2vh;
+  font-weight: 100;
+  padding-bottom: 10px;
 }
+
+li{
+  margin-bottom: 10px;
+}
+
 
 .CardText{
   font-size: 3vh;
@@ -233,11 +240,11 @@ text-indent: 2vw;
 .FeatureColumn {
   display: flex;
   flex-wrap: wrap; /* Ensure image and text are side by side */
+  
 }
 
 .FeatureImg {
   width: 100%; /* Adjust width to fit next to the text */
-  max-height: 70vh;
   object-fit: cover;
 }
 

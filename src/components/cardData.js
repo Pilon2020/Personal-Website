@@ -17,37 +17,49 @@ const cardData = [
     , which I personally do not want to pay $200 for; and is probably overkill in terms of size for most of what I need to store on it during a workout. I have seen a few products
     That are a little similar to this product, but all cost close to the same as the Kickr Desk. This lead me to wanting to make something that could be manufactured quickly
     and cheaply, and could be adjusted as needed based on the users requirements.`,
-    features: `Using 3d printing to create the angled mount and the platform allowed for the product to be manufactured more cheaply, and quickly than alternative methods. Using a 
-    non-slip silicon mat holds devices or anything else on the table even while being covered in sweat and water during a workout. The silicon mat is also easily removable to 
-    clean it. `,
-    additionalText: '',
-    specifications: '',
-    cadFiles: '',
-    AddPhotos: '',
+    features: `This section is highlighting key points of the project that make it stand out from other related projects/products`,
+    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
+    specifications: 'This is more for the technical projects that actually have specifications',
+    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
+    extraFiles: `This is where written reports can go`,
+    AddPhotos: 'What is the most optimal way to share a photo gallery?',
   },
  
  
   {
     id: 2,
-    layout: 1,
+    layout: 0,
     images: [
       images['finlandbikephoto.jpg'],
     ],
-    title: 'Wildland Firefighting Helmet',
-    carddescription: 'A respritory protective device for wildland firefighters',
-    date: 'Sept 9, 2024',
-    description: 'Project 2 description.',
-    features: `
-      <ul>
-        <li>Feature 1: Description</li>
-        <li>Feature 2: Description</li>
-        <li>Feature 3: Description</li>
-      </ul>
-    `,
-    additionalText: 'Here’s some more details about the project and its unique features.',
-    specifications: 'Here are some moore detailed technical specs about the project',
-    cadFiles: '',
-    AddPhotos: '',
+    title: 'WUI Firefighter Respirator',
+    carddescription: 'A respritory protective device for wildland and wildland urban interface firefighters',
+    date: 'June 27, 2024',
+    description: `This project aims to address the critical and long-standing need for effective respiratory protection for wildland firefighters, as current options, 
+    such as N95 masks and bandanas, fall far short of offering adequate defense against the harmful smoke, toxic materials, and gases they are exposed to on the job. 
+    Wildland firefighters, who regularly endure long shifts in extreme environments, face significantly higher risks of developing lung cancer, cardiovascular disease, 
+    chronic obstructive pulmonary disease (COPD), and other serious health conditions. A mortality study by the National Institute for Occupational Safety & Health (NIOSH) 
+    has demonstrated that career firefighters have notably higher rates of cancer-related deaths compared to the general population, further underscoring the urgency of providing 
+    reliable respiratory protection. Unfortunately, previous efforts to design respirators for wildland firefighting have been unsuccessful in meeting the National Fire Protection 
+    Association (NFPA) 1984 standards or withstanding the physical demands of wildland firefighting conditions, which include high heat, rough terrain, and long durations of use. 
+    Through the collaboration between the Wildfire Conservancy, the WUI Fire Institute at Cal Poly, and CAL FIRE, a team of students, myself included, came together to design an an innovative 
+    air-respirator designed to provide continuous airflow while effectively filtering out harmful particulates and gases. This new device aims to bridge the gap between safety and practicality, 
+    ensuring that it not only meets strict safety standards but is also durable, comfortable, and capable of withstanding the rigors of wildland firefighting.
+    Although the team made a lot of progress we were unable to reach a final product that we felt happy with and were confident that would meet the NFPA standards and would protect the firefighters
+    as was our goal.`,
+    features: ` While working on this project we developed a series of goals/features for the final product.
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  `,
+  
+    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
+    specifications: 'This is more for the technical projects that actually have specifications',
+    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
+    extraFiles: `Our full final report: <a href='./media/WildlandResporator/Final Design Report.pdf' target='_blank'>Wildland Firefighter Respiratory Protection Device</a>`,
+    AddPhotos: 'What is the most optimal way to share a photo gallery?',
   },
   
   
@@ -69,16 +81,18 @@ const cardData = [
         <li>Feature 3: Description</li>
       </ul>
     `,
-    additionalText: 'Here’s some more details about the project and its unique features.',
-    specifications: 'Here are some moore detailed technical specs about the project',
-    cadFiles: '',
-    AddPhotos: '',
+    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
+    specifications: 'This is more for the technical projects that actually have specifications',
+    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
+    extraFiles: `This is where written reports can go`,
+    AddPhotos: 'What is the most optimal way to share a photo gallery?',
   },
   
   
   
   {
     id: 4,
+    layout: 1,
     images: [
       images['finlandbikephoto.jpg'],
     ],
@@ -93,10 +107,11 @@ const cardData = [
         <li>Feature 3: Description</li>
       </ul>
     `,
-    additionalText: 'Here’s some more details about the project and its unique features.',
-    specifications: 'Here are some moore detailed technical specs about the project',
-    cadFiles: '',
-    AddPhotos: '',
+    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
+    specifications: 'This is more for the technical projects that actually have specifications',
+    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
+    extraFiles: `This is where written reports can go`,
+    AddPhotos: 'What is the most optimal way to share a photo gallery?',
   },
   
   
@@ -117,10 +132,11 @@ const cardData = [
         <li>Feature 3: Description</li>
       </ul>
     `,
-    additionalText: 'Here’s some more details about the project and its unique features.',
-    specifications: 'Here are some moore detailed technical specs about the project',
-    cadFiles: '',
-    AddPhotos: '',
+    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
+    specifications: 'This is more for the technical projects that actually have specifications',
+    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
+    extraFiles: `This is where written reports can go`,
+    AddPhotos: 'What is the most optimal way to share a photo gallery?',
   },
 ]
 export default cardData;
