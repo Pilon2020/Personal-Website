@@ -1,4 +1,5 @@
 import images from '../utils/imageLoader';
+import pdfs from '../utils/pdfLoader'
 
 const cardData = [
   {
@@ -58,7 +59,7 @@ const cardData = [
     additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
     specifications: 'This is more for the technical projects that actually have specifications',
     cadFiles: 'I need to find a way to hold any cad files i need for the project here',
-    extraFiles: `Our full final report: <a href='./media/WildlandResporator/Final Design Report.pdf' target='_blank'>Wildland Firefighter Respiratory Protection Device</a>`,
+    extraFiles: `Our full final report: <a href='${pdfs['WildlandResporator/Final Design Report.pdf']}' target='_blank'>Wildland Firefighter Respiratory Protection Device</a>`,
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
   },
   
