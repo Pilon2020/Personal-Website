@@ -7,7 +7,15 @@ const cardData = [
     layout: 0,
     images: [
       images['TrainerTable/TrainerTable1.png'],
+      images['TrainerTable/TableMountV3_3.jpg'],
+      images['TrainerTable/TableMountV1_2.jpg'],
       images['TrainerTable/TrainerTable2.png'],
+      images['TrainerTable/TableMountV1_1.jpg'],
+      images['TrainerTable/TableMountV2_1.jpg'],
+      images['TrainerTable/TableMountV2_2.jpg'],
+      images['TrainerTable/TableMountV3_1.jpg'],
+      images['TrainerTable/TableMountV3_2.jpg'],
+  
     ],
     title: 'Indoor Trainer Table',
     carddescription:'A small table for indoor training.',

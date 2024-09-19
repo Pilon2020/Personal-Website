@@ -28,7 +28,8 @@ const AboutMe = () => {
             </div>
             <div className="about-me-column AboutMe">
                 <p>
-                    I am not sure what I am going to put here but I don't want to duplicate my resume here just to have it linked at the bottom of the page.
+                    Resume is linked at the bototm of the page, this should be stuff that to highlight from the resume, but also to hightlight stuff that might not be on the resume
+                    for one reason or another, show more depth as a person other than the stuff that is obvious on the resume.
                 </p>
             </div>
             <div onClick={handleDownload}>
