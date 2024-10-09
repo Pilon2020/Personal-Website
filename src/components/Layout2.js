@@ -66,7 +66,7 @@ const DetailsPage = () => {
             {card.extraFiles && (
               <>
                 <h4 className='indented'>Extra Files:</h4>
-                <p className='indented'>{card.extraFiles}</p>
+                <p className='indented'>{parse(card.extraFiles)}</p>
               </>
             )}
             {card.cadFiles && (

@@ -1,16 +1,14 @@
-// utils/imageLoader.js
-
-// Function to import all images by their file path (no alt text here)
 function importAll(r) {
   let images = {};
   r.keys().forEach((item) => {
     const imageName = item.replace('./', '');
-    images[imageName] = r(item);  // Only the image source (file path)
+    images[imageName] = r(item);
   });
   return images;
 }
 
-// Import all images without alt text (alt will be defined in CardData)
+// Assuming you're exporting it or using it in some way
 const images = importAll(require.context('../media', true, /\.(jpg|jpeg|png)$/));
 
+// Make sure to use the 'images' variable somewhere in your code
 export default images;

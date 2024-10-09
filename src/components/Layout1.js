@@ -1,4 +1,3 @@
-// DetailsPage.jsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import cardData from './cardData';
@@ -23,23 +22,43 @@ const DetailsPage = () => {
       <div className="ImgColumns">
         {/* Left images */}
         <div className="StackedImg">
-            <ViewableImage 
-            src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
-            className='MainImage'/>
-            <ViewableImage 
-              src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'}
-              className='SubImage'/>
+          {/* Access image src and position */}
+          <ViewableImage 
+            src={card.images[0]?.src ? card.images[0].src : 'https://picsum.photos/3000'}
+            className='MainImage'
+            style={{
+              objectFit: 'cover',
+              objectPosition: card.images[0]?.position || 'center center', // Apply position dynamically
+            }}
+          />
+          <ViewableImage 
+            src={card.images[1]?.src ? card.images[1].src : 'https://picsum.photos/3000'}
+            className='SubImage'
+            style={{
+              objectFit: 'cover',
+              objectPosition: card.images[1]?.position || 'center center', // Apply position dynamically
+            }}
+          />
         </div>
 
         {/* Right images */}
         <div className="StackedImg">
           <ViewableImage 
-            src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'}
-            className='SubImage'/>
-
+            src={card.images[2]?.src ? card.images[2].src : 'https://picsum.photos/3000'}
+            className='SubImage'
+            style={{
+              objectFit: 'cover',
+              objectPosition: card.images[2]?.position || 'center center', // Apply position dynamically
+            }}
+          />
           <ViewableImage 
-            src={card.images[3] ? card.images[3] : 'https://picsum.photos/3000'}
-            className='SubImage'/>
+            src={card.images[3]?.src ? card.images[3].src : 'https://picsum.photos/3000'}
+            className='SubImage'
+            style={{
+              objectFit: 'cover',
+              objectPosition: card.images[3]?.position || 'center center', // Apply position dynamically
+            }}
+          />
         </div>
       </div>
 
@@ -54,8 +73,12 @@ const DetailsPage = () => {
         <div>
           <img 
             className='FeatureImg'
-            src={card.images[3] ? card.images[3] : 'https://picsum.photos/5000/3000'}
+            src={card.images[3]?.src ? card.images[3].src : 'https://picsum.photos/5000/3000'}
             alt={card.title} 
+            style={{
+              objectFit: 'cover',
+              objectPosition: card.images[3]?.position || 'center center', // Apply position dynamically
+            }}
           />
         </div>
         <div className='FeatureText'>
@@ -79,7 +102,7 @@ const DetailsPage = () => {
             {card.extraFiles && (
               <>
                 <h4 className='indented'>Extra Files:</h4>
-                <p className='indented'>{card.extraFiles}</p>
+                <p className='indented'>{parse(card.extraFiles)}</p>
               </>
             )}
             {card.cadFiles && (

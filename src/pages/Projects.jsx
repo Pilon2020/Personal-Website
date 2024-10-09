@@ -42,15 +42,17 @@ export default function Projects() {
           spacing={4} // Ensure this is set to the desired spacing
         >
           {data.map((item, index) => (
-            <Link to={`/projects/${item.id}`} key={item.id} style={{ textDecoration: 'none' }}>
-              <CardItem
-                item={item}
-                index={index}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                focusedCardIndex={focusedCardIndex}
-              />
-            </Link>
+            !item.hidden && ( // Only render if hidden is false
+              <Link to={`/projects/${item.id}`} key={item.id} style={{ textDecoration: 'none' }}>
+                <CardItem
+                  item={item}
+                  index={index}
+                  onFocus={handleFocus}
+                  onBlur={handleBlur}
+                  focusedCardIndex={focusedCardIndex}
+                />
+              </Link>
+            )
           ))}
         </Masonry>
       </Box>

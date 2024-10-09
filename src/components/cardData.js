@@ -3,6 +3,61 @@ import pdfs from '../utils/pdfLoader'
 
 const cardData = [
   {
+    id: 4,
+    layout: 1,
+    images: [
+      images['finlandbikephoto.jpg'],
+    ],
+    title: 'Race Results Website',
+    carddescription: 'I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results.',
+    date: 'Oct 9, 2024',
+    description: `I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results. I do now see what 
+    the difficulty of this project would be as the analysis its self is easy. The hard part is getting the results, but there are plenty of websites that already do that decently well.`,
+    features: `
+      <ul>
+        <li>Feature 1: Athlete Search</li>
+          <p> Description of Feature 1 </p>
+        <li>Feature 2: Racer Analysis</li>
+          <p> Description of Feature 2 </p>
+        <li>Feature 3: Race Analysis</li>
+          <p> Description of Feature 3 </p>
+      </ul>
+    `,
+    additionalText: `Other than my experience learning how to do React for THIS website, and using React as the basis for the Race Results website I have had basically no experience with coding everything
+    that is necessary for this website. It has required me to dive into database development and storage optimization as the results documents end up taking up a lot of space if I have a seperate document for each one
+    , and then the question is how do I efficiently search through the results for the data I want.`,
+    specifications: 'I originally built out the basic analysis function that I wanted in a excel document as I am much more confident with it there.',
+    cadFiles: '',
+    extraFiles: `The original <a href='https://docs.google.com/spreadsheets/d/19zZrQdFdPiwhV3rvaIdNkJ6UEtoLKbeMjExR50L9jJY/edit?usp=sharing' target='_blank'>Google Sheet</a>`,
+    AddPhotos: '',
+    hidden: false,
+  },
+  {
+    id: 3,
+    layout: 2,
+    images: [
+      images['sandiaview.jpg'],
+    ],
+    title: 'Smartphone Alarm Clock',
+    carddescription:' ',
+    date: 'Sept 9, 2024',
+    description: 'Project 3 Description',
+    features: `
+      <ul>
+        <li>Feature 1: Description</li>
+        <li>Feature 2: Description</li>
+        <li>Feature 3: Description</li>
+      </ul>
+    `,
+    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
+    specifications: 'This is more for the technical projects that actually have specifications',
+    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
+    extraFiles: `This is where written reports can go`,
+    AddPhotos: 'What is the most optimal way to share a photo gallery?',
+    hidden: true,
+  },
+
+  {
     id: 1,
     layout: 0,
     images: [
@@ -32,6 +87,7 @@ const cardData = [
     cadFiles: 'I need to find a way to hold any cad files i need for the project here',
     extraFiles: `This is where written reports can go`,
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
+    hidden: false,
   },
  
  
@@ -39,7 +95,7 @@ const cardData = [
     id: 2,
     layout: 0,
     images: [
-      images['finlandbikephoto.jpg'],
+      images['WildlandResporator/Wildfire_1.jpg'],
     ],
     title: 'WUI Firefighter Respirator',
     carddescription: 'A respritory protective device for wildland and wildland urban interface firefighters',
@@ -69,83 +125,7 @@ const cardData = [
     cadFiles: 'I need to find a way to hold any cad files i need for the project here',
     extraFiles: `Our full final report: <a href='${pdfs['WildlandResporator/Final Design Report.pdf']}' target='_blank'>Wildland Firefighter Respiratory Protection Device</a>`,
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
-  },
-  
-  
-  
-  {
-    id: 3,
-    layout: 2,
-    images: [
-      images['sandiaview.jpg'],
-    ],
-    title: 'Smartphone Alarm Clock',
-    carddescription:' ',
-    date: 'Sept 9, 2024',
-    description: 'Project 3 Description',
-    features: `
-      <ul>
-        <li>Feature 1: Description</li>
-        <li>Feature 2: Description</li>
-        <li>Feature 3: Description</li>
-      </ul>
-    `,
-    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
-    specifications: 'This is more for the technical projects that actually have specifications',
-    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
-    extraFiles: `This is where written reports can go`,
-    AddPhotos: 'What is the most optimal way to share a photo gallery?',
-  },
-  
-  
-  
-  {
-    id: 4,
-    layout: 1,
-    images: [
-      images['finlandbikephoto.jpg'],
-    ],
-    title: 'Project 4',
-    carddescription: ' ',
-    date: 'Sept 9, 2024',
-    description: 'Project 4 Description',
-    features: `
-      <ul>
-        <li>Feature 1: Description</li>
-        <li>Feature 2: Description</li>
-        <li>Feature 3: Description</li>
-      </ul>
-    `,
-    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
-    specifications: 'This is more for the technical projects that actually have specifications',
-    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
-    extraFiles: `This is where written reports can go`,
-    AddPhotos: 'What is the most optimal way to share a photo gallery?',
-  },
-  
-  
-  
-  {
-    id: 5,
-    images: [
-      images['finlandbikephoto.jpg'],
-    ],
-    title: 'Project 5',
-    carddescription: ' ',
-    date: 'Sept 9, 2024',
-    description: 'Project 5 Description',
-    features: `
-      <ul>
-        <li>Feature 1: Description</li>
-        <li>Feature 2: Description</li>
-        <li>Feature 3: Description</li>
-      </ul>
-    `,
-    additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
-    specifications: 'This is more for the technical projects that actually have specifications',
-    cadFiles: 'I need to find a way to hold any cad files i need for the project here',
-    extraFiles: `This is where written reports can go`,
-    AddPhotos: 'What is the most optimal way to share a photo gallery?',
+    hidden: false,
   },
 ]
 export default cardData;
