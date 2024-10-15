@@ -6,6 +6,63 @@
   font-style: normal;
 }
 
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+/* Ensure the carousel container is centered on the page */
+.carousel-container {
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  width: 100%; /* Full width */
+  object-fit: contain;
+}
+
+.coarousel-center {
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  width: 100%; /* Full width */
+  object-fit: contain;
+}
+
+.carousel-item {
+  display: flex; /* Flexbox for centering the item */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: fit-content; /* Ensures the item takes up only necessary space */
+  object-fit: contain; /* Image should stay within the container */
+
+}
+
+.carousel-item img {
+  display: block; /* Ensure it's treated as a block element */
+  max-height: 100%; /* Keep the image from overflowing vertically */
+  max-width: 100%; /* Keep the image from overflowing horizontally */
+  object-fit: contain; /* Image stays within its boundaries */
+  margin: 0 auto; /* Center the image */
+}
+
+
+/* Thumbnail gallery styles */
+.thumbnail-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 4vh;
+}
+
+.thumbnail-image {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.1);
+}
+
+
+
+
 body, .App, .App-header {
   font-family: "Isocpeur", Arial, sans-serif !important;
   font-weight: bold;
@@ -439,5 +496,31 @@ h1 {
   object-fit: cover;
 }
 
+.ImageWrap {
+  overflow: hidden;
+  position: relative;
 }
 
+.FeatureImg {
+  float: left;
+  width: 50%; /* Make the image take up 50% of the screen width */
+  margin-right: 20px;
+  margin-bottom: 20px;
+  max-width: 50vw; /* Ensure image scales with viewport */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.description {
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.description.h3 .h4{
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+
+
+
+}
