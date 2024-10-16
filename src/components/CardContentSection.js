@@ -4,6 +4,7 @@ const CardContentSection = ({ title, description, date }) => (
   <div className='StyledCardContent'>
     <h2 className="CardText">{title}</h2>
     <p className='CardText'> {description}</p>
+    <p style={{paddingBotom:"15px"}}></p>
     <p className='DateContainer'>{date}</p>
     </div>
 );

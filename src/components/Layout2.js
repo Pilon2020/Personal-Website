@@ -45,7 +45,7 @@ const DetailsPage = () => {
           <p className="description">{card.description}</p>
           <img
             className="FeatureImg"
-            src={card.images[2] ? card.images[2] : 'https://picsum.photos/5000/3000'}
+            src={card.images[1] ? card.images[1] : 'https://picsum.photos/5000/3000'}
             alt={card.title}
           />
           <h3>Features:</h3>

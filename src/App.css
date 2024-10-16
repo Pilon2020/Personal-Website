@@ -86,9 +86,9 @@ body, .App, .App-header {
   flex-direction: column;
   min-height: 150vh;
   background: 
-    linear-gradient(rgb(198, 59, 216), transparent),
-    linear-gradient(to top left, lime, transparent),
-    linear-gradient(to top right, blue, transparent);
+    linear-gradient(rgb(136, 106, 184), transparent),
+    linear-gradient(to top left, rgb(67, 90, 121), transparent),
+    linear-gradient(to top right, rgb(41, 41, 82), transparent);
   background-blend-mode: screen;
   color: #000; /* Default text color */
 }

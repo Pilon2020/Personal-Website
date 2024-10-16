@@ -1,49 +1,93 @@
 import images from '../utils/imageLoader';
 import pdfs from '../utils/pdfLoader'
 
+  // {
+  //     id: 0,
+  //     layout: 1,
+  //     images: [
+  //       images[``],
+  //     ],
+  //     title: 'Blank Template',
+  //     carddescription: ' ',
+  //     date: 'Last Updated: Mon Day, Year',
+  //     description: ` `,
+  //     features: `
+  //       <ul>
+  //         <li>Feature 1: Athlete Search</li>
+  //           <p> Description of Feature 1 </p>
+  //         <li>Feature 2: Racer Analysis</li>
+  //           <p> Description of Feature 2 </p>
+  //         <li>Feature 3: Race Analysis</li>
+  //           <p> Description of Feature 3 </p>
+  //       </ul>
+  //     `,
+  //     additionalText: ``,
+  //     specifications: '',
+  //     cadFiles: '',
+  //     extraFiles: ``,
+  //     AddPhotos: '',
+  //     hidden: true,
+  //   },
+
 const cardData = [
-  {
-      id: 0,
-      layout: 1,
+    {
+      id: 6,
+      layout: 0,
       images: [
-        images[``],
+        images[`MustangShowdown/LOGO.jpg`],
+        images[`MustangShowdown/LOGO(1).png`],
+        images[`MustangShowdown/LOGO Sticker.png`],
+        images[`MustangShowdown/PALLET.jpg`],
       ],
-      title: 'Blank Template',
-      carddescription: ' ',
-      date: 'Mon Day, Year',
-      description: ` `,
+      title: 'Mustang Showdown 2024',
+      carddescription: 'A super sprint triathlon race I hosted, which happened to be the first of its kind in the nation for the collegiate level.',
+      date: 'Last Updated: Oct 15, 2024',
+      description: `At the end of the season in April of 2024, the Cal Poly Triathlon coach, Coach Scott, approached me to see if I would be interested in hosting a new race at 
+      Cal Poly in the fall. The race as described by Coach Scott and some of the other coaches was going to be a series of super short races, held over the course of one morning.
+      After each race the racers would be resorted into new heats, so the races would get more competetive and faster as the day progressed. Somewhat similar to the Super Leagues style of 
+      racing where each triathlete does a munch of super sprints over the course of the day. I accepted the challenge and got to work. Working through throughout the summer I was able to host
+      the race on October 13th, 2024. With 54 registrants the race was a little smaller than I would have liked from a business perspective, as we were unable to make money from the event, but it was nice having a smaller field
+      as we ran into quite a few problems on race day that were considerably more easy to solve since we had so few people racing. `,
       features: `
         <ul>
-          <li>Feature 1: Athlete Search</li>
-            <p> Description of Feature 1 </p>
-          <li>Feature 2: Racer Analysis</li>
-            <p> Description of Feature 2 </p>
-          <li>Feature 3: Race Analysis</li>
-            <p> Description of Feature 3 </p>
+          <li>Short Races</li>
+            <p> Each race was only around 30 minutes long, having a 300m pool swim, 5km bike, and a 2km run. Both the bike and the run consisted of 4 laps, with runners turning into the finish line
+            about halfway through thier fourth lap.</p>
+          <li>Multiple Short Races</li>
+            <p> This caused athletes to have to strategize more for each race and were unable to just go completely all out the whole time. If they did they might not have enough left 
+            in the tank for the following rounds when they would need it more. While each race was short, the whole combined total for the men meant by the end of they day they were swimming 900m, biking 15km and running 6km.
+            which while shorter than a Olympic distance race requires very different pacing for the race. </p>
+          <li>Progressive Waves</li>
+            <p> After each wave I resorted the athletes into new heats for the following rounds. They started out in fully random heats, so the fastest people could be put with the slowest. This allowed everyone to have as equal
+            a chance of progressing to the next round. In the resorting process I would take the fastest athletes from each heat and resort them into heats together. This caused the heats to have a smaller and smaller spread between
+            the racers as the day went on, making the later races more exciting. </p>
+          <li>Race Manager Program</li>
+            <p> I created a race manager program to help me manage the race. The program was originally designed to make it so I could autogenerate heats for coming rounds very quickly, but due to some unforseen race day events 
+            (I forgot people might not race) I was unable to use the program. A project description of the program, as well as a link to the github for the project can be found <a href="https://www.calpolytriathlon.com/races/mustang-showdown/showdown-info"> here</a>. I go into a bit more detail
+            about the shortcomings of the program and what I want to improve as I still want to keep developing the program. </p>
         </ul>
       `,
-      additionalText: ` `,
-      specifications: ' ',
+      additionalText: `Talk here more about how the race went, how it went well, and how to improve it. Link to the Cal Poly Tri website for it.`,
+      specifications: '',
       cadFiles: '',
-      extraFiles: ` `,
-      AddPhotos: '',
-      hidden: true,
+      extraFiles: ``,
+      hidden: false,
     },
 
     {
       id: 5,
       layout: 2,
       images: [
-        images[`RaceManagerRound1DExample.png`],
-        images[`RaceManagerRound1Example.png`],
-        images[`RaceManagerEntry.png`],
-        images[`RaceManagerBoot.png`],
-        images[`RaceManagerResultsEdit.png`],
-        images[`RaceManagerResultsEdit_Selected.png`],
+        images[`RaceManager/RaceManagerRound1DExample.png`],
+        images[`RaceManager/RaceManagerRound1Example.png`],
+        images[`RaceManager/RaceManagerEntry.png`],
+        images[`RaceManager/RaceManagerBoot.png`],
+        images[`RaceManager/RaceManagerResultsEdit.png`],
+        images[`RaceManager/RaceManagerResultsEdit_Selected.png`],
       ],
       title: 'Mustang Showdown Race Manager Program',
       carddescription: 'A small python program to manage preliminary race results for multi-round triathlon events',
-      date: 'Oct 14, 2024',
+      date: 'Last Updated: Oct 14, 2024',
       description: `The Mustang Showdown Race Manager is a Python-based application designed to organize multi-round triathlon events. 
       It uses Tkinter for the user interface and employs optimization techniques to create balanced race heats based on athletes' swim and run times.`,
       features: `
@@ -106,7 +150,7 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     ],
     title: 'Race Results Website',
     carddescription: 'I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results.',
-    date: 'Oct 9, 2024',
+    date: 'Last Updated: Oct 9, 2024',
     description: `I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results. I do now see what 
     the difficulty of this project would be as the analysis its self is easy. The hard part is getting the results, but there are plenty of websites that already do that decently well.`,
     features: `
@@ -136,7 +180,7 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     ],
     title: 'Smartphone Alarm Clock',
     carddescription:' ',
-    date: 'Sept 9, 2024',
+    date: 'Last Updated: Sept 9, 2024',
     description: 'Project 3 Description',
     features: `
       <ul>
@@ -170,7 +214,7 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     ],
     title: 'Indoor Trainer Table',
     carddescription:'A small table for indoor training.',
-    date: 'Sept 15, 2024',
+    date: 'Last Updated: Sept 15, 2024',
     description: `One common problem I have been running into while doing indoor rides on my trainer I am just far enough away from the table that I cannot reach things
     like my phone or the tv remote. Companies like Wahoo have a solution for this with products like the
     <a href="https://www.wahoofitness.com/devices/indoor-cycling/accessories/kickr-desk-buy" target="_blank"> Kickr Desk</a>
@@ -195,7 +239,7 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     ],
     title: 'WUI Firefighter Respirator',
     carddescription: 'A respritory protective device for wildland and wildland urban interface firefighters',
-    date: 'June 27, 2024',
+    date: 'Last Updated: June 27, 2024',
     description: `This project aims to address the critical and long-standing need for effective respiratory protection for wildland firefighters, as current options, 
     such as N95 masks and bandanas, fall far short of offering adequate defense against the harmful smoke, toxic materials, and gases they are exposed to on the job. 
     Wildland firefighters, who regularly endure long shifts in extreme environments, face significantly higher risks of developing lung cancer, cardiovascular disease, 
