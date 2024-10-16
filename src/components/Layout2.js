@@ -4,12 +4,10 @@ import cardData from './cardData'; // Adjust path if needed
 import parse from 'html-react-parser';
 import ViewableImage from './ViewableImage';
 import ReactMarkdown from 'react-markdown';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 const DetailsPage = () => {
   const { id } = useParams();
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active index
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const card = cardData.find((item) => item.id === parseInt(id, 10));
 
@@ -29,21 +27,6 @@ const DetailsPage = () => {
         </div>
       ))
     : [];
-
-  const handleSlideChange = (index) => {
-    if (index < 0) {
-      setActiveIndex(items.length - 1);
-    } else if (index >= items.length) {
-      setActiveIndex(0);
-    } else {
-      setActiveIndex(index);
-    }
-  };
-
-  // Handle thumbnail click to switch carousel image
-  const handleThumbnailClick = (index) => {
-    setActiveIndex(index);
-  };
 
   return (
     <div className="ProjectImgs">
@@ -97,35 +80,59 @@ const DetailsPage = () => {
               </>
             )}
             {card.images && items.length > 0 && (
-              <>
+                <>
+                <div>
                 <h4 className="indented">Photos:</h4>
+                <div>
                 <div className="carousel-container">
-                  <AliceCarousel
-                    items={items}
-                    activeIndex={activeIndex} // Bind active index to AliceCarousel
-                    autoPlay
-                    infinite
-                    disableDotsControls
-                    disableButtonsControls
-                    autoPlayInterval={1000}
-                    onSlideChanged={(e) => handleSlideChange(e.item)}
-                  />
-                </div>
+                    <div className="carousel">
+                      {card.images.map((photo, index) => (
+                        <img
+                          key={index}
+                          className="carousel_img"
+                          src={photo}
+                          alt={`item ${index + 1}`}
+                          style={{
+                            cursor: 'pointer',
+                            width: '100%',
+                            margin: '5px',
+                            maxHeight: '60vh',
+                            objectFit: 'contain',
+                            display: index === activeIndex ? 'block' : 'none', // Only display the active image
+                          }}
+                          onClick={() => setActiveIndex(index)} // Update active image on click
+                        />
+                      ))}
 
-                {/* Thumbnail Preview Gallery */}
-                <div className="thumbnail-gallery">
-                  {card.images.map((photo, index) => (
-                    <img
-                      key={index}
-                      className={`thumbnail-image ${activeIndex === index ? 'active' : ''}`}
-                      src={photo}
-                      alt={`Thumbnail ${index + 1}`}
-                      onClick={() => handleThumbnailClick(index)} // Change carousel image on thumbnail click
-                      style={{ cursor: 'pointer', width: '100px', margin: '5px', border: activeIndex === index ? '5px solid #007bff' : 'none' }}
-                    />
-                  ))}
+                      {/* Arrows inside the carousel container */}
+                      <a className="prev" onClick={() => setActiveIndex((activeIndex - 1 + card.images.length) % card.images.length)}>&#10094;</a>
+                      <a className="next" onClick={() => setActiveIndex((activeIndex + 1) % card.images.length)}>&#10095;</a>
+                    </div>
+
+                   {/* Thumbnail Preview Gallery */}
+                  </div>
+                  <div className="thumbnail-gallery">
+                        {card.images.map((photo, index) => (
+                          <img
+                            key={index}
+                            className={activeIndex === index ? 'active' : ''}
+                            src={photo}
+                            alt={`Thumbnail ${index + 1}`}
+                            style={{
+                              cursor: 'pointer',
+                              width: '100px',
+                              maxHeight: '100px',
+                              margin: '5px',
+                              objectFit: 'contain',
+                              border: activeIndex === index ? '5px solid #007bff' : 'none', // Highlight active thumbnail
+                            }}
+                            onClick={() => setActiveIndex(index)}
+                          />
+                      ))}
+                    </div>
                 </div>
-              </>
+                </div>
+                </>
             )}
           </>
         )}

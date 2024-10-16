@@ -8,60 +8,73 @@
 
 @import "react-alice-carousel/lib/alice-carousel.css";
 
-/* Ensure the carousel container is centered on the page */
 .carousel-container {
-  display: flex; /* Flexbox to center content */
-  justify-content: center; /* Horizontally center the image */
-  align-items: center; /* Vertically center the image */
-  width: 100%; /* Full width */
+  position: relative; /* Ensure the arrows are positioned relative to the container */
+  width: 100%;
+  max-height: 60vh; /* Max height to contain the images */
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel_img {
+  width: 100%;
   object-fit: contain;
+  display: block;
+  max-height: 60vh;
 }
 
-.coarousel-center {
-  display: flex; /* Flexbox to center content */
-  justify-content: center; /* Horizontally center the image */
-  align-items: center; /* Vertically center the image */
-  width: 100%; /* Full width */
-  object-fit: contain;
+/* Arrow styling */
+.prev, .next {
+  position: absolute;
+  top: 50%; /* Center arrows vertically */
+  transform: translateY(-50%);
+  font-size: 2rem; /* Larger arrow size */
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px; /* Only horizontal padding for click area */
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 0; /* Remove circular background */
+  border-radius: 5px;
 }
 
-.carousel-item {
-  display: flex; /* Flexbox for centering the item */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: fit-content; /* Ensures the item takes up only necessary space */
-  object-fit: contain; /* Image should stay within the container */
-
+.prev {
+  left: 10px; /* Position to the left */
 }
 
-.carousel-item img {
-  display: block; /* Ensure it's treated as a block element */
-  max-height: 100%; /* Keep the image from overflowing vertically */
-  max-width: 100%; /* Keep the image from overflowing horizontally */
-  object-fit: contain; /* Image stays within its boundaries */
-  margin: 0 auto; /* Center the image */
+.next {
+  right: 10px; /* Position to the right */
 }
 
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-/* Thumbnail gallery styles */
+/* Thumbnail gallery styling */
 .thumbnail-gallery {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  padding-bottom: 4vh;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.thumbnail-image {
+.thumbnail-gallery img {
   cursor: pointer;
-  transition: transform 0.3s;
+  width: 100px; /* Ensure thumbnail has a width */
+  height: auto; /* Adjust height automatically to preserve aspect ratio */
+  max-height: 100px; /* Limit max height */
+  margin: 5px;
+  object-fit: contain;
+  border: 2px solid transparent; /* Default border */
 }
-
-.thumbnail-image:hover {
-  transform: scale(1.1);
-}
-
-
-
 
 body, .App, .App-header {
   font-family: "Isocpeur", Arial, sans-serif !important;
