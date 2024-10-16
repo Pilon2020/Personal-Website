@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.71440bfb.css",
-    "main.js": "/Personal-Website/static/js/main.fdaa76bc.js",
+    "main.css": "/Personal-Website/static/css/main.77536cc9.css",
+    "main.js": "/Personal-Website/static/js/main.c6fd34a5.js",
     "static/js/453.68693753.chunk.js": "/Personal-Website/static/js/453.68693753.chunk.js",
     "static/media/Final Design Report.pdf": "/Personal-Website/static/media/Final Design Report.45d9aba49fcd1d4e246e.pdf",
     "static/media/Wildfire_1.jpg": "/Personal-Website/static/media/Wildfire_1.6069b13ff36f42816057.jpg",
     "static/media/TrainerTable1.png": "/Personal-Website/static/media/TrainerTable1.503a90d8720840bac125.png",
+    "static/media/PALLET.jpg": "/Personal-Website/static/media/PALLET.7a1255bd6fa27c92a5f8.jpg",
     "static/media/finlandbikephoto.jpg": "/Personal-Website/static/media/finlandbikephoto.3a2f1b76e253abb56c27.jpg",
     "static/media/TrainerTable2.png": "/Personal-Website/static/media/TrainerTable2.3d5d11ff2ada4bc749a2.png",
     "static/media/sandiaview.jpg": "/Personal-Website/static/media/sandiaview.9d0ec8f804528f390d5a.jpg",
     "static/media/AboutMe.jpg": "/Personal-Website/static/media/AboutMe.db1feb57e17f22bfe7e5.jpg",
+    "static/media/LOGO.jpg": "/Personal-Website/static/media/LOGO.0e21c39939cc14473d31.jpg",
+    "static/media/LOGO Sticker.png": "/Personal-Website/static/media/LOGO Sticker.d646c592fbcdae4c5b40.png",
+    "static/media/LOGO(1).png": "/Personal-Website/static/media/LOGO(1).ade97e41fac3f591e5b1.png",
     "static/media/TableMountV1_2.jpg": "/Personal-Website/static/media/TableMountV1_2.01c29cdd6fb1b71908c7.jpg",
     "static/media/isocpeur.ttf": "/Personal-Website/static/media/isocpeur.a9397af8f7e4c3971fb8.ttf",
     "static/media/TableMountV3_3.jpg": "/Personal-Website/static/media/TableMountV3_3.cb7bcd3e1cd29bf41639.jpg",
@@ -19,13 +23,16 @@
     "static/media/TableMountV1_1.jpg": "/Personal-Website/static/media/TableMountV1_1.51b48b00e1098a5c6bdb.jpg",
     "static/media/TableMountV3_2.jpg": "/Personal-Website/static/media/TableMountV3_2.a69ba8625bbe1fcf817a.jpg",
     "static/media/TableMountV3_1.jpg": "/Personal-Website/static/media/TableMountV3_1.34138100fe5539bc56b9.jpg",
+    "static/media/RaceManagerRound1DExample.png": "/Personal-Website/static/media/RaceManagerRound1DExample.cb96a88e82cfdc63fe69.png",
+    "static/media/RaceManagerRound1Example.png": "/Personal-Website/static/media/RaceManagerRound1Example.cc2ca9a2945c5aac0461.png",
+    "static/media/RaceManagerResultsEdit.png": "/Personal-Website/static/media/RaceManagerResultsEdit.12145da7a682084a4dc8.png",
     "index.html": "/Personal-Website/index.html",
-    "main.71440bfb.css.map": "/Personal-Website/static/css/main.71440bfb.css.map",
-    "main.fdaa76bc.js.map": "/Personal-Website/static/js/main.fdaa76bc.js.map",
+    "main.77536cc9.css.map": "/Personal-Website/static/css/main.77536cc9.css.map",
+    "main.c6fd34a5.js.map": "/Personal-Website/static/js/main.c6fd34a5.js.map",
     "453.68693753.chunk.js.map": "/Personal-Website/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71440bfb.css",
-    "static/js/main.fdaa76bc.js"
+    "static/css/main.77536cc9.css",
+    "static/js/main.c6fd34a5.js"
   ]
 }
