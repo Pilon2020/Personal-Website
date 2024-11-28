@@ -29,22 +29,22 @@ const DetailsPage = () => {
 
   return (
     <div className='ProjectImgs' >
-      <div className='ImgColumns'>
-          <ViewableImage 
-            src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
-            className='Layout0'  
-          />
-        <div className='StackedImg'>
-          <ViewableImage
-            src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'}
-            className='SubImage' 
-          />
-          <ViewableImage
-            src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'}
-            className='SubImage' 
-          />
-        </div>
+    <div className='ImgColumns'>
+      <ViewableImage 
+        src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
+        className='MainImage'  
+      />
+      <div className='StackedImg'>
+        <ViewableImage
+          src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'}
+          className='SubImage' 
+        />
+        <ViewableImage
+          src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'}
+          className='SubImage' 
+        />
       </div>
+    </div>
 
 
       {/* Main paragraph */}

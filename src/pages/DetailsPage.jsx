@@ -11,7 +11,7 @@ const DetailsPage = () => {
   if (!card) {
     return (
       <div>
-        <h1 style={{ color: 'black' }}>No Project Found</h1>
+        <h2 style={{ color: 'black' }}>No Project Found</h2>
         <p>We couldn't find the project you're looking for. Please check the URL or go back to the projects page.</p>
         <Link to="/projects">
           <button style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', cursor: 'pointer' }}>

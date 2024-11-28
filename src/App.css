@@ -6,8 +6,6 @@
   font-style: normal;
 }
 
-@import "react-alice-carousel/lib/alice-carousel.css";
-
 .carousel-container {
   position: relative; /* Ensure the arrows are positioned relative to the container */
   width: 100%;
@@ -431,50 +429,80 @@ h1 {
 }
 
 .about-me-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.about-me-column {
-    flex: 1; /* Distributes space evenly */
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
+  align-items: flex-start; /* Aligns items at the top of the container */
+  justify-content: flex-start; /* Aligns items to the start horizontally */
+  margin: 20px;
 }
 
 .AboutMeIMG {
-    max-width: 100%;
-    height: auto;
-    margin-right: 20px; /* Adds space between the image and text */
+  max-width: 48vw; /* Sets a consistent image width */
+  height: 60vh;
+  margin-right: 1vw; /* Adds spacing between the image and text */
 }
 
-.AboutMe {
-    flex-grow: 1; /* Ensures the text takes up the remaining space */
+.about-me-text {
+  flex-grow: 1; /* Allows the text to occupy remaining space */
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 42vw; /* Prevents text from overflowing next to the image */
 }
+
+.download-resume {
+  width: 100%; /* Makes the link take up full width of its container */
+  text-align: center; /* Centers the link horizontally */
+  margin-top: 20px;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
+
+.download-resume:hover {
+  color: #000000; /* Keeps hover effect consistent */
+  text-decoration: underline;
+}
+
 
 .ProjectImgs {
   padding-top: 20px;
   margin-bottom:0;
 }
 
+/* ImgColumns - Top section with 3 images */
 .ImgColumns {
-  height: 75vh;
+  display: flex;
+  gap: 10px; /* Space between the images */
+  width: 100%;
+  height: auto;
 }
 
+.MainImage {
+  flex: 3; /* Main image takes more space */
+  width: 70vw; /* Adjust as per need */
+  height: 100%; 
+  object-fit: cover; /* Maintain aspect ratio */
+}
 
 .StackedImg {
-  flex: 1; /* The stacked images should take up one-third of the available width */
+  flex: 1; /* Stacked images take less space */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 10px;
 }
 
 .StackedImg > * {
-  flex: 1; /* Ensure both images in StackedImg take equal space */
-  height: calc(50% - 5px);
+  flex: 1;
+  height: calc(50% - 5px); /* Each stacked image takes half the space */
+  object-fit: cover;
+}
+
+/* FeatureImg - Image next to the features section */
+.FeatureImg {
+  float: left;
+  width: 50vw; /* Ensure image takes up 50% of the width */
+  height: auto;
+
 }
 
 .FeatureColumn {
@@ -483,10 +511,6 @@ h1 {
   align-items: flex-start; /* Vertically align items if needed */
 }
 
-.FeatureImg {
-  max-height: 60vh;
-  object-fit: contain;
-}
 
 .FeatureText {
   flex: 1; /* Take the remaining space next to the image */

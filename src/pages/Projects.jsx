@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <div>
-        <h1 style={{marginBottom: '0px'}}>Projects</h1>
+        <h2 style={{marginBottom: '0px'}}>Projects</h2>
         <p style={{marginTop: '0px'}}>
           This is the projects I have been working on. Look at figma for design outline for this page.
         </p>
