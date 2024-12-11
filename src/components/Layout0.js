@@ -28,23 +28,25 @@ const DetailsPage = () => {
 
 
   return (
-    <div className='ProjectImgs' >
-    <div className='ImgColumns'>
-      <ViewableImage 
-        src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
-        className='MainImage'  
-      />
-      <div className='StackedImg'>
+    <div className="ProjectImgs">
+    <div className="Layout0">
+      <div className="ImgColumns">
         <ViewableImage
-          src={card.images[1] ? card.images[1] : 'https://picsum.photos/3000'}
-          className='SubImage' 
+          src={card.images[0] ? card.images[0] : "https://picsum.photos/3000"}
+          className="MainImage"
         />
-        <ViewableImage
-          src={card.images[2] ? card.images[2] : 'https://picsum.photos/3000'}
-          className='SubImage' 
-        />
+        <div className="StackedImg">
+          <ViewableImage
+            src={card.images[1] ? card.images[1] : "https://picsum.photos/3000"}
+            className="SubImage"
+          />
+          <ViewableImage
+            src={card.images[2] ? card.images[2] : "https://picsum.photos/3000"}
+            className="SubImage"
+          />
+        </div>
       </div>
-    </div>
+    </div> 
 
 
       {/* Main paragraph */}
@@ -56,7 +58,7 @@ const DetailsPage = () => {
       {/* Two-column section below the main paragraph */}
       <div className='FeatureColumn'>
         <div>
-          <img className='FeatureImg'
+          <ViewableImage className='FeatureImg'
             src={card.images[2] ? card.images[2] : 'https://picsum.photos/5000/3000'}
             alt={card.title} />
         </div>

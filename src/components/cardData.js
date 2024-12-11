@@ -70,7 +70,7 @@ const cardData = [
       additionalText: `Talk here more about how the race went, how it went well, and how to improve it. Link to the Cal Poly Tri website for it.`,
       specifications: '',
       cadFiles: '',
-      extraFiles: ``,
+      extraFiles: `<a href="https://docs.google.com/spreadsheets/d/10d0qrCvABImRJyWm-EiLY51QGX-v6ahU/edit?usp=sharing&ouid=112113793053301426450&rtpof=true&sd=true" target="_blank" >Full Results</a>`,
       hidden: false,
     },
 
@@ -142,7 +142,7 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
       hidden: false,
     },
 
-  {
+    {
     id: 4,
     layout: 1,
     images: [
@@ -171,8 +171,8 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     extraFiles: `The original <a href='https://docs.google.com/spreadsheets/d/19zZrQdFdPiwhV3rvaIdNkJ6UEtoLKbeMjExR50L9jJY/edit?usp=sharing' target='_blank'>Google Sheet</a>`,
     AddPhotos: '',
     hidden: false,
-  },
-  {
+    },
+    {
     id: 3,
     layout: 2,
     images: [
@@ -195,9 +195,9 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     extraFiles: `This is where written reports can go`,
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
     hidden: true,
-  },
+    },
 
-  {
+    {
     id: 1,
     layout: 0,
     images: [
@@ -228,10 +228,10 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     extraFiles: `This is where written reports can go`,
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
     hidden: false,
-  },
+    },
  
  
-  {
+    {
     id: 2,
     layout: 0,
     images: [
@@ -266,6 +266,6 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     extraFiles: `Our full final report: <a href='${pdfs['WildlandResporator/Final Design Report.pdf']}' target='_blank'>Wildland Firefighter Respiratory Protection Device</a>`,
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
     hidden: false,
-  },
+    },
 ]
 export default cardData;

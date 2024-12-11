@@ -501,7 +501,8 @@ h1 {
 .FeatureImg {
   float: left;
   width: 50vw; /* Ensure image takes up 50% of the width */
-  height: auto;
+  height: 40vh;
+  object-fit: contain;
 
 }
 
@@ -527,12 +528,6 @@ h1 {
   display: flex;
 }
 
-.ImgColumns .Layout0{
-  width: 70vw;
-  height: 100%;
-  object-fit: cover;
-}
-
 .ImageWrap {
   overflow: hidden;
   position: relative;
@@ -540,7 +535,7 @@ h1 {
 
 .FeatureImg {
   float: left;
-  width: 50%; /* Make the image take up 50% of the screen width */
+  width: 100%; /* Make the image take up 50% of the screen width */
   margin-right: 20px;
   margin-bottom: 20px;
   max-width: 50vw; /* Ensure image scales with viewport */
@@ -552,12 +547,94 @@ h1 {
   padding: 0; /* Remove any padding */
 }
 
-.description.h3 .h4{
-  margin: 0; /* Remove any margin */
-  padding: 0; /* Remove any padding */
+.additional h3 {
+  margin-top: 5vh;
+}
+
+.additional h4{
+  margin-top: 1vh;
+}
+
+.ImgColumns .Layout1{
+  flex: 1; /* Stacked images take less space */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 70vh;
+}
+
+.ImgColumns .Layout2{
+  flex: 1; /* Stacked images take less space */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 70vh;
+}
+
+.ProjectImgs .Layout1{
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap into rows */
+  height: 70vh; /* Set height of the container */
+  width: 100%; /* Total width of the container */
+  gap: 10px; /* Add 10px gap between images */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure box-sizing includes padding/border */
+}
+
+.GridImage {
+  flex: 1 1 48%; /* Each image takes up 48% of the container's width, minus gap */
+  object-fit: contain; /* Scale image to fit */
+  object-position: center; /* Center the image */
+  display: block; /* Remove extra space below images */
+  box-sizing: border-box; /* Ensure border and padding are included in width/height */
+}
+
+h2 {
+  font-size: 6vh;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 2px;
 }
 
 
+ .Layout0 .ImgColumns {
+  display: flex;
+  height: 70vh; /* Adjust the height of the layout */
+  gap: 10px; /* Gap between the main image and stacked images */
+  box-sizing: border-box;
+} 
 
+.Layout0 .MainImage {
+  flex: 1 1 100%; /* Main image takes up 60% of the width */
+  height: 100%;
+  object-fit: cover; /* Make sure the image fills the container */
+  object-position: center;
+}
+
+.Layout0 .StackedImg {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  flex: 1 1 60%; /* Right side images take up 35% of the container */
+  gap: 10px; /* Add gap between stacked images */
+}
+
+.Layout0 .SubImage {
+  width: 100%; /* Make the images fill the width of their container */
+  height: calc(50% - 5px); /* Adjust height to fit two images inside the container */
+  object-fit: cover; /* Make sure the images cover their space */
+  object-position: center;
+}
+
+.ProjectImgs .Layout0{
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap into rows */
+  height: 100%; /* Set height of the container */
+  width: 100%; /* Total width of the container */
+  gap: 10px; /* Add 10px gap between images */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure box-sizing includes padding/border */
+} 
 
 }

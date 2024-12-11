@@ -32,7 +32,7 @@ const DetailsPage = () => {
     <div className="ProjectImgs">
       {/* Top section with two images */}
       <div className="ImgColumns">
-        <div className="StackedImg">
+        <div className="Layout2">
           <ViewableImage
             src={card.images[0] ? card.images[0] : 'https://picsum.photos/3000'}
           />
@@ -43,14 +43,15 @@ const DetailsPage = () => {
         <h2>{card.title}</h2>
         <div className="ImageWrap">
           <p className="description">{card.description}</p>
-          <img
+          <ViewableImage
             className="FeatureImg"
             src={card.images[1] ? card.images[1] : 'https://picsum.photos/5000/3000'}
             alt={card.title}
+            style={{marginTop:"10px"}}
           />
           <h3>Features:</h3>
           <p className="description">{parse(card.features)}</p>
-          <ReactMarkdown className="description">
+          <ReactMarkdown className="additional">
             {card.additionalText}
           </ReactMarkdown>
         </div>

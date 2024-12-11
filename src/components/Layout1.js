@@ -27,50 +27,23 @@ const DetailsPage = () => {
     : [];
 
   return (
-    <div className='ProjectImgs'>
-      {/* Top section with two images */}
-      <div className="ImgColumns">
-        {/* Left images */}
-        <div className="StackedImg">
-          {/* Access image src and position */}
-          <ViewableImage 
-            src={card.images[0]?.src ? card.images[0].src : 'https://picsum.photos/3000'}
-            className='MainImage'
+    <div>
+      <div className="ProjectImgs" >
+        <div className='Layout1'>
+        {card.images.slice(0, 2).map((image, index) => (
+          <ViewableImage
+            key={index}
+            src={image}
+            className="GridImage"
             style={{
-              objectFit: 'cover',
-              objectPosition: card.images[0]?.position || 'center center', // Apply position dynamically
+              objectFit: 'contain',
+              objectPosition: image?.position || 'center',
             }}
           />
-          <ViewableImage 
-            src={card.images[1]?.src ? card.images[1].src : 'https://picsum.photos/3000'}
-            className='SubImage'
-            style={{
-              objectFit: 'cover',
-              objectPosition: card.images[1]?.position || 'center center', // Apply position dynamically
-            }}
-          />
-        </div>
-
-        {/* Right images */}
-        <div className="StackedImg">
-          <ViewableImage 
-            src={card.images[2]?.src ? card.images[2].src : 'https://picsum.photos/3000'}
-            className='SubImage'
-            style={{
-              objectFit: 'cover',
-              objectPosition: card.images[2]?.position || 'center center', // Apply position dynamically
-            }}
-          />
-          <ViewableImage 
-            src={card.images[3]?.src ? card.images[3].src : 'https://picsum.photos/3000'}
-            className='SubImage'
-            style={{
-              objectFit: 'cover',
-              objectPosition: card.images[3]?.position || 'center center', // Apply position dynamically
-            }}
-          />
+        ))}
         </div>
       </div>
+      
 
       {/* Main paragraph */}
       <div>
@@ -81,11 +54,12 @@ const DetailsPage = () => {
       {/* Two-column section below the main paragraph */}
       <div className='FeatureColumn'>
         <div>
-          <img 
+          <ViewableImage
             className='FeatureImg'
-            src={card.images[3]?.src ? card.images[3].src : 'https://picsum.photos/5000/3000'}
+            src={card.images[3] ? card.images[3] : 'https://picsum.photos/3000'}
             alt={card.title} 
             style={{
+              marginTop: '10px',
               objectFit: 'cover',
               objectPosition: card.images[3]?.position || 'center center', // Apply position dynamically
             }}
