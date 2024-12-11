@@ -21,6 +21,10 @@ button {
   width: 10vw;
 }
 
+a:visited {
+  color: white;
+}
+
 .carousel-container {
   position: relative; /* Ensure the arrows are positioned relative to the container */
   width: 100%;
@@ -97,11 +101,11 @@ body, .App, .App-header {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 150vh;
+  min-height: 100vh;
   background: 
-    linear-gradient(rgb(136, 106, 184), transparent),
-    linear-gradient(to top left, rgb(67, 90, 121), transparent),
-    linear-gradient(to top right, rgb(41, 41, 82), transparent);
+    linear-gradient(rgb(56, 56, 56), transparent),
+    linear-gradient(to top left, rgb(31, 32, 34), transparent),
+    linear-gradient(to top right, rgb(37, 37, 37), transparent);
   background-blend-mode: screen;
   color: #000; /* Default text color */
 }

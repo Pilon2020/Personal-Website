@@ -30,7 +30,9 @@ export default function Projects() {
       <div>
         <h2 style={{marginBottom: '0px'}}>Projects</h2>
         <p style={{marginTop: '0px'}}>
-          This is the projects I have been working on. Look at figma for design outline for this page.
+          These are the projects I have been working on. Most of these projects are on going as I tend to hop around from 
+          project to project, working on each of them and updating them as I think of new ways to improve or expand on what
+          I have already done. 
         </p>
       </div>
 
