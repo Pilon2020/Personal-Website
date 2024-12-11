@@ -42,8 +42,8 @@ const AboutMe = () => {
                 my commitment to innovation, creativity, and community, while demonstrating my ability to manage multiple pursuits with passion and focus.
                 </p>
             </div>
-            <div onClick={handleDownload} className="download-resume">
-                <p>Download Resume</p>
+            <div className="download-resume">
+                <button  onClick={handleDownload} >Download Resume</button>
             </div>
         </div>
 

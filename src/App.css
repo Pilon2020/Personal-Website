@@ -6,6 +6,21 @@
   font-style: normal;
 }
 
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .2);
+  font-family: "Isocpeur";
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  align-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 10vw;
+}
+
 .carousel-container {
   position: relative; /* Ensure the arrows are positioned relative to the container */
   width: 100%;
@@ -453,7 +468,6 @@ h1 {
   width: 100%; /* Makes the link take up full width of its container */
   text-align: center; /* Centers the link horizontally */
   margin-top: 20px;
-  cursor: pointer;
   color: #000000;
   text-decoration: none;
 }
