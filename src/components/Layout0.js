@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import cardData from '../components/cardData'; // Adjust path if needed
 import parse from 'html-react-parser';
 import ViewableImage from '../components/ViewableImage';
+import ReactMarkdown from 'react-markdown';
 
 const DetailsPage = () => {
   const { id } = useParams(); // Get the id from the URL
@@ -60,13 +61,14 @@ const DetailsPage = () => {
         <div>
           <ViewableImage className='FeatureImg'
             src={card.images[2] ? card.images[2] : 'https://picsum.photos/5000/3000'}
-            alt={card.title} />
+            alt={card.title} 
+            style={{paddingTop:"10px"}}/>
         </div>
 
         <div className='FeatureText'>
-          <h3>Features:</h3>
-          <p className='description'>{parse(card.features)}</p>
-          <p className='description'>{card.additionalText}</p>
+        <h3>Features:</h3>
+          <ReactMarkdown className="description">{card.features}</ReactMarkdown>
+          <ReactMarkdown className="additional">{card.additionalText}</ReactMarkdown>
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import cardData from './cardData';
 import parse from 'html-react-parser';
 import ViewableImage from './ViewableImage';
+import ReactMarkdown from 'react-markdown';
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -66,9 +67,9 @@ const DetailsPage = () => {
           />
         </div>
         <div className='FeatureText'>
-          <h3>Features:</h3>
-          <p className='description'>{parse(card.features)}</p>
-          <p className='description'>{card.additionalText}</p>
+        <h3>Features:</h3>
+          <ReactMarkdown className="description">{card.features}</ReactMarkdown>
+          <ReactMarkdown className="additional">{card.additionalText}</ReactMarkdown>
         </div>
       </div>
 

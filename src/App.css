@@ -6,20 +6,7 @@
   font-style: normal;
 }
 
-button {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, .2);
-  font-family: "Isocpeur";
-  font-size: larger;
-  font-weight: 600;
-  cursor: pointer;
-  align-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: white;
-  width: 10vw;
-}
+
 
 a:visited {
   color: white;
@@ -381,8 +368,36 @@ h1 {
     max-width: 90vw;
 }
 
+.AboutMe p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .ProjectImgs0{
   padding: 0px;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .2);
+  font-family: "Isocpeur";
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  align-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 50vw;
+}
+
+.download-resume {
+  width: 100%; /* Makes the link take up full width of its container */
+  text-align: center; /* Centers the link horizontally */
+  margin-top: 20px;
+  color: #000000;
+  text-decoration: none;
 }
 
 
@@ -418,7 +433,12 @@ h1 {
   
   .AboutMe {
       float: left;
-      max-width: 80vw;
+      max-width: 100%;
+  }
+
+  .AboutMe p{
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .ProjectImgs0{
@@ -439,9 +459,36 @@ h1 {
     display:none;
   }
 
+  button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .2);
+    font-family: "Isocpeur";
+    font-size: larger;
+    font-weight: 600;
+    cursor: pointer;
+    align-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 30vw;
+  }
+
+  .download-resume {
+    width: 100%; /* Makes the link take up full width of its container */
+    text-align: center; /* Centers the link horizontally */
+    margin-top: 20px;
+    color: #000000;
+    text-decoration: none;
+  }
+
 }
 /* Layout for Desktops */
 @media only screen and (min-width:1400px){
+a {
+  color: white;
+}
+
 
 h1 {
   font-size: 5vw;
@@ -654,5 +701,20 @@ h2 {
   padding: 0; /* Remove default padding */
   box-sizing: border-box; /* Ensure box-sizing includes padding/border */
 } 
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .2);
+  font-family: "Isocpeur";
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  align-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 10vw;
+}
 
 }

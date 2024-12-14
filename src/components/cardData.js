@@ -34,6 +34,8 @@ const cardData = [
       id: 6,
       layout: 0,
       images: [
+        images[`MustangShowdown/PXL_20241013_185741491.jpg`],
+        images[`MustangShowdown/First_Place_2024.jpg`],
         images[`MustangShowdown/LOGO.jpg`],
         images[`MustangShowdown/LOGO(1).png`],
         images[`MustangShowdown/LOGO Sticker.png`],
@@ -48,29 +50,26 @@ const cardData = [
       racing where each triathlete does a munch of super sprints over the course of the day. I accepted the challenge and got to work. Working through throughout the summer I was able to host
       the race on October 13th, 2024. With 54 registrants the race was a little smaller than I would have liked from a business perspective, as we were unable to make money from the event, but it was nice having a smaller field
       as we ran into quite a few problems on race day that were considerably more easy to solve since we had so few people racing. `,
-      features: `
-        <ul>
-          <li>Short Races</li>
-            <p> Each race was only around 30 minutes long, having a 300m pool swim, 5km bike, and a 2km run. Both the bike and the run consisted of 4 laps, with runners turning into the finish line
-            about halfway through thier fourth lap.</p>
-          <li>Multiple Short Races</li>
-            <p> This caused athletes to have to strategize more for each race and were unable to just go completely all out the whole time. If they did they might not have enough left 
-            in the tank for the following rounds when they would need it more. While each race was short, the whole combined total for the men meant by the end of they day they were swimming 900m, biking 15km and running 6km.
-            which while shorter than a Olympic distance race requires very different pacing for the race. </p>
-          <li>Progressive Waves</li>
-            <p> After each wave I resorted the athletes into new heats for the following rounds. They started out in fully random heats, so the fastest people could be put with the slowest. This allowed everyone to have as equal
-            a chance of progressing to the next round. In the resorting process I would take the fastest athletes from each heat and resort them into heats together. This caused the heats to have a smaller and smaller spread between
-            the racers as the day went on, making the later races more exciting. </p>
-          <li>Race Manager Program</li>
-            <p> I created a race manager program to help me manage the race. The program was originally designed to make it so I could autogenerate heats for coming rounds very quickly, but due to some unforseen race day events 
-            (I forgot people might not race) I was unable to use the program. A project description of the program, as well as a link to the github for the project can be found <a href="https://www.calpolytriathlon.com/races/mustang-showdown/showdown-info"> here</a>. I go into a bit more detail
-            about the shortcomings of the program and what I want to improve as I still want to keep developing the program. </p>
-        </ul>
+      features: `- **Short Races**  
+  Each race was only around 30 minutes long, having a 300m pool swim, 5km bike, and a 2km run. Both the bike and the run consisted of 4 laps, with runners turning into the finish line about halfway through their fourth lap.
+
+- **Multiple Short Races**  
+  This caused athletes to have to strategize more for each race and were unable to just go completely all out the whole time. If they did, they might not have enough left in the tank for the following rounds when they would need it more. While each race was short, the whole combined total for the men meant by the end of the day they were swimming 900m, biking 15km, and running 6km, which, while shorter than an Olympic distance race, requires very different pacing for the race.
+
+- **Progressive Waves**  
+  After each wave, I resorted the athletes into new heats for the following rounds. They started out in fully random heats, so the fastest people could be put with the slowest. This allowed everyone to have an equal chance of progressing to the next round. In the resorting process, I would take the fastest athletes from each heat and resort them into heats together. This caused the heats to have a smaller and smaller spread between the racers as the day went on, making the later races more exciting.
+
+- **Race Manager Program**  
+  I created a race manager program to help me manage the race. The program was originally designed to make it so I could auto-generate heats for upcoming rounds very quickly, but due to some unforeseen race day events (I forgot people might not race), I was unable to use the program. A project description of the program, as well as a link to the project, can be found [here](/#/projects/5). I go into more detail about the shortcomings of the program and what I want to improve as I still want to keep developing the program.
+
       `,
-      additionalText: `Talk here more about how the race went, how it went well, and how to improve it. Link to the Cal Poly Tri website for it.`,
+      additionalText: ` **Post Race Report**  
+Mention the full report I made for USAT is linked at the bottom in the extra files section.
+`,
       specifications: '',
       cadFiles: '',
-      extraFiles: `<a href="https://docs.google.com/spreadsheets/d/10d0qrCvABImRJyWm-EiLY51QGX-v6ahU/edit?usp=sharing&ouid=112113793053301426450&rtpof=true&sd=true" target="_blank" >Full Results</a>`,
+      extraFiles: `<p><a href="https://docs.google.com/spreadsheets/d/10d0qrCvABImRJyWm-EiLY51QGX-v6ahU/edit?usp=sharing&ouid=112113793053301426450&rtpof=true&sd=true" target="_blank" >Full Results</a></p>
+      <p><a href="_blank" target="_blank">Post Race Report to USAT</a></p>`,
       hidden: false,
     },
 
@@ -90,15 +89,14 @@ const cardData = [
       date: 'Last Updated: Oct 14, 2024',
       description: `The Mustang Showdown Race Manager is a Python-based application designed to organize multi-round triathlon events. 
       It uses Tkinter for the user interface and employs optimization techniques to create balanced race heats based on athletes' swim and run times.`,
-      features: `
-        <ul>
-        <li>Feature 1: Athlete Search</li>
-          <p>Load athlete data from Excel files, including details like names, teams, bib numbers, and performance times, to automatically organize racers into heats based on swim and run times.</p>
-        <li>Feature 2: Racer Analysis</li>
-          <p>Analyze athlete performance across multiple rounds. The program dynamically adjusts heat assignments based on real-time race results, ensuring balanced competition with top performers advancing.</p>
-        <li>Feature 3: Race Analysis</li>
-          <p>Generate detailed race reports after each round, including heat assignments, performance results, and rankings. The program supports exporting results to text and CSV files for further review or printing.</p>
-        </ul>
+      features: `- **Feature 1: Athlete Search**  
+  Load athlete data from Excel files, including details like names, teams, bib numbers, and performance times, to automatically organize racers into heats based on swim and run times.
+
+- **Feature 2: Racer Analysis**  
+  Analyze athlete performance across multiple rounds. The program dynamically adjusts heat assignments based on real-time race results, ensuring balanced competition with top performers advancing.
+
+- **Feature 3: Race Analysis**  
+  Generate detailed race reports after each round, including heat assignments, performance results, and rankings. The program supports exporting results to text and CSV files for further review or printing.
       `,
       additionalText: `### Description:
 #### Round 1: Initial heats
@@ -153,15 +151,14 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     date: 'Last Updated: Oct 9, 2024',
     description: `I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results. I do now see what 
     the difficulty of this project would be as the analysis its self is easy. The hard part is getting the results, but there are plenty of websites that already do that decently well.`,
-    features: `
-      <ul>
-        <li>Feature 1: Athlete Search</li>
-          <p> Description of Feature 1 </p>
-        <li>Feature 2: Racer Analysis</li>
-          <p> Description of Feature 2 </p>
-        <li>Feature 3: Race Analysis</li>
-          <p> Description of Feature 3 </p>
-      </ul>
+    features: `- **Feature 1: Athlete Search**  
+  Load athlete data from Excel files, including details like names, teams, bib numbers, and performance times, to automatically organize racers into heats based on swim and run times.
+
+- **Feature 2: Racer Analysis**  
+  Analyze athlete performance across multiple rounds. The program dynamically adjusts heat assignments based on real-time race results, ensuring balanced competition with top performers advancing.
+
+- **Feature 3: Race Analysis**  
+  Generate detailed race reports after each round, including heat assignments, performance results, and rankings. The program supports exporting results to text and CSV files for further review or printing.
     `,
     additionalText: `Other than my experience learning how to do React for THIS website, and using React as the basis for the Race Results website I have had basically no experience with coding everything
     that is necessary for this website. It has required me to dive into database development and storage optimization as the results documents end up taking up a lot of space if I have a seperate document for each one
@@ -182,12 +179,14 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     carddescription:' ',
     date: 'Last Updated: Sept 9, 2024',
     description: 'Project 3 Description',
-    features: `
-      <ul>
-        <li>Feature 1: Description</li>
-        <li>Feature 2: Description</li>
-        <li>Feature 3: Description</li>
-      </ul>
+    features: `- **Feature 1:**  
+    Feature 1 Description
+
+- **Feature 2:**  
+  Feature 2 Description
+
+- **Feature 3:**  
+  Feature 3 Description
     `,
     additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',
     specifications: 'This is more for the technical projects that actually have specifications',
@@ -253,11 +252,15 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     Although the team made a lot of progress we were unable to reach a final product that we felt happy with and were confident that would meet the NFPA standards and would protect the firefighters
     as was our goal.`,
     features: ` While working on this project we developed a series of goals/features for the final product.
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    
+- **Feature 1:**  
+    Feature 1 Description
+
+- **Feature 2:**  
+  Feature 2 Description
+
+- **Feature 3:**  
+  Feature 3 Description
   `,
   
     additionalText: 'This can be an area to add key information that does not need to be highlighted in any other section',

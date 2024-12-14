@@ -49,11 +49,9 @@ const DetailsPage = () => {
             alt={card.title}
             style={{marginTop:"10px"}}
           />
-          <h3>Features:</h3>
-          <p className="description">{parse(card.features)}</p>
-          <ReactMarkdown className="additional">
-            {card.additionalText}
-          </ReactMarkdown>
+        <h3>Features:</h3>
+          <ReactMarkdown className="description">{card.features}</ReactMarkdown>
+          <ReactMarkdown className="additional">{card.additionalText}</ReactMarkdown>
         </div>
       </div>
 
