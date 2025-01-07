@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6a9d50ca.css",
-    "main.js": "/static/js/main.0fee0d94.js",
+    "main.js": "/static/js/main.66cc156f.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/Final Design Report.pdf": "/static/media/Final Design Report.45d9aba49fcd1d4e246e.pdf",
     "static/media/PXL_20241013_185741491.jpg": "/static/media/PXL_20241013_185741491.50c3d13f079c146d9f21.jpg",
@@ -20,6 +20,7 @@
     "static/media/isocpeur.ttf": "/static/media/isocpeur.a9397af8f7e4c3971fb8.ttf",
     "static/media/TableMountV3_3.jpg": "/static/media/TableMountV3_3.cb7bcd3e1cd29bf41639.jpg",
     "static/media/Resume.pdf": "/static/media/Resume.3979931d10a4870dd047.pdf",
+    "static/media/resume.pdf": "/static/media/resume.3979931d10a4870dd047.pdf",
     "static/media/TableMountV2_2.jpg": "/static/media/TableMountV2_2.6dc8cad07b6b60d45232.jpg",
     "static/media/TableMountV2_1.jpg": "/static/media/TableMountV2_1.bfe24315e4bb2ae55e01.jpg",
     "static/media/TableMountV1_1.jpg": "/static/media/TableMountV1_1.51b48b00e1098a5c6bdb.jpg",
@@ -30,11 +31,11 @@
     "static/media/RaceManagerResultsEdit.png": "/static/media/RaceManagerResultsEdit.12145da7a682084a4dc8.png",
     "index.html": "/index.html",
     "main.6a9d50ca.css.map": "/static/css/main.6a9d50ca.css.map",
-    "main.0fee0d94.js.map": "/static/js/main.0fee0d94.js.map",
+    "main.66cc156f.js.map": "/static/js/main.66cc156f.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a9d50ca.css",
-    "static/js/main.0fee0d94.js"
+    "static/js/main.66cc156f.js"
   ]
 }
