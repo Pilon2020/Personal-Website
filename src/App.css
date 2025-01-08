@@ -6,7 +6,9 @@
   font-style: normal;
 }
 
-
+a {
+  color: white;
+}
 
 a:visited {
   color: white;
@@ -162,6 +164,11 @@ h2 {
   font-weight: bolder;
   margin-bottom: 2px;
   margin-top:2px;
+
+}
+
+h2.pagetitle{
+  text-align: center;
 }
 
 h3 {
@@ -330,8 +337,6 @@ text-indent: 2vw;
   display:none;
 }
 
-
-
 /* Layout for phone screens */
 .App-content {
   flex: 1;
@@ -355,11 +360,20 @@ h1 {
   margin: 0;
 }
 
+.about-me-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
+  align-items: flex-start; /* Aligns items at the top of the container */
+  justify-content: center; /* Center items horizontally */
+  margin: 20px;
+}
+
 .AboutMeIMG {
-  height: 45vh;
-  width: 100%;
+  width: 100%; /* Sets a consistent image width */
+  height: 50vh; /* Sets a reasonable max height for the image */
   object-fit: cover;
-  overflow:hidden;
+  object-position: center; /* Ensures the image is centered within the element */
+  margin: auto; /* Centers the image inside the flex container */
 }
 
 .AboutMe {
@@ -424,11 +438,20 @@ button {
   }
 
 
+  .about-me-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
+    align-items: flex-start; /* Aligns items at the top of the container */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px;
+  }
+  
   .AboutMeIMG {
-    height: 50vw;
-    width: 100%;
+    width: 50vw; /* Sets a consistent image width */
+    max-height: 60vh; /* Sets a reasonable max height for the image */
     object-fit: cover;
-    overflow: hidden;
+    object-position: center; /* Ensures the image is centered within the element */
+    margin: auto; /* Centers the image inside the flex container */
   }
   
   .AboutMe {
@@ -498,14 +521,16 @@ h1 {
   display: flex;
   flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
   align-items: flex-start; /* Aligns items at the top of the container */
-  justify-content: flex-start; /* Aligns items to the start horizontally */
+  justify-content: center; /* Center items horizontally */
   margin: 20px;
 }
 
 .AboutMeIMG {
-  max-width: 48vw; /* Sets a consistent image width */
-  height: 60vh;
-  margin-right: 1vw; /* Adds spacing between the image and text */
+  width: 40vw; /* Sets a consistent image width */
+  max-height: 60vh; /* Sets a reasonable max height for the image */
+  object-fit: cover;
+  object-position: center; /* Ensures the image is centered within the element */
+  margin: auto; /* Centers the image inside the flex container */
 }
 
 .about-me-text {

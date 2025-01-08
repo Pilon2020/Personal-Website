@@ -6,7 +6,7 @@ const Home = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
       {/* Header Section */}
       <div>
-        <h2>About Me</h2>
+        <h2 className='pagetitle'>About Me</h2>
       </div>
 
       {/* AboutMe Section */}

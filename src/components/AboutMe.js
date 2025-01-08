@@ -23,6 +23,7 @@ const AboutMe = () => {
                 src={AboutMeImg}
                 className="AboutMeIMG"
                 alt="Headshot"
+                // style={{width:"60vw", height:"40vw"}}
             />
             <div className="about-me-text AboutMe">
                 <p>
