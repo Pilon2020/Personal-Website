@@ -29,7 +29,7 @@ export default function Projects() {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <div>
         <h2 style={{marginBottom: '0px'}} className='pagetitle'>Projects</h2>
-        <p style={{marginTop: '0px',textAlign:'justify'}}>
+        <p style={{marginTop: '0px',textAlign:'justify', padding:'5px'}}>
           These are the projects I have been working on. Most of these projects are on going as I tend to hop around from 
           project to project, working on each of them and updating them as I think of new ways to improve or expand on what
           I have already done. 

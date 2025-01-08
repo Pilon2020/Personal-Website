@@ -447,11 +447,12 @@ button {
   }
   
   .AboutMeIMG {
-    width: 50vw; /* Sets a consistent image width */
+    width: 100%; /* Sets a consistent image width */
     max-height: 60vh; /* Sets a reasonable max height for the image */
     object-fit: cover;
     object-position: center; /* Ensures the image is centered within the element */
     margin: auto; /* Centers the image inside the flex container */
+    padding-bottom: 10px;
   }
   
   .AboutMe {
@@ -526,11 +527,12 @@ h1 {
 }
 
 .AboutMeIMG {
-  width: 40vw; /* Sets a consistent image width */
+  width: 55vw; /* Sets a consistent image width */
   max-height: 60vh; /* Sets a reasonable max height for the image */
   object-fit: cover;
   object-position: center; /* Ensures the image is centered within the element */
   margin: auto; /* Centers the image inside the flex container */
+  padding-bottom: 10px;
 }
 
 .about-me-text {
@@ -685,6 +687,10 @@ h2 {
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 2px;
+}
+
+h2.pagetitle{
+  text-align: left;
 }
 
 
