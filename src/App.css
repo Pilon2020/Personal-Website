@@ -36,6 +36,23 @@ a:visited {
   max-height: 60vh;
 }
 
+.additional table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.additional th, .additional td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.additional th {
+  background-color: #f2f2f2;
+}
+
+
+
 /* Arrow styling */
 .prev, .next {
   position: absolute;

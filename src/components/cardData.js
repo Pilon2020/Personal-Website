@@ -30,6 +30,51 @@ import pdfs from '../utils/pdfLoader'
   //   },
 
 const cardData = [
+
+    {
+      id: 7,
+      layout: 3,
+      images: [
+        images[`EnveAero/AeroCockpitDesign.png`],
+        images[`EnveAero/FEA_U3.png`],
+      ],
+      title: 'ENVE Aero Stem Redesign',
+      carddescription: 'Due to full aero cockpits attaching aerobars to road bikes has become more difficult, this project aims to fix that for one specific stem design.',
+      date: 'Last Updated: Dec 20, 2024',
+      description: `This class project for a Finite Element Analysis (FEA) course focused on redesigning the <a href="https://enve.com/products/aero-stem?variant=45111154376988" target="_blank">ENVE Aero Stem</a> to work with standard 30mm aero bars,
+       such as those used in the <a href="https://www.sram.com/en/zipp/models/hb-vkal-clpe-a1" target="_blank"> Zipp Vuka Clip</a>.
+       With flat aero handlebars becoming more popular, the aim was to offer cyclists a simple solution that didnt involve replacing their entire cockpit. The idea came to me when one of my teammates was preparing for an Ironman and struggled to find a compatible setup. 
+       Unable to find a solution, he ended up racing without clip-on bars. My goal was to create a design that required minimal modifications to the bike, which led to the decision to redesign just the faceplate and build the necessary attachments onto it.
+       <br><br>
+       The first model I built was replicating the existing ENVE Aero Stem faceplate in Fusion 360. This ensured the new design would integrate seamlessly with the original stem. I simplified some elements of the model during this step to make it easier to work with and prepare it for FEA simulations.
+       Building on this base, I developed an attachment system to support clip-on aerobars, focusing on keeping the design as minimal and functional as possible. Using Abaqus for Finite Element Analysis, I applied realistic loads, including rider weight and forces exerted on the aerobars, 
+       to test the designs durability. These simulations were key to refining the geometry and identifying areas of stress concentration. 
+       <br><br>
+       While the loads had to be simplified for the purposes of the class, I still wanted to ensure precision in the simplified system, iterating the mesh to ultimatey arrive have the mesh converage with around 736000 degrees of freedom, while not taking years to run.
+       
+       `,
+       features: `- **Redesigned Faceplate for Aerobar Compatibility**  
+  This project focused on reimagining the ENVE Aero Stem faceplate to make it compatible with clip-on aerobars. The redesign allows for seamless integration with flat aero handlebars, addressing the limitations of the original three-point mounting system and eliminating the need for a complete cockpit replacement.
+
+- **Stress-Optimized Design**  
+  The redesigned faceplate underwent rigorous Finite Element Analysis (FEA) to assess stress distribution and deformation under typical cycling loads. The analysis confirmed that the updated design keeps stress levels well below the aluminum yield strength while ensuring minimal deformation for a secure and reliable setup.
+
+- **Iterative Mesh Refinement**  
+  To ensure accuracy, the design process included an iterative approach to mesh refinement. This allowed for high precision in areas of critical stress while keeping computational requirements manageable. The final mesh, with over 736,000 degrees of freedom, delivered reliable insights into the faceplate's structural performance.
+      `,
+      additionalText: `The redesigned ENVE Aero Stem faceplate was analyzed using finite element analysis (FEA) to assess its structural integrity under typical cycling loads. The analysis revealed that the maximum principal stress observed in the simulation was 23.2 MPa, significantly lower than the 75.11 MPa 
+      estimated via hand calculations. This discrepancy arises due to the hand calculations' simplified assumptions, while the FEA provides a more accurate representation by considering complex geometry and distributed forces. Similarly, the maximum displacement observed in the simulation was -1.49 × 10^-7 m, 
+      much lower than the hand-calculated value of 0.0003526 m. These findings confirm the faceplate's structural soundness, ensuring it can withstand expected loads without excessive deformation. Mesh refinement was conducted iteratively, achieving convergence at 736,575 degrees of freedom (DoF), where displacement and stress values stabilized. Partitioned meshes were used to enhance accuracy in high-stress regions while maintaining efficiency in less critical areas. The study highlighted the importance of refining mesh
+      density to achieve accurate stress distribution results. The FEA findings align well with the project's objective to design a faceplate that meets structural requirements, offering a practical solution for cyclists who wish to retrofit their existing ENVE Aero Stem without replacing the entire system. Future work should focus 
+      on incorporating detailed fastener models and dynamic loading conditions to further refine the design.
+`,
+      specifications: '',
+      cadFiles: '',
+      extraFiles: ``,
+      AddPhotos: '',
+      hidden: false,
+  },
+
     {
       id: 6,
       layout: 0,
@@ -270,5 +315,6 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     AddPhotos: 'What is the most optimal way to share a photo gallery?',
     hidden: false,
     },
+
 ]
 export default cardData;
