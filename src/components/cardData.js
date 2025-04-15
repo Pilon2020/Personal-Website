@@ -189,13 +189,17 @@ The full code for both programs can be found on my [GitHub](https://github.com/P
     id: 4,
     layout: 1,
     images: [
-      images['finlandbikephoto.jpg'],
+      images['RaceResults/Athlete_Race_Results.png'],
+      images['RaceResults/Athlete_Analysis.png'],
+      images['RaceResults/Athlete_Analysis_Speed.png'],
+      images['RaceResults/Athlete_Stats.png'],
     ],
     title: 'Race Results Website',
     carddescription: 'I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results.',
-    date: 'Last Updated: Oct 9, 2024',
-    description: `I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results. I do now see what 
-    the difficulty of this project would be as the analysis its self is easy. The hard part is getting the results, but there are plenty of websites that already do that decently well.`,
+    date: 'Last Updated: April 11, 2024',
+    description: `So far I have been able to make the athlete profile pages. To do this I have begun learning noSQL so I can link a MONGODB database to the webpage, allowing for data to be easily pulled from the collections at the appropriate times. 
+    I have started to work on getting the race specific analysis for each athlete completed, but I think I am still a quite a ways off from getting it done to the level I like. While I would like to post the site live
+    at the moment, I do not think it is in a finished enough state to be useful enough to have it live, the code can be found on my github though.`,
     features: `- **Feature 1: Athlete Search**  
   Load athlete data from Excel files, including details like names, teams, bib numbers, and performance times, to automatically organize racers into heats based on swim and run times.
 
