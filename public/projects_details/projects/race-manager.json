@@ -1,0 +1,34 @@
+{
+  "id": 7,
+  "slug": "race-manager",
+  "layout": 3,
+  "images": [
+        "RaceManager/RaceManagerRound1DExample.png",
+        "RaceManager/RaceManagerRound1Example.png",
+        "RaceManager/RaceManagerEntry.png",
+        "RaceManager/RaceManagerBoot.png",
+        "RaceManager/RaceManagerResultsEdit.png",
+        "RaceManager/RaceManagerResultsEdit_Selected.png"
+  ],
+  "title": "Mustang Showdown Race Manager Program",
+  "carddescription": "A small python program to manage preliminary race results for multi-round triathlon events",
+  "date": "Last Updated: Oct 14, 2024",
+  "description": "race-manager.md",
+  "features": [
+    {
+      "title": "Athlete Search",
+      "text": "Load athlete data from Excel files, including details like names, teams, bib numbers, and performance times, to automatically organize racers into heats based on swim and run times."
+    },
+    {
+      "title": "Racer Analysis",
+      "text": "Analyze athlete performance across multiple rounds. The program dynamically adjusts heat assignments based on real-time race results, ensuring balanced competition with top performers advancing."
+    },
+    {
+      "title": " Race Analysis",
+      "text": "Generate detailed race reports after each round, including heat assignments, performance results, and rankings. The program supports exporting results to text and CSV files for further review or printing."
+    }
+  ],
+  "additionalText": "race-manager.md",
+  "extraFiles": [],
+  "hidden": false
+}

@@ -14,7 +14,7 @@ export default function MenuBar() {
   const tabList = useMemo(() => [
     { label: "About", to: "/" },
     { label: "Projects", to: "/projects" },
-    // { label: "Racing", to: "/racing" },
+    { label: "Racing", to: "/racing" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/oliverpilon/" },
     { label: "GitHub", href: "https://github.com/Pilon2020" }
   ], []);

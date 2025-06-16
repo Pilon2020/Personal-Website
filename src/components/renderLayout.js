@@ -1,19 +1,20 @@
 // renderLayout.js
-import React from 'react';
-import Layout0 from './Layout0';
-import Layout1 from './Layout1';
-import Layout2 from './Layout2';
-
-const renderLayout = (card) => {
-  switch (card.layout) {
-    case 1:
-      return <Layout1 card={card} />;
-    case 2:
-      return <Layout2 card={card} />;
-    case 0:
-    default:
-      return <Layout0 card={card} />;
-  }
+const renderLayout = (card, descriptionComponent, additionalComponent) => {
+  return (
+    <div className="layout-wrapper">
+      <h1>{card.title}</h1>
+      <p>{card.carddescription}</p>
+      <div>{descriptionComponent}</div>
+      <ul>
+        {card.features.map((feature, i) => (
+          <li key={i}>
+            <strong>{feature.title}:</strong> {feature.text}
+          </li>
+        ))}
+      </ul>
+      <div>{additionalComponent}</div>
+    </div>
+  );
 };
 
 export default renderLayout;

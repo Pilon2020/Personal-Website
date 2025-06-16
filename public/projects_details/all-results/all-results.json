@@ -1,0 +1,21 @@
+{
+  "id": 5,
+  "slug": "all-results",
+  "layout": 3,
+  "images": [
+    "RaceResults/Athlete_Race_Results.png",
+    "RaceResults/Athlete_Analysis.png",
+    "RaceResults/Athlete_Analysis_Speed.png",
+    "RaceResults/Athlete_Stats.png"
+  ],
+  "title": "Race Results Website",
+  "carddescription": "I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results.",
+  "date": "Last Updated: April 11, 2024",
+  "description": "all-results.md",
+  "features": [
+    
+  ],
+  "additionalText": "all-results.md",
+  "extraFiles": [],
+  "hidden": false
+}

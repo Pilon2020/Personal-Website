@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import DetailsPage from './pages/DetailsPage'; // Import the details page
 import MenuBar from './components/MenuBar';
+import Racing from './pages/Racing';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} /> {/* Default route */}
             <Route path="/projects" element={<Projects />} /> {/* Projects page */}
-            <Route path="/projects/:id" element={<DetailsPage />} /> {/* Dynamic project details */}
+            <Route path="/projects/:slug" element={<DetailsPage />} />
+            <Route path="/Racing" element={<Racing />} />
           </Routes>
         </main>
       </div>

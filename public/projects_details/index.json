@@ -1,0 +1,73 @@
+[
+  {
+    "id": 7,
+    "slug": "enve-aero",
+    "title": "ENVE Aero Stem Redesign",
+    "carddescription": "Fixes aero-bar compatibility for the ENVE Aero Stem.",
+    "thumbnail": "EnveAero/AeroCockpitDesign.png",
+    "pinned": false,           
+    "featuredText": "Pinned Info" 
+  },
+  {
+    "id": 6,
+    "slug": "mustang-showdown-24",
+    "title": "Mustang Showdown 2024",
+    "carddescription": "A super-sprint collegiate triathlon I hosted.",
+    "thumbnail": "MustangShowdown/PXL_20241013_185741491.jpg",
+    "pinned":false,
+    "featuredText": "Here’s a bit more context on why this was critical for my Ironman prep…" 
+
+  },
+  {
+    "id": 5,
+    "slug": "all-results",
+    "title": "Race Results Website (All Results)",
+    "carddescription": "I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results.",
+    "thumbnail": "Athlete_Race_Results.png",
+    "pinned":true,
+    "featuredText": "One of my main projects is getting this up and running, with at least the WCCTC results and athlete. I am having to learn the basics of database management and setup.", 
+    "layout":"detailed",
+    "github":{"owner": "Pilon2020","repo":"all-results"}
+  },
+  {
+    "id": 4,
+    "slug": "race-manager",
+    "title": "Mustang Showdown Race Manager Program",
+    "carddescription": "A small python program to manage preliminary race results for multi-round triathlon events",
+    "thumbnail": "RaceManager/RaceManagerBoot.png",
+    "pinned":false,
+    "featuredText": "Pinned Info" 
+
+  },
+  {
+    "id": 3,
+    "slug": "trainer-table",
+    "title": "Indoor Trainer Table",
+    "carddescription": "A small table for indoor training.",
+    "thumbnail": "TrainerTable/TableMountV3_3.jpg",
+    "pinned":false,
+    "featuredText": "Pinned Info" 
+
+  },
+  {
+    "id": 2,
+    "slug": "smart-alarm",
+    "title": "Smartphone Alarm Clock",
+    "carddescription": "",
+    "thumbnail": "",
+    "pinned":false,
+    "featuredText": "Pinned Info" 
+
+  },
+  {
+    "id": 1,
+    "slug": "wui-protection",
+    "title": "WUI Firefighter Respiratory Proteciton System",
+    "carddescription": "A respritory protective device for wildland and wildland urban interface firefighters",
+    "thumbnail": "Wildfire_1.jpg",
+    "layout": "detailed",
+    "pinned":true,
+    "featuredText": "Pinned Info", 
+    "github": {}
+  }
+]
