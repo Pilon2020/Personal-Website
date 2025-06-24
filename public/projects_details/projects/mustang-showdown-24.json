@@ -2,33 +2,47 @@
   "id": 6,
   "slug": "mustang-showdown-24",
   "layout": 0,
-  "images": [
-        "MustangShowdown/PXL_20241013_185741491.jpg",
-        " MustangShowdown/First_Place_2024.jpg",
-        "MustangShowdown/LOGO.jpg",
-        "MustangShowdown/LOGO(1).png",
-        "MustangShowdown/LOGO Sticker.png",
-        "MustangShowdown/PALLET.jpg"
-  ],
   "title": "Mustang Showdown 2024",
   "carddescription": "A super sprint triathlon race I hosted, which happened to be the first of its kind in the nation for the collegiate level.",
   "date": "Last Updated: Dec 20, 2024",
   "description": "mustang-showdown-24.md",
-  "features": [
-    {
-      "title": "Short Races",
-      "text": "Each race was only around 30 minutes long, having a 300m pool swim, 5km bike, and a 2km run. Both the bike and the run consisted of 4 laps, with runners turning into the finish line about halfway through their fourth lap."
-    },
-    {
-      "title": "Multiple Short Races",
-      "text": "This caused athletes to have to strategize more for each race and were unable to just go completely all out the whole time. If they did, they might not have enough left in the tank for the following rounds when they would need it more. While each race was short, the whole combined total for the men meant by the end of the day they were swimming 900m, biking 15km, and running 6km, which, while shorter than an Olympic distance race, requires very different pacing for the race."
-    },
-    {
-      "title": "Progressive Waves",
-      "text": "After each wave, I resorted the athletes into new heats for the following rounds. They started out in fully random heats, so the fastest people could be put with the slowest. This allowed everyone to have an equal chance of progressing to the next round. In the resorting process, I would take the fastest athletes from each heat and resort them into heats together. This caused the heats to have a smaller and smaller spread between the racers as the day went on, making the later races more exciting."
-    }
-  ],
   "additionalText": "mustang-showdown-24.md",
   "extraFiles": ["https://docs.google.com/spreadsheets/d/10d0qrCvABImRJyWm-EiLY51QGX-v6ahU/edit?usp=sharing&ouid=112113793053301426450&rtpof=true&sd=true"],
-  "hidden": false
+  "images": [
+  {
+    "filename": "DSC01872.jpg",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "DSC02077.jpg",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "DSC02236.jpg",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "DSC02331(1).jpg",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "First_Place_2024.jpg",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "PXL_20241013_185741491.jpg",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  }
+]
 }

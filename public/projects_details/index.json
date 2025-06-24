@@ -1,22 +1,33 @@
-[
+[  {
+    "id": 8,
+    "slug": "bta-lid",
+    "title": "BTA Bottle Lid",
+    "carddescription": "A custom lid that screws onto a waterbottle with a straw.",
+    "thumbnail": "bta-lid/WattShop_BTA_1.webp",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
   {
     "id": 7,
     "slug": "enve-aero",
     "title": "ENVE Aero Stem Redesign",
     "carddescription": "Fixes aero-bar compatibility for the ENVE Aero Stem.",
-    "thumbnail": "EnveAero/AeroCockpitDesign.png",
+    "thumbnail": "enve-aero/stress_distribution.jpeg",
     "pinned": false,           
-    "featuredText": "Pinned Info" 
+    "featuredText": "Pinned Info",
+    "hidden": false
+ 
   },
   {
     "id": 6,
     "slug": "mustang-showdown-24",
     "title": "Mustang Showdown 2024",
     "carddescription": "A super-sprint collegiate triathlon I hosted.",
-    "thumbnail": "MustangShowdown/PXL_20241013_185741491.jpg",
+    "thumbnail": "mustang-showdown-24/LOGO.jpg",
     "pinned":false,
-    "featuredText": "Here’s a bit more context on why this was critical for my Ironman prep…" 
-
+    "featuredText": "Here’s a bit more context on why this was critical for my Ironman prep…", 
+    "hidden": false
   },
   {
     "id": 5,
@@ -27,16 +38,18 @@
     "pinned":true,
     "featuredText": "One of my main projects is getting this up and running, with at least the WCCTC results and athlete. I am having to learn the basics of database management and setup.", 
     "layout":"detailed",
-    "github":{"owner": "Pilon2020","repo":"all-results"}
+    "github":{"owner": "Pilon2020","repo":"all-results"},
+    "hidden": false
   },
   {
     "id": 4,
     "slug": "race-manager",
     "title": "Mustang Showdown Race Manager Program",
     "carddescription": "A small python program to manage preliminary race results for multi-round triathlon events",
-    "thumbnail": "RaceManager/RaceManagerBoot.png",
+    "thumbnail": "race-manager/RaceManagerBoot.png",
     "pinned":false,
-    "featuredText": "Pinned Info" 
+    "featuredText": "Pinned Info", 
+    "hidden": false
 
   },
   {
@@ -44,19 +57,10 @@
     "slug": "trainer-table",
     "title": "Indoor Trainer Table",
     "carddescription": "A small table for indoor training.",
-    "thumbnail": "TrainerTable/TableMountV3_3.jpg",
+    "thumbnail": "trainer-table/TrainerTable1.png",
     "pinned":false,
-    "featuredText": "Pinned Info" 
-
-  },
-  {
-    "id": 2,
-    "slug": "smart-alarm",
-    "title": "Smartphone Alarm Clock",
-    "carddescription": "",
-    "thumbnail": "",
-    "pinned":false,
-    "featuredText": "Pinned Info" 
+    "featuredText": "Pinned Info", 
+    "hidden": true
 
   },
   {
@@ -68,6 +72,7 @@
     "layout": "detailed",
     "pinned":true,
     "featuredText": "Pinned Info", 
-    "github": {}
+    "github": {},
+    "hidden": false
   }
 ]

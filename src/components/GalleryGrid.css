@@ -1,0 +1,29 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(100vw/6));
+  gap: 1rem;
+  padding: 2vw;
+  align-content: center;
+  justify-content: center;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 0.5vw;
+}
+
+.gallery-item img {
+  display: flexbox;
+  width: 100%;
+  height: calc(100vw/8);
+  object-fit: cover;
+}
+
+.gallery-item figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}

@@ -55,7 +55,7 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
   };
 
   return (
-    <div>
+    <div className="markdown-detailed">
       {/* Sidebar navigation */}
       <aside style={{ position: 'fixed', top: isScroll ? 0 : '100px', left: 0, bottom: 0, 
             width: '5%', padding: '1rem', borderRight: '1px solid #eee', overflowY: 'auto', 

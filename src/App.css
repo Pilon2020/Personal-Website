@@ -6,8 +6,13 @@
   font-style: normal;
 }
 
+html, body, .markdown-body {
+  overflow-x: hidden;
+}
+
 a {
   color: white;
+  text-decoration: none;
 }
 
 a:visited {
@@ -101,7 +106,6 @@ a:visited {
 
 body, .App, .App-header {
   font-family: "Isocpeur", Arial, sans-serif !important;
-  font-weight: bold;
 }
 
 .App {
@@ -113,7 +117,6 @@ body, .App, .App-header {
     linear-gradient(to top left, rgb(31, 32, 34), transparent),
     linear-gradient(to top right, rgb(37, 37, 37), transparent);
   background-blend-mode: screen;
-  color: #000; /* Default text color */
 }
 
 .column {
@@ -122,6 +125,165 @@ body, .App, .App-header {
 
 img {
   object-fit: cover;
+}
+
+/* Project Markdown Styles*/
+
+.markdown-body h1{
+  font-size: 5vh;
+}
+
+.markdown-body h2{
+  font-size: 4vh;
+}
+
+
+.markdown-body h4{
+  font-size: 3vh;
+  margin-top: 0px;
+}
+
+.markdown-body p{
+  font-size: 2vh;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.markdown-body figure.left {
+  float: left;
+  margin: 0 1em 0 0;
+  max-width: 40%;          
+}
+
+.markdown-body figure.left.large img {
+  float: left;
+  margin: 0 1em 0 0;   
+  object-fit:contain;  
+  height: auto;   
+  width: auto; 
+}
+
+.markdown-body figure.right {
+  float: right;
+  margin: 0 0 0 1em;
+  max-width: 40%;          
+}
+
+.markdown-body figure.photo_album img{
+  display: block;
+  margin: auto;    
+  max-width: 50%;         
+}
+
+.markdown-body figure.right.large img {
+  float: right;
+  margin: 0 0 0 1em;   
+  object-fit:contain;  
+}
+
+.markdown-body .split-container {
+  display: flex;
+  justify-content: space-between; /* even spacing */
+  align-items: flex-start;        /* align tops */
+  gap: 1em;                       /* space between items */
+}
+
+.markdown-body .split-container figure {
+  flex: 1;                        /* each takes equal width */
+  margin: 0;
+  display: flex;
+  flex-direction: column;         /* stack img over caption */
+  align-items: center;            /* center‐align within each figure */
+}
+
+.markdown-body .split-container figure img {
+  width: auto;                    /* fill its column */
+  height: 27rem;                   /* keep aspect ratio */
+  object-fit: contain;
+}
+
+.markdown-body .split-container figure figcaption {
+  margin-top: 0.5em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.markdown-body figure.right {
+  float: right;
+  margin: 0 0 0 1em;
+  max-width: 40%;          
+}
+
+
+.markdown-body figure img {
+  display: block;
+  max-width: 100%;         
+  height: 50vh;
+}
+
+.markdown-body figcaption {
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-body img.left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+
+.markdown-body img.right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.markdown-body figure.center.split img {
+  display: block;
+  margin: 1em auto;    
+  max-width: 50%;     
+}
+
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.markdown-body table th {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  color: #000000;
+}
+
+
+.markdown-body table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+
+.markdown-body table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+
+/* Detailed Project Markdown Styles*/
+.markdown-detailed h1{
+  font-size: 5vh;
+}
+
+.markdown-detailed p{
+  font-size: 2vh;
 }
 
 /* Header */

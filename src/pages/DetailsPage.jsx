@@ -4,6 +4,8 @@ import { useParams, Link }           from 'react-router-dom';
 import ReactMarkdown                 from 'react-markdown';
 import renderLayout                  from '../components/renderLayout';
 import DetailedProjectLayout         from '../components/DetailedProjectLayout';
+import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 
 export default function DetailsPage() {
   const { slug } = useParams();
@@ -87,7 +89,7 @@ export default function DetailsPage() {
   // detailed large-project view
   if (project.layout === 'detailed') {
     return (
-      <DetailedProjectLayout
+      <DetailedProjectLayout 
         project={project}
         docsMd={docsMd}
         posts={posts}
@@ -97,11 +99,15 @@ export default function DetailsPage() {
 
   // basic small-project view with features now included
   return (
-    <div>
+    <div className="markdown-body" style={{ overflowX:'hidden', width:'100%'}}>
       {renderLayout(
         project,
-        <ReactMarkdown>{descriptionMd}</ReactMarkdown>,
-        <ReactMarkdown>{additionalMd}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} 
+        components={{     a: ({ node, children, ...props }) => (
+      <a {...props} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>)}}>{descriptionMd}</ReactMarkdown>,
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{additionalMd}</ReactMarkdown>
       )}
     </div>
   );

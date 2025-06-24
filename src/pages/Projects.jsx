@@ -21,9 +21,10 @@ export default function Projects() {
   const handleFocus = i => setFocusedCardIndex(i);
   const handleBlur  = () => setFocusedCardIndex(null);
 
+  const visibleProjects = projects.filter(p=> !p.hidden)
   // Split out pinned vs the rest
-  const pinned = projects.filter(p => p.pinned);
-  const others = projects.filter(p => !p.pinned);
+  const pinned = visibleProjects.filter(p => p.pinned);
+  const others = visibleProjects.filter(p => !p.pinned);
 
   const cols = { default: 4, 1200: 3, 900: 2, 600: 1 };
 
@@ -33,8 +34,6 @@ export default function Projects() {
       <p style={{ textAlign: 'justify', padding: '5px' }}>
         These are the projects I have been working on. Most of these projects are on going as I tend to hop around from project to project, working on each of them and updating them as I think of new ways to improve or expand on what I have already done.
       </p>
-
-      {/* Pinned side-by-side */}
       <div
         style={{
           display: 'flex',
@@ -61,7 +60,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* --- Masonry Section for the rest --- */}
       <div style={{ width: '100%', minHeight: '500px' }}>
         <Masonry
           breakpointCols={cols}

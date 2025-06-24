@@ -2,29 +2,46 @@
   "id": 7,
   "slug": "enve-aero",
   "layout": 3,
-  "images": [
-    "EnveAero/AeroCockpitDesign.png",
-    "EnveAero/FEA_U3.png"
-  ],
   "title": "ENVE Aero Stem Redesign",
   "carddescription": "Due to full aero cockpits attaching aerobars to road bikes, attaching clip-on aerobars has become more difficult. This project aims to solve that problem for one specific stem design.",
-  "date": "Last Updated: Dec 20, 2024",
+  "date": "Last Updated: Jun 23, 2024",
   "description": "enve-aero.md",
-  "features": [
-    {
-      "title": "Redesigned Faceplate for Aerobar Compatibility",
-      "text": "Reimagines the ENVE Aero Stem faceplate to support standard 30mm clip-on aerobars like the Zipp Vuka Clip. Avoids needing to replace the entire cockpit."
-    },
-    {
-      "title": "Stress-Optimized Design",
-      "text": "Performed Finite Element Analysis (FEA) to evaluate stress distribution and ensure safety margins well below aluminum yield strength."
-    },
-    {
-      "title": "Iterative Mesh Refinement",
-      "text": "Used mesh refinement with over 736,000 degrees of freedom to ensure accurate stress analysis while keeping simulation time reasonable."
-    }
-  ],
   "additionalText": "enve-aero.md",
   "extraFiles": [],
-  "hidden": false
+  "images":[
+    {
+      "filename":"convergence_plot.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"deformation_pattern.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"EnveBars.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"EnveStem.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"faceplate_full.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"faceplate_original.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"faceplate_simplified.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    },{
+      "filename":"stress_distribution.jpeg",
+      "caption":"description",
+      "alt":"alt"
+    }
+    
+  ]
 }
