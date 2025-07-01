@@ -1,14 +1,13 @@
 /* App.css */
-@font-face {
-  font-family: "Isocpeur";
-  src: url("fonts/isocpeur/isocpeur.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 html, body, .markdown-body {
   overflow-x: hidden;
 }
+
+* {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
 
 a {
   color: white;
@@ -104,10 +103,6 @@ a:visited {
   border: 2px solid transparent; /* Default border */
 }
 
-body, .App, .App-header {
-  font-family: "Isocpeur", Arial, sans-serif !important;
-}
-
 .App {
   display: flex;
   flex-direction: column;
@@ -137,22 +132,54 @@ img {
   font-size: 4vh;
 }
 
-
 .markdown-body h4{
   font-size: 3vh;
   margin-top: 0px;
 }
 
 .markdown-body p{
-  font-size: 2vh;
+  font-size: 1.06rem;
   text-align: justify;
   text-justify: auto;
 }
 
 .markdown-body figure.left {
   float: left;
-  margin: 0 1em 0 0;
-  max-width: 40%;          
+  margin: 0 1em 1em 0;
+  text-align: center;           /* centers image and caption inside figure */
+  width: fit-content;           /* optional: shrink-wrap to content */
+}
+
+.markdown-body figure.left img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 50vh;
+}
+
+.markdown-body figure.left figcaption {
+  font-size: 1em;
+  color: #ffffff;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+
+.markdown-body .fig-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.markdown-body .fig-row figure {
+  flex: 1;               /* all three equal width */
+  margin: 0 1%;          /* gutter */
+}
+.markdown-body .fig-row img {
+  width: 100%;
+  height: 30vh;
+  display: block;
+  object-fit: contain;
 }
 
 .markdown-body figure.left.large img {
@@ -166,6 +193,12 @@ img {
 .markdown-body figure.right {
   float: right;
   margin: 0 0 0 1em;
+  max-width: 40%;          
+}
+
+.markdown-body figure.center {
+  float: flex;
+  margin: 0 0;
   max-width: 40%;          
 }
 
@@ -206,12 +239,6 @@ img {
   margin-top: 0.5em;
   text-align: center;
   margin-bottom: 0.5em;
-}
-
-.markdown-body figure.right {
-  float: right;
-  margin: 0 0 0 1em;
-  max-width: 40%;          
 }
 
 
@@ -283,7 +310,8 @@ img {
 }
 
 .markdown-detailed p{
-  font-size: 2vh;
+  font-size: 1.06rem;
+  margin: auto;
 }
 
 /* Header */
@@ -323,24 +351,10 @@ img {
   color: White; /* Default text color for tabs */
 }
 
-.tab.Mui-selected {
-  color: White; /* Text color when selected */
-  background-color: rgba(116, 116, 116, 0.2); /* Less transparent grey for active tab */
-}
-
-.MuiTab-root {
-  text-decoration: none !important; /* Ensure no underline */
-  border-bottom: none !important; /* Ensure no underline */
-}
-
-.MuiTabs-indicator {
-  display: none !important; /* Remove default underline indicator */
-}
-
 h2 {
   font-size: 6vh;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: bold;
   margin-bottom: 2px;
   margin-top:2px;
 
@@ -372,14 +386,12 @@ li{
   margin-bottom: 10px;
 }
 
-
 .CardText{
-  font-size: 3vh;
   padding-bottom:2px;
   margin: 0px;
 }
 p.CardText{
-  font-size: 1.75vh;
+  font-size: 1rem;
   font-weight: 100;
 }
 
@@ -562,6 +574,7 @@ h1 {
 }
 
 .AboutMe p{
+  font-size: 1rem;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -575,7 +588,6 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   background: rgba(255, 255, 255, .2);
-  font-family: "Isocpeur";
   font-size: larger;
   font-weight: 600;
   cursor: pointer;
@@ -667,7 +679,6 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     background: rgba(255, 255, 255, .2);
-    font-family: "Isocpeur";
     font-size: larger;
     font-weight: 600;
     cursor: pointer;
@@ -917,7 +928,6 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   background: rgba(255, 255, 255, .2);
-  font-family: "Isocpeur";
   font-size: larger;
   font-weight: 600;
   cursor: pointer;

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import './GalleryGrid.css';
+
 
 export default function CardItem({
   item,
   index,
-  onFocus,
-  onBlur,
-  focusedCardIndex,
-  featured = false       // new flag
+  onFocus = () => {},          // default no-op
+  onBlur  = () => {},          // default no-op
+  focusedCardIndex = null,     // optional
+  featured = false
 }) {
   const [hovered, setHovered] = useState(false);
   const isFocused = focusedCardIndex === index;
@@ -52,7 +54,8 @@ export default function CardItem({
   const descStyle = {
     margin: 0,
     marginBottom: 'auto',
-    color: '#555'
+    color: '#555',
+    fontSize: '1rem'
   };
 
   const dateStyle = {
@@ -63,8 +66,8 @@ export default function CardItem({
 
   const featuredTextStyle = {
     marginTop: '12px',
-    fontSize: '1rem',
-    color: '#333'
+    color: '#333',
+    fontSize: "1rem",
   };
 
   return (
@@ -73,7 +76,7 @@ export default function CardItem({
       tabIndex={0}
       role="button"
       onFocus={() => onFocus(index)}
-      onBlur={onBlur}
+      onBlur={() => onBlur()}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

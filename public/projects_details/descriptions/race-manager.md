@@ -38,8 +38,9 @@ I know there are a lot of issues with the program, and I want to keep improving 
 4. Record a finishing timestamp to help later with results processing.
 5. Add a way to input start time in order to calculate full finish time.<br><br> <br><br>
 
-The full code for both programs can be found on my [GitHub](https://github.com/Pilon2020/Mustang-Showdown-Race-Manager)
+The full code for both programs can be found on my <ins>[GitHub](https://github.com/Pilon2020/Mustang-Showdown-Race-Manager)</ins>
 
 #### Project Files
-Example data: [MOCK_DATA.xlsx](/projects_details/media/RaceManager/MOCK_DATA.xlsx)
+Example data: <ins><a href='/projects_details/media/RaceManager/MOCK_DATA.xlsx' download>Mock_Data.xlsx</a></ins>
+
 

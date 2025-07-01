@@ -1,4 +1,4 @@
-This class project for a Finite Element Analysis (FEA) course focused on redesigning the [ENVE Aero Stem](https://enve.com/products/aero-stem?variant=45111154376988) to work with standard 30 mm clip-on aerobars, such as the [Zipp Vuka Clip](https://www.sram.com/en/zipp/models/hb-vkal-clpe-a1). With flat aero handlebars becoming increasingly popular, the goal was to offer cyclists a simple solution that didn’t require replacing their entire cockpit. This idea was sparked when a teammate struggled to find a compatible setup before an Ironman and ultimately raced without aerobars.
+This class project for a Finite Element Analysis (FEA) course focused on redesigning the <ins>[ENVE Aero Stem](https://enve.com/products/aero-stem?variant=45111154376988)</ins> to work with standard 30 mm clip-on aerobars, such as the <ins>[Zipp Vuka Clip](https://www.sram.com/en/zipp/models/hb-vkal-clpe-a1)</ins>. With flat aero handlebars becoming increasingly popular, the goal was to offer cyclists a simple solution that didn’t require replacing their entire cockpit. This idea was sparked when a teammate struggled to find a compatible setup before an Ironman and ultimately raced without aerobars.
 
 The ENVE Aero Stem poses unique challenges for mounting clip-on aerobars due to its non-standard three-point mounting design and incompatibility with traditional round handlebar aerobars. The primary objective of this project was to design and evaluate a secure mounting solution for aerobars. By focusing on the faceplate redesign, the analysis aimed to ensure the attachment meets structural and safety requirements, identify stress concentration areas, and calculate deformation under typical loads. The redesign allows cyclists who already have the ENVE Aero Stem to adapt their system instead of fully replacing their cockpit.
 
@@ -12,11 +12,11 @@ The original ENVE Aero Stem and faceplate geometry were created in Fusion 360. N
 <div class="split-container">
   <figure>
     <img src='/projects_details/media/enve-aero/EnveStem.jpeg' alt='Enve Stem' />
-    <figcaption>The stem in question that I am designing around. Source: <a href='https://enve.com/products/aero-stem?variant=45111154376988' target='_blank'>ENVE</a></figcaption>
+    <figcaption>The stem in question that I am designing around. Source: <ins><a href='https://enve.com/products/aero-stem?variant=45111154376988' target='_blank'>ENVE</a></ins></figcaption>
   </figure>
   <figure>
     <img src='/projects_details/media/enve-aero/EnveBars.jpeg' alt='Specialized Bars' />
-    <figcaption>A pair of aero bars that compatible and commonly used with the stem. Source: <a href='https://www.specialized.com/us/en/roval-rapide-handlebars/p/205446?color=329928-205446' target='_blank'>Specialized</a></figcaption>
+    <figcaption>A pair of aero bars that compatible and commonly used with the stem. Source: <ins><a href='https://www.specialized.com/us/en/roval-rapide-handlebars/p/205446?color=329928-205446' target='_blank'>Specialized</a></ins></figcaption>
   </figure>
 </div><br>
 
@@ -52,7 +52,7 @@ A linear static analysis was performed to assess stress and deformation under ty
 
 
 <figure class='right large'>
-  <img src='projects_details\media\enve-aero\convergence_plot.jpeg' alt='Convergence plot of max displacement vs degrees of freedom' />
+  <img src='/projects_details/media/enve-aero/convergence_plot.jpeg' alt='Convergence plot of max displacement vs degrees of freedom' />
   <figcaption>Convergence plot of max displacement as degrees of freedom increase. Showing that
 by 100000 degrees of freedom the max displacement does not change by much.</figcaption>
 </figure><br>
@@ -86,8 +86,8 @@ This project successfully redesigned the ENVE Aero Stem faceplate to accommodate
 
 The reports that I wrote for the class is attached here:
 
-[Project Proposal](/projects_details/media/EnveAero/Pilon_Oliver_AerobarMount.pdf)
+<ins>[Project Proposal](/projects_details/media/EnveAero/Pilon_Oliver_AerobarMount.pdf)</ins>
 
-[Report](projects_details/media/EnveAero/Pilon_Oliver_Aerobar_Mounting.pdf)
+<ins>[Report](projects_details/media/EnveAero/Pilon_Oliver_Aerobar_Mounting.pdf)</ins>
 
 <!-- Attach Abaqus and 3d Models Here[Full Model]() -->

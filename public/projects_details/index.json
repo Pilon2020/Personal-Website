@@ -1,4 +1,15 @@
-[  {
+[
+  {
+    "id": 9,
+    "slug": "risers",
+    "title": "Custom Cockpit Risers",
+    "carddescription": "Due to compatibility issues between the vision aero bars I use and the bike I have, I have had to make my own custom risers.",
+    "thumbnail": "risers/V3_Position.png",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
+  {
     "id": 8,
     "slug": "bta-lid",
     "title": "BTA Bottle Lid",

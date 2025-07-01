@@ -19,14 +19,12 @@ export default function DetailsPage() {
   useEffect(() => {
     const load = async () => {
       try {
-        // load index.json and find basic metadata
         const idxRes = await fetch('/projects_details/index.json');
         if (!idxRes.ok) throw new Error('Index load failed');
         const all = await idxRes.json();
         const p   = all.find(x => x.slug === slug);
         if (!p) throw new Error('Project not found in index');
 
-        // if detailed layout, fetch docs and posts only
         if (p.layout === 'detailed') {
           setProject(p);
           const [dRes, postRes] = await Promise.all([
