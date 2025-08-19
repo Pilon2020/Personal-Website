@@ -1,13 +1,13 @@
+// LinkTab.jsx (no MUI)
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import Tab from "@mui/material/Tab";
 
-// Function to handle same-page link navigation
+// Handle same-page left-click only (no meta/ctrl/alt/shift, no middle/right click)
 function samePageLinkNavigation(event) {
   if (
     event.defaultPrevented ||
-    event.button !== 0 || // ignore everything but left-click
+    event.button !== 0 ||
     event.metaKey ||
     event.ctrlKey ||
     event.altKey ||
@@ -18,39 +18,49 @@ function samePageLinkNavigation(event) {
   return true;
 }
 
-// LinkTab component using Tab and Link from react-router-dom
-function LinkTab(props) {
+export default function LinkTab({
+  to,
+  selected = false,
+  onSelect,
+  className = "",
+  style,
+  children,
+  label,           // keep compatibility with your previous usage
+  ...rest
+}) {
   const handleClick = (event) => {
     if (samePageLinkNavigation(event)) {
-      // Handle custom logic for the Projects tab
+      // If parent passed an onSelect (e.g., to set the active index), call it
+      if (onSelect) onSelect();
     }
   };
 
+  const baseClass = "tabItem";
+  const selectedClass = selected ? " isSelected" : "";
+  const combinedClass = `${baseClass}${selectedClass}${className ? " " + className : ""}`;
+
   return (
-    <Tab
-    component={Link}
-    to={props.to} // Ensure "to" prop is passed correctly for routing
-    onClick={handleClick}
-    aria-current={props.selected ? "page" : undefined}
-    sx={{
-      color: "White", // Default color for tabs
-      textDecoration: 'none', // Remove underline
-      borderBottom: 'none', // Remove underline
-      "&.Mui-selected": {
-        color: "White", // Text color for selected tab
-        backgroundColor: "rgba(0, 0, 0, 0.2)", // Less transparent grey for active tab
-      },
-      borderRadius: "10px",
-      ...props.sx, // Allow additional styling via props
-    }}
-    {...props}
-  />
+    <Link
+      to={to}
+      role="tab"
+      aria-selected={selected}
+      aria-current={selected ? "page" : undefined}
+      className={combinedClass}
+      style={style}
+      onClick={handleClick}
+      {...rest}
+    >
+      {children ?? label}
+    </Link>
   );
 }
 
 LinkTab.propTypes = {
+  to: PropTypes.string.isRequired,
   selected: PropTypes.bool,
-  to: PropTypes.string.isRequired, // Ensure "to" prop is required
+  onSelect: PropTypes.func,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.node,
+  label: PropTypes.node
 };
-
-export default LinkTab;

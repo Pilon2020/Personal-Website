@@ -1,0 +1,14 @@
+/* Optimized MenuBar.css Canvas */
+.tabsContainer{ width:100%; }
+.tabsNav{ display:flex; justify-content:center; width:100%; }
+.tabsList{ display:flex; align-items:center; list-style:none; padding:0; margin:0; gap:.25rem; }
+
+.tabItem{
+  font-weight:700; font-size: clamp(.8rem, 1.75vh, 1rem);
+  font-family: var(--font-mono);
+  color:white; text-decoration:none;
+  padding:.4rem .75rem; border-radius:6px;
+  transition: background-color 120ms ease;
+}
+.tabItem:hover, .tabItem:focus-visible{ background-color: rgba(116,116,116,.15); outline:none; }
+.tabItem.isSelected{ color:white; background-color: rgba(116,116,116,.2); }

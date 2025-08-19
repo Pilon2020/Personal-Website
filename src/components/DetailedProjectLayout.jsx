@@ -96,15 +96,16 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const cardStyle = {
-    backgroundColor: 'lightgrey',
-    margin: '10px',
-    padding: '1rem',
-    paddingBottom: '2rem',
-    borderRadius: '8px',
-    width: '97%',
-    height: 'auto',
-  };
+const cardStyle = {
+  backgroundColor: 'lightgrey',
+  margin: '10px',
+  padding: '1rem',
+  borderRadius: '8px',
+  width: '97%',
+  height: 'auto',
+  display: 'flow-root',      // <-- contain the float
+};
+
 
   const getExcerpt = (md, maxParas = 3) => {
     const paras = md.split(/\n\s*\n/).filter(p => p.trim() !== '');
@@ -129,7 +130,7 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
     <div className="markdown-detailed">
       {/* Sidebar navigation */}
       <aside style={{ position: 'fixed', top: isScroll ? 0 : '100px', left: 0, bottom: 0, 
-            width: '5%', padding: '1rem', borderRight: '1px solid #eee', overflowY: 'auto', 
+            width: 'auto', padding: '1rem', borderRight: '1px solid #eee', overflowY: 'auto', 
             zIndex: 1000, transition: 'top 0.3s ease-in-out',}}>
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '10px' }} className='menubar'>
           {hasDocs && (<a href="#docs" onClick={e => { e.preventDefault(); scrollToSection('docs'); }}>Documentation</a>)}
@@ -142,7 +143,7 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
       </aside>
 
       {/* Main content */}
-      <main style={{ marginLeft: '5%', padding: '1rem' }}>
+      <main style={{ marginLeft: '7%', padding: '1rem' }}>
         {keyimage && (<img src={`/projects_details/${slug}/media/${keyimage}`} 
                       style={{
                         width: '100%',
@@ -188,15 +189,11 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
                     onClick={() => toggleExpand(post.id)}
                     style={{ cursor: 'pointer', color: 'black' }}
                   >
-
-                    {hasImage && (<img src={`/projects_details/${slug}/media/${post.thumbnail}`} alt={post.title} 
-                      style={{
-                        float: flexDir ? 'left':'right',
-                        maxHeight: '100%', 
-                        width: '15rem',
-                        margin: '0 1rem 0 0',
-                        borderRadius: '5px',
-                      }}
+                    {hasImage && (<img
+                      src={`/projects_details/${slug}/media/${post.thumbnail}`}
+                      alt={post.title}
+                      className="post-thumbnail"
+                      style={{ float: flexDir ? 'left' : 'right' }} // keep dynamic float inline
                     />)}
 
                     <h3>{post.title}</h3>
