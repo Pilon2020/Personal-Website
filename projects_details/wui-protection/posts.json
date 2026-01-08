@@ -1,0 +1,43 @@
+[
+  {
+    "id" : 5,
+    "date": "2025-06-16T14:30:00Z",
+    "title": "v1.3 Released — CLI Enhancements",
+    "body": "preview text",
+    "content":"5.md"
+  },
+  {
+    "id" : 4,
+    "date": "2025-06-10T08:15:00Z",
+    "title": "Feature: Real-Time Data Sync",
+    "body": "Implemented WebSocket-based sync:\n\n- Live updates across clients\n- Automatic reconnection on network loss\n\nSee [the docs](./docs.md#usage).",
+    "thumbnail": "Wildfire_1.jpg",
+    "content":"4.md",
+    "images":""
+  },
+  {
+    "id" : 3,
+    "date": "2025-06-08T12:00:00Z",
+    "title": "Bugfix: Login Loop Issue",
+    "body": "Fixed an authentication bug where users were caught in a login loop when cookies expired. Thanks to @contributor for the report!\n\n> Ensure your cookies are cleared before updating.",
+    "thumbnail": "Wildfire_1.jpg",
+    "content":"3.md",
+    "attachments": [
+      { "name": "stacktrace.log", "url": "/projects_details/<slug>/downloads/login-bug-stacktrace.log" }
+    ]
+  },
+  {
+    "id" : 2,
+    "date": "2025-06-01T09:30:00Z",
+    "title": "Initial Alpha Release",
+    "body": "Released the first alpha build for testing:\n\n```bash\ndownload alpha.zip && unzip alpha.zip\n```",
+    "content":"2.md"
+  },
+  {
+    "id" : 1,
+    "date": "2025-05-25T15:00:00Z",
+    "title": "Project Kickoff",
+    "body": "Project kickoff! We:\n\n1. Set up the repo\n2. Defined project goals\n3. Created issue templates\n\nLooking forward to collaborating.",
+    "content":"1.md"
+  }
+]

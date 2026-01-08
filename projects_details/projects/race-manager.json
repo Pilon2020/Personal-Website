@@ -1,0 +1,48 @@
+{
+  "id": 7,
+  "slug": "race-manager",
+  "layout": 3,
+  "title": "Mustang Showdown Race Manager Program",
+  "carddescription": "A small python program to manage preliminary race results for multi-round triathlon events",
+  "date": "Last Updated: Jun 23, 2024",
+  "description": "race-manager.md",
+  "additionalText": "race-manager.md",
+  "images": [
+  {
+    "filename": "RaceManagerRound1DExample.png",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "RaceManagerRound1Example.png",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "RaceManagerEntry.png",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "RaceManagerBoot.png",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "RaceManagerResultsEdit.png",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  },
+
+  {
+"filename": "RaceManagerResultsEdit_Selected.png",
+    "caption": "Scott Running with his bike",
+    "alt": "Podium shot from 2024 Mustang Showdown"
+  }
+],
+  "extraFiles": []
+}

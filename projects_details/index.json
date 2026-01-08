@@ -1,0 +1,99 @@
+[
+    {
+    "id": 10,
+    "slug": "sandias",
+    "title": "Sandias Sandias",
+    "carddescription": "A new dumb race idea",
+    "thumbnail": "sandias/SANDIASsandias.jpg",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
+  {
+    "id": 9,
+    "slug": "risers",
+    "title": "Custom Cockpit Risers",
+    "carddescription": "Due to compatibility issues between the vision aero bars I use and the bike I have, I have had to make my own custom risers.",
+    "thumbnail": "risers/V3_Position.png",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
+  {
+    "id": 8,
+    "slug": "bta-lid",
+    "title": "BTA Bottle Lid",
+    "carddescription": "A custom lid that screws onto a waterbottle with a straw.",
+    "thumbnail": "bta-lid/WattShop_BTA_1.webp",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
+  {
+    "id": 7,
+    "slug": "enve-aero",
+    "title": "ENVE Aero Stem Redesign",
+    "carddescription": "Fixes aero-bar compatibility for the ENVE Aero Stem.",
+    "thumbnail": "enve-aero/stress_distribution.jpeg",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false
+ 
+  },
+  {
+    "id": 6,
+    "slug": "mustang-showdown-24",
+    "title": "Mustang Showdown 2024",
+    "carddescription": "A super-sprint collegiate triathlon I hosted.",
+    "thumbnail": "mustang-showdown-24/LOGO.jpg",
+    "pinned":false,
+    "featuredText": "Here’s a bit more context on why this was critical for my Ironman prep…", 
+    "hidden": false
+  },
+  {
+    "id": 5,
+    "slug": "all-results",
+    "title": "Race Results Website (All Results)",
+    "carddescription": "I have been frustrated for years that there is no good place to get all of the race results I want, that also provides an indepth analysis of the race results.",
+    "thumbnail": "Athlete_Race_Results.png",
+    "pinned":true,
+    "featuredText": "One of my main projects is getting this up and running, with at least the WCCTC results and athlete. I am having to learn the basics of database management and setup.", 
+    "layout":"detailed",
+    "github":{"owner": "Pilon2020","repo":"all-results"},
+    "hidden": false
+  },
+  {
+    "id": 4,
+    "slug": "race-manager",
+    "title": "Mustang Showdown Race Manager Program",
+    "carddescription": "A small python program to manage preliminary race results for multi-round triathlon events",
+    "thumbnail": "race-manager/RaceManagerBoot.png",
+    "pinned":false,
+    "featuredText": "Pinned Info", 
+    "hidden": false
+
+  },
+  {
+    "id": 3,
+    "slug": "trainer-table",
+    "title": "Indoor Trainer Table",
+    "carddescription": "A small table for indoor training.",
+    "thumbnail": "trainer-table/TrainerTable1.png",
+    "pinned":false,
+    "featuredText": "Pinned Info", 
+    "hidden": true
+
+  },
+  {
+    "id": 1,
+    "slug": "wui-protection",
+    "title": "WUI Firefighter Respiratory Proteciton System",
+    "carddescription": "A respritory protective device for wildland and wildland urban interface firefighters",
+    "thumbnail": "Wildfire_1.jpg",
+    "layout": "detailed",
+    "pinned":true,
+    "featuredText": "Pinned Info", 
+    "github": {},
+    "hidden": false
+  }
+]
