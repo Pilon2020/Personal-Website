@@ -1,3 +1,3 @@
-Other than my experience learning how to do React for my personal website (this website), and using React as the basis for the Race Results website I have had basically no experience with coding everything that is necessary for this website. It has required me to dive into database development and storage optimization as the results documents end up taking up a lot of space if I have a seperate document for each one , and then the question is how do I efficiently search through the results for the data I want. 
+My goal has been to create a as close to all in one place triathlon analysis page as possible. 
 
 I originally built out the basic analysis function that I wanted in a excel document as I am much more confident with it there. The original googlesheet is [here.](https://docs.google.com/spreadsheets/d/19zZrQdFdPiwhV3rvaIdNkJ6UEtoLKbeMjExR50L9jJY/edit?usp=sharing)

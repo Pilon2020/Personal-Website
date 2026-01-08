@@ -90,7 +90,7 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const getExcerpt = (md, maxParas = 3) => {
+  const getExcerpt = (md, maxParas = 2) => {
     const paras = md.split(/\n\s*\n/).filter(p => p.trim() !== '');
     if (paras.length <= maxParas) return { excerpt: md, isLong: false };
     return {
@@ -152,7 +152,7 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
             {visiblePosts.map((post, idx) => {
               const isOpen    = expandedPost === post.id;
               const fullMd    = bodies[post.id] || post.body;
-              const { excerpt, isLong } = getExcerpt(fullMd, 3);
+              const { excerpt, isLong } = getExcerpt(fullMd, 2);
               const hasImage  = Boolean(post.thumbnail);
               const flexDir   = hasImage && idx % 2 === 0;
               const dateSlug = formatDateSlug(post.date);

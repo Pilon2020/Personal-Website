@@ -258,7 +258,6 @@ button:focus-visible {
 .markdown-body figure.right img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
   object-fit: contain;
   border-radius: 12px;
 }
@@ -272,6 +271,8 @@ button:focus-visible {
 .markdown-body .fig-row {
   display: flex;
   gap: 1rem;
+  width: 100%;
+  max-height: 65vh;
 }
 
 .markdown-body .fig-row figure {
@@ -280,25 +281,33 @@ button:focus-visible {
 
 .markdown-body .split-container {
   display: flex;
+  flex-wrap: nowrap;         /* force single row */
   gap: 1rem;
   align-items: flex-start;
+  max-width: 1100px;         /* key: define the container width */
+  width: 100%;
+  margin: 2rem auto;         /* key: center the whole container */
 }
 
 .markdown-body .split-container figure {
-  flex: 1;
+  flex: 1 1 0;               /* two equal columns that can shrink */
+  min-width: 0;              /* key: prevents overflow in flex */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .markdown-body .split-container figure img {
+  width: 100%;               /* key: image can't exceed its column */
+  max-width: 100%;
   height: 24rem;
   object-fit: contain;
 }
 
+
 .markdown-body .fig-row img {
   width: 100%;
-  height: 30vh;
+  height: 45vh;
   object-fit: contain;
 }
 

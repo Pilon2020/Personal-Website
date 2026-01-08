@@ -21,7 +21,25 @@ export default function PostPage() {
     const [groupId, setGroupId] = useState(null);
     const [keyimage, setkeyimage] = useState(null);
     const [postTitle, setPostTitle] = useState('');
+    const [projectTitle, setProjectTitle] = useState('');
     const postBasePath = `/projects_details/${slug}/posts/`;
+
+  useEffect(() => {
+    fetch('/projects_details/index.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Could not load project index');
+        return res.json();
+      })
+      .then(data => {
+        const project = data.find(p => p.slug === slug);
+        if (project) {
+          setProjectTitle(project.title);
+        } else {
+          console.warn(`No project found for ${slug}`);
+        }
+      })
+      .catch(err => console.error(err));
+  }, [slug]);
 
 
   useEffect(() => {
@@ -52,8 +70,8 @@ export default function PostPage() {
 
   return (
     
-    <article className="detail-main" style={{ padding: '1rem' }}>
-        <h3><a href={`../../${slug}`}> {`< Back To ${slug}`}</a></h3>
+    <article className="detail-main" style={{ padding: '1rem',  }}>
+        <h3><a href={`../../${slug}`}> {`< Back To ${projectTitle || slug}`}</a></h3>
         {keyimage && (<img src={`/projects_details/${slug}/media/${keyimage}`} 
                 className="detail-hero"
                 alt={`${postTitle || slug} highlight`}

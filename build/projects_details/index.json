@@ -1,4 +1,24 @@
 [
+    {
+    "id": 11,
+    "slug": "sandias",
+    "title": "Sandias Sandias",
+    "carddescription": "A new dumb race idea",
+    "thumbnail": "sandias/SANDIASsandias.jpg",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
+      {
+    "id": 10,
+    "slug": "mustang-showdown-25",
+    "title": "Mustang Showdown 2025",
+    "carddescription": "YEAR 2! I can't believe they let me do it again",
+    "thumbnail": "mustang-showdown-25/MustangShowdownLogo.jpg",
+    "pinned":false,
+    "featuredText": "Here’s a bit more context on why this was critical for my Ironman prep…", 
+    "hidden": false
+      },
   {
     "id": 9,
     "slug": "risers",
@@ -77,9 +97,9 @@
   {
     "id": 1,
     "slug": "wui-protection",
-    "title": "WUI Firefighter Respiratory Proteciton System",
+    "title": "WUI Respiratory Proteciton System",
     "carddescription": "A respritory protective device for wildland and wildland urban interface firefighters",
-    "thumbnail": "Wildfire_1.jpg",
+    "thumbnail": "PrototypeV4.jpg",
     "layout": "detailed",
     "pinned":true,
     "featuredText": "Pinned Info", 
