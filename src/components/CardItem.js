@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import './GalleryGrid.css';
-
 
 export default function CardItem({
   item,
@@ -12,6 +10,12 @@ export default function CardItem({
 }) {
   const [hovered, setHovered] = useState(false);
   const isFocused = focusedCardIndex === index;
+  const rawDescription = item.carddescription || '';
+  const firstParagraph = rawDescription
+    .split(/\n\s*\n|<br\s*\/?>\s*<br\s*\/?>|<\/p>/i)[0]
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<\/?p>/gi, '')
+    .trim();
 
   // build the image URL
   const thumb = item.thumbnail
@@ -20,16 +24,18 @@ export default function CardItem({
 
   // Featured cards get a taller image and more text
   const containerStyle = {
-    backgroundColor: hovered || isFocused ? '#f5f5f5' : '#ffffff',
+    backgroundColor: hovered || isFocused ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.04)',
     borderRadius: '8px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    boxShadow: hovered ? '0 12px 30px rgba(0,0,0,0.35)' : '0 8px 24px rgba(0,0,0,0.25)',
     overflow: 'hidden',
     outline: 'none',
     display: 'flex',
     flexDirection: 'column',
     marginBottom: featured ? '2rem' : '1rem',
-    border: isFocused ? '2px solid #007aff' : '2px solid transparent',
-    height: featured ? '40vh' : 'auto'
+    border: isFocused ? '2px solid #38bdf8' : '1px solid rgba(255,255,255,0.06)',
+    height: featured ? '100%' : 'auto',
+    transform: hovered || isFocused ? 'translateY(-4px)' : 'none',
+    transition: 'transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, background-color 150ms ease'
   };
 
   const imgStyle = {
@@ -41,33 +47,29 @@ export default function CardItem({
   const contentStyle = {
     padding: '16px',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    flex: 1
   };
 
   const titleStyle = {
     margin: 0,
     marginBottom: '8px',
-    fontSize: featured ? '1.8rem' : '1.2rem',
-    color:"black"
+    fontSize: featured ? '1.6rem' : '1.15rem',
+    color:"#f8fafc",
+    letterSpacing: '0.02em'
   };
 
   const descStyle = {
     margin: 0,
     marginBottom: 'auto',
-    color: '#555',
+    color: 'rgba(241,245,249,0.85)',
     fontSize: '1rem'
   };
 
   const dateStyle = {
     marginTop: '12px',
-    fontSize: featured ? '0.9rem' : '0.8rem',
-    color: '#888'
-  };
-
-  const featuredTextStyle = {
-    marginTop: '12px',
-    color: '#333',
-    fontSize: "1rem",
+    fontSize: featured ? '0.95rem' : '0.85rem',
+    color: '#94a3b8'
   };
 
   return (
@@ -79,14 +81,13 @@ export default function CardItem({
       onBlur={() => onBlur()}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onMouseDown={() => setHovered(true)}
+      onMouseUp={() => setHovered(false)}
     >
       {thumb && <img src={thumb} alt={item.title} style={imgStyle} />}
       <div style={contentStyle}>
         <h3 style={titleStyle}>{item.title}</h3>
-        <p style={descStyle}>{item.carddescription}</p>
-        {featured && item.featuredText && (
-          <p style={featuredTextStyle}>{item.featuredText}</p>
-        )}
+        <p style={descStyle}>{firstParagraph}</p>
         {item.date && <div style={dateStyle}>{item.date}</div>}
       </div>
     </div>

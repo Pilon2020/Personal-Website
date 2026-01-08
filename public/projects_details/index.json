@@ -1,4 +1,14 @@
 [
+    {
+    "id": 10,
+    "slug": "sandias",
+    "title": "Sandias Sandias",
+    "carddescription": "A new dumb race idea",
+    "thumbnail": "sandias/SANDIASsandias.jpg",
+    "pinned": false,           
+    "featuredText": "Pinned Info",
+    "hidden": false 
+  },
   {
     "id": 9,
     "slug": "risers",

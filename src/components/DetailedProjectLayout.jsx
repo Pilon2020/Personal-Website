@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
+import React, { useState, useEffect, useMemo } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import GitHubCommits from './GitHubCommits';
 import './detailedproject.css';
 import { Link } from 'react-router-dom';
+import LayoutMarkdown from './LayoutMarkdown';
 
 
 
@@ -16,11 +14,13 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
   const [expandedPost, setExpandedPost] = useState(null);
   const [bodies, setBodies] = useState({});
   const [modalImage, setModalImage] = useState(null);
-  const [isScroll, setIsScroll] = useState(false);
   const [docsContent, setDocsContent] = useState(null);
   const [hasDocs, setHasDocs]         = useState(false);
   const [docOpen, setDocOpen] = useState(false);  
   const [keyimage, setkeyimage] = useState(null);
+
+  const postBasePath = `/projects_details/${slug}/posts/`;
+  const docsBasePath = `/projects_details/${slug}/`;
 
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
       });
   }, [slug]);
 
-  const sortedPosts = React.useMemo(
+  const sortedPosts = useMemo(
     () => [...posts].sort((a, b) => b.id - a.id),
     [posts]
   );
@@ -72,12 +72,6 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
         });
   }, [slug]);
 
-  useEffect(() => {
-    const handleScroll = () => setIsScroll(window.scrollY >= 100);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   // Fetch expanded post bodies
   useEffect(() => {
     if (expandedPost != null && !bodies[expandedPost]) {
@@ -95,17 +89,6 @@ export default function DetailedProjectLayout({ project, docsMd, posts }) {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
-
-const cardStyle = {
-  backgroundColor: 'lightgrey',
-  margin: '10px',
-  padding: '1rem',
-  borderRadius: '8px',
-  width: '97%',
-  height: 'auto',
-  display: 'flow-root',      // <-- contain the float
-};
-
 
   const getExcerpt = (md, maxParas = 3) => {
     const paras = md.split(/\n\s*\n/).filter(p => p.trim() !== '');
@@ -127,51 +110,42 @@ const cardStyle = {
   
 
   return (
-    <div className="markdown-detailed">
+    <div className="markdown-detailed detailed-layout">
       {/* Sidebar navigation */}
-      <aside style={{ position: 'fixed', top: isScroll ? 0 : '100px', left: 0, bottom: 0, 
-            width: 'auto', padding: '1rem', borderRight: '1px solid #eee', overflowY: 'auto', 
-            zIndex: 1000, transition: 'top 0.3s ease-in-out',}}>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '10px' }} className='menubar'>
+      <aside className="detail-aside">
+        <nav className="detail-nav menubar" aria-label="Project sections">
           {hasDocs && (<a href="#docs" onClick={e => { e.preventDefault(); scrollToSection('docs'); }}>Documentation</a>)}
           <a href="#updates" onClick={e => { e.preventDefault(); scrollToSection('updates'); }}>Updates</a>
           {downloads.length > 0 && <a href="#downloads" onClick={e => { e.preventDefault(); scrollToSection('downloads'); }}>Downloads</a>}
           {github.owner && github.repo && <a href="#commits" onClick={e => { e.preventDefault(); scrollToSection('commits'); }}>Commits</a>}
           {photoFiles.length > 0 && <a href="#photos" onClick={e => { e.preventDefault(); scrollToSection('photos'); }}>Photos</a>}
- 
         </nav>
       </aside>
 
       {/* Main content */}
-      <main style={{ marginLeft: '7%', padding: '1rem' }}>
+      <main className="detail-main">
         {keyimage && (<img src={`/projects_details/${slug}/media/${keyimage}`} 
-                      style={{
-                        width: '100%',
-                        height: '50vh',
-                        margin: '0 1rem 1rem 0',
-                        borderRadius: '8px',
-                        cursor: 'pointer'
-                      }} onClick={() => setModalImage(keyimage)}
+                      className="detail-hero"
+                      alt={`${title} highlight`}
+                      onClick={() => setModalImage(keyimage)}
                     />)}
         <h1>{title}</h1>
       {hasDocs && docsContent && (
-           <section id="docs" style={{ marginBottom: '2rem' }}>
-             <details open={docOpen}>
-               <summary style={{ cursor: 'pointer', fontSize: '1.4rem', fontWeight: 'bold' }}>
-                 Documentation
-               </summary>
-               <div style={{ padding: '0.5rem 1rem'}}>
-                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                   {docsContent}
-                 </ReactMarkdown>
-               </div>
-             </details>
-           </section>
-         )}
-        
+           <section id="docs" className="detail-section">
+             <details open={docOpen} className="detail-accordion">
+             <summary>
+               Documentation
+             </summary>
+             <div>
+                <LayoutMarkdown markdown={docsContent} basePath={docsBasePath} />
+              </div>
+            </details>
+          </section>
+        )}
+
 
         {/* Updates */}
-        <section id="updates" style={{ marginBottom: '2rem' }}>
+        <section id="updates" className="detail-section">
           <h2>Updates</h2>
           <InfiniteScroll dataLength={visiblePosts.length} next={() => setPage(p => p + 1)} hasMore={hasMore} loader={<p>Loading more updates…</p>}>
 
@@ -184,10 +158,10 @@ const cardStyle = {
               const dateSlug = formatDateSlug(post.date);
 
               return (
-                <div key={post.id} style={cardStyle}>
+                <div key={post.id} className="post-card">
                   <div
                     onClick={() => toggleExpand(post.id)}
-                    style={{ cursor: 'pointer', color: 'black' }}
+                    style={{ cursor: 'pointer' }}
                   >
                     {hasImage && (<img
                       src={`/projects_details/${slug}/media/${post.thumbnail}`}
@@ -202,15 +176,12 @@ const cardStyle = {
                     {isOpen ? (
                       <>
                         {/* show excerpt first */}
-                        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-                          {excerpt}
-                        </ReactMarkdown>
+                        <LayoutMarkdown markdown={excerpt} basePath={postBasePath} />
 
                         {/* if it’s actually longer, show Read more */}
                         {isLong && (
                           <div>
-                            
-                            <Link to={`/projects/${slug}/posts/${dateSlug}`} style={{ marginTop: '1rem', color:'black', alignItems:'flex-end' }}>
+                            <Link to={`/projects/${slug}/posts/${dateSlug}`} className="read-more-link">
                               Read more…
                             </Link>
                           </div>
@@ -218,9 +189,7 @@ const cardStyle = {
                       </>
                     ) : (
                       // closed state: show the “preview” from post.body
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {post.body}
-                      </ReactMarkdown>
+                      <LayoutMarkdown markdown={post.body} basePath={postBasePath} />
                     )}
                   </div>
                 </div>
@@ -232,7 +201,7 @@ const cardStyle = {
 
         {/* Downloads */}
         {downloads.length > 0 && (
-          <section id="downloads" style={{ marginBottom: '2rem' }}>
+          <section id="downloads" className="detail-section">
             <h2>Downloads</h2>
             <ul>{downloads.map(file => <li key={file.url}><a href={file.url} download>{file.name}</a></li>)}</ul>
           </section>
@@ -240,7 +209,7 @@ const cardStyle = {
 
         {/* Commits */}
         {github.owner && github.repo && (
-          <section id="commits" style={{ marginBottom: '2rem' }}>
+          <section id="commits" className="detail-section">
             <h2>Recent Commits</h2>
             <GitHubCommits owner={github.owner} repo={github.repo} />
           </section>
@@ -248,15 +217,15 @@ const cardStyle = {
 
         {/* Photos with click-to-open modal */}
         {photoFiles.length > 0 && (
-          <section id="photos" style={{ marginTop: '2rem' }}>
+          <section id="photos" className="detail-section">
             <h2>Photos</h2>
-            <div style={{ display: 'flex', overflowX: 'auto', gap: '10px', padding: '1rem 0' }}>
+            <div className="detail-photo-grid">
               {photoFiles.map((file, idx) => (
                 <img
                   key={idx}
                   src={`/projects_details/${slug}/media/${file}`}
                   alt={`photo-${idx}`}
-                  style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: '4px', cursor: 'pointer' }}
+                  className="detail-photo-thumb"
                   onClick={() => setModalImage(file)}
                 />
               ))}

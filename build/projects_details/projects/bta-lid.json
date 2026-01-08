@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "slug": "bta-lid",
+  "layout": 3,
+  "title": "BTA Bottle Lid",
+  "carddescription": "A custom lid that screws onto a Purist waterbottle with a hose.",
+  "date": "Last Updated: Jun 23, 2025",
+  "description": "bta-lid.md",
+  "additionalText": "bta-lid.md",
+   "images": [
+    {
+      "filename":"Fmom_calcs1.png",
+      "caption": "Scott Running with his bike",
+      "alt": "Podium shot from 2024 Mustang Showdown"
+    },{
+      "filename":"VisionBTA.jpg",
+      "caption": "Scott Running with his bike",
+      "alt": "Podium shot from 2024 Mustang Showdown"
+    },{
+      "filename":"Wattshop_BTA_1.webp",
+      "caption": "Scott Running with his bike",
+      "alt": "Podium shot from 2024 Mustang Showdown"
+    }
+  ],
+  "extraFiles": []
+}

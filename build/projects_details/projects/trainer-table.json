@@ -1,0 +1,55 @@
+{
+  "id": 7,
+  "slug": "trainer-table",
+  "layout": 3,
+  "images": [
+    {
+      "filename": "TrainerTable1.png",
+      "caption": "Caption",
+      "alt":"alt"
+  },{
+      "filename":"TableMountV3_3.jpg",
+
+          "caption": "Caption",
+      "alt":"alt"
+  },{
+      "filename":"TableMountV1_2.jpg",
+          "caption": "Caption",
+      "alt":"alt"
+  },{
+    "filename": "TrainerTable2.png",
+          "caption": "Caption",
+      "alt":"alt"
+  },{
+    "filename": "TableMountV1_1.jpg",
+          "caption": "Caption",
+      "alt":"alt"
+  },{
+    "filename":"TableMountV2_1.jpg",
+    "caption":"Caption",
+    "alt":"alt"
+  },{
+    "filename":"TableMountV2_1.jpg",
+    "caption":"Caption",
+    "alt":"alt"
+  },{
+    "filename": "TableMountV2_2.jpg",
+    "caption":"Caption",
+    "alt":"alt"
+  },{
+    "filename":"TableMountV3_1.jpg",
+    "caption":"Caption",
+    "alt":"alt"
+  },{
+    "filename": "TableMountV3_2.jpg",
+    "caption":"Caption",
+    "alt":"alt"
+  }
+  ],
+  "title": "Indoor Trainer Table",
+  "carddescription": "A small table for indoor training.",
+  "date": "Last Updated: Jun 23, 2024",
+  "description": "trainer-table.md",
+  "additionalText": "trainer-table.md",
+  "extraFiles": []
+}

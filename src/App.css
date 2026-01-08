@@ -1,956 +1,441 @@
-/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-html, body, .markdown-body {
-  overflow-x: hidden;
-  font-family: 'Roboto Mono', 'JetBrains Mono', 'Source Code Pro',
-               Consolas, Menlo, Monaco, 'Courier New', monospace;
+:root {
+  --bg: #2f343c;
+  --bg-2: #2f343c;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #f1f5f9;
+  --muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-2: #a855f7;
+  --font: 'Inter', 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  background: linear-gradient(180deg, #3a3f46 0%, #2b3036 100%);
+  color: var(--text);
+  min-height: 100%;
 }
 
 a {
-  color: white;
+  color: var(--text);
   text-decoration: none;
 }
 
-a:visited {
-  color: white;
-}
-
-.carousel-container {
-  position: relative; /* Ensure the arrows are positioned relative to the container */
-  width: 100%;
-  max-height: 60vh; /* Max height to contain the images */
-  overflow: hidden;
-}
-
-.carousel {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.carousel_img {
-  width: 100%;
-  object-fit: contain;
-  display: block;
-  max-height: 60vh;
-}
-
-.additional table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.additional th, .additional td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.additional th {
-  background-color: #f2f2f2;
-}
-
-
-
-/* Arrow styling */
-.prev, .next {
-  position: absolute;
-  top: 50%; /* Center arrows vertically */
-  transform: translateY(-50%);
-  font-size: 2rem; /* Larger arrow size */
-  color: white;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px; /* Only horizontal padding for click area */
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 0; /* Remove circular background */
-  border-radius: 5px;
-}
-
-.prev {
-  left: 10px; /* Position to the left */
-}
-
-.next {
-  right: 10px; /* Position to the right */
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Thumbnail gallery styling */
-.thumbnail-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.thumbnail-gallery img {
-  cursor: pointer;
-  width: 100px; /* Ensure thumbnail has a width */
-  height: auto; /* Adjust height automatically to preserve aspect ratio */
-  max-height: 100px; /* Limit max height */
-  margin: 5px;
-  object-fit: contain;
-  border: 2px solid transparent; /* Default border */
+a:hover {
+  color: var(--accent);
 }
 
 .App {
+  min-height: 100vh;
+}
+
+.App-header {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.tabsContainer {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.35rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.App-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem 3rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text);
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pagetitle {
+  text-align: left;
+  letter-spacing: 0.08em;
+}
+
+.about-me-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: 
-    linear-gradient(rgb(56, 56, 56), transparent),
-    linear-gradient(to top left, rgb(31, 32, 34), transparent),
-    linear-gradient(to top right, rgb(37, 37, 37), transparent);
-  background-blend-mode: screen;
-}
-
-.column {
-  float: left;
-}
-
-img {
-  object-fit: cover;
-}
-
-/* Project Markdown Styles*/
-
-.markdown-body h1{
-  font-size: 5vh;
-}
-
-.markdown-body h2{
-  font-size: 4vh;
-}
-
-.markdown-body h4{
-  font-size: 3vh;
-  margin-top: 0px;
-}
-
-.markdown-body p{
-  font-size: 1.06rem;
-  text-align: justify;
-  text-justify: auto;
-}
-
-.markdown-body figure.left {
-  float: left;
-  margin: 0 1em 1em 0;
-  text-align: center;           /* centers image and caption inside figure */
-  width: fit-content;           /* optional: shrink-wrap to content */
-}
-
-.markdown-body figure.left img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: 50vh;
-}
-
-.markdown-body figure.left figcaption {
-  font-size: 1em;
-  color: #ffffff;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-
-
-.markdown-body .fig-row {
-  display: flex;
-  justify-content: space-between;
+  gap: 1.5rem;
   align-items: flex-start;
+  max-width: 880px;
+  margin: 0 auto;
 }
-.markdown-body .fig-row figure {
-  flex: 1;               /* all three equal width */
-  margin: 0 1%;          /* gutter */
-}
-.markdown-body .fig-row img {
+
+.AboutMeIMG {
   width: 100%;
-  height: 30vh;
-  display: block;
-  object-fit: contain;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.32);
 }
 
-.markdown-body figure.left.large img {
-  float: left;
-  margin: 0 1em 0 0;   
-  object-fit:contain;  
-  height: auto;   
-  width: auto; 
+.about-me-text {
+  padding: 0;
 }
 
-.markdown-body figure.right {
-  float: right;
-  margin: 0 0 0 1em;
-  max-width: 40%;          
-}
-
-.markdown-body figure.center {
-  float: flex;
-  margin: 0 0;
-  max-width: 40%;          
-}
-
-.markdown-body figure.photo_album img{
-  display: block;
-  margin: auto;    
-  max-width: 50%;         
-}
-
-.markdown-body figure.right.large img {
-  float: right;
-  margin: 0 0 0 1em;   
-  object-fit:contain;  
-}
-
-.markdown-body .split-container {
+.download-resume {
   display: flex;
-  justify-content: space-between; /* even spacing */
-  align-items: flex-start;        /* align tops */
-  gap: 1em;                       /* space between items */
+  justify-content: center;
+  margin-top: 0.25rem;
+  width: 100%;
 }
 
-.markdown-body .split-container figure {
-  flex: 1;                        /* each takes equal width */
-  margin: 0;
+button {
+  font-family: var(--font);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.8rem 1.4rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  width: auto;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.markdown-body {
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.layout-wrapper {
   display: flex;
-  flex-direction: column;         /* stack img over caption */
-  align-items: center;            /* center‐align within each figure */
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.markdown-body .split-container figure img {
-  width: auto;                    /* fill its column */
-  height: 27rem;                   /* keep aspect ratio */
-  object-fit: contain;
+.layout-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.markdown-body .split-container figure figcaption {
-  margin-top: 0.5em;
-  text-align: center;
-  margin-bottom: 0.5em;
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+  padding: 0.2rem 0;
+  transition: color 120ms ease, transform 120ms ease;
 }
 
-
-.markdown-body figure img {
-  display: block;
-  max-width: 100%;         
-  height: 50vh;
+.back-link:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
 }
 
-.markdown-body figcaption {
-  font-size: 1em;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+.back-link__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.markdown-body h1 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.markdown-body h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-top: 1.5rem;
+}
+
+.markdown-body h4 {
+  font-size: 1.15rem;
+  margin-top: 1rem;
+}
+
+.markdown-body p {
+  font-size: 1rem;
+  text-align: justify;
+  color: var(--muted);
 }
 
 .markdown-body img {
   display: block;
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
 }
 
-.markdown-body img.left {
+.markdown-body figure {
+  margin: 1rem 0;
+}
+
+.markdown-body figure.left {
   float: left;
-  margin: 0 1em 1em 0;
+  margin: 0 1rem 1rem 0;
+  text-align: center;
+  width: min(48%, 420px);
+  shape-outside: margin-box;
 }
 
-
-.markdown-body img.right {
+.markdown-body figure.right {
   float: right;
-  margin: 0 0 1em 1em;
+  margin: 0 0 1rem 1rem;
+  text-align: center;
+  width: min(48%, 420px);
+  shape-outside: margin-box;
+}
+.markdown-body figure.figure-offset {
+  margin-top: 2.25rem !important; /* nudge down to sit a couple of lines below adjacent content */
 }
 
-.markdown-body figure.center.split img {
+.markdown-body figure.center {
   display: block;
-  margin: 1em auto;    
-  max-width: 50%;     
+  text-align: center;
+  margin: 1rem auto;
 }
 
+.markdown-body figure.left img,
+.markdown-body figure.right img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.markdown-body figure figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.markdown-body .fig-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.markdown-body .fig-row figure {
+  flex: 1;
+}
+
+.markdown-body .split-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.markdown-body .split-container figure {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.markdown-body .split-container figure img {
+  height: 24rem;
+  object-fit: contain;
+}
+
+.markdown-body .fig-row img {
+  width: 100%;
+  height: 30vh;
+  object-fit: contain;
+}
+
+.markdown-body figure.photo_album img {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.markdown-body .layout-grid,
+.markdown-detailed .layout-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols, auto-fit), minmax(var(--grid-min, 240px), 1fr));
+  gap: var(--grid-gap, 1rem);
+  align-items: var(--grid-align, start);
+  justify-items: var(--grid-justify, stretch);
+  margin: 1.25rem 0;
+}
+
+.markdown-body .layout-col,
+.markdown-detailed .layout-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.markdown-body .layout-figure,
+.markdown-detailed .layout-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.markdown-body .layout-figure img,
+.markdown-detailed .layout-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.markdown-body .layout-figure.align-left,
+.markdown-detailed .layout-figure.align-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  max-width: min(48%, 420px);
+  shape-outside: margin-box;
+}
+
+.markdown-body .layout-figure.align-right,
+.markdown-detailed .layout-figure.align-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: min(48%, 420px);
+  shape-outside: margin-box;
+}
+
+.markdown-body .layout-figure figcaption,
+.markdown-detailed .layout-figure figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.markdown-body .table-wrapper,
+.markdown-detailed .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 1rem 0;
+}
 
 .markdown-body table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1em 0;
+  margin: 1.5rem 0;
 }
 
-.markdown-body table th {
-  border: 1px solid #ddd;
-  padding: 0.5em;
-  color: #000000;
-}
-
-
-.markdown-body table td {
-  border: 1px solid #ddd;
-  padding: 0.5em;
-}
-
-.markdown-body table th {
-  background-color: #f4f4f4;
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem;
   text-align: left;
 }
 
-
-/* Detailed Project Markdown Styles*/
-.markdown-detailed h1{
-  font-size: 5vh;
-}
-
-.markdown-detailed p{
-  font-size: 1.06rem;
-  margin: auto;
-}
-
-/* Header */
-.App-header {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically if needed */
-  font-size: calc(10px + 2vmin);
-  width: fit-content; /* Adjust width based on content */
-  position: fixed; /* Ensure the header stays fixed at the top */
-  top: 1vh; /* Float 1vh below the top of the viewport */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  z-index: 1000; /* Ensure it is above other content */
-  padding: 1vh;
-}
-
-/* Tabs Container */
-.tabsContainer {
-  position: relative; /* Position relative to allow for positioning inside header */
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border-radius: 10px; /* Radius for rounded corners */
-  padding: 1vh; /* Padding for better content spacing */
-  color: #000; /* Text color for readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a more polished look */
-}
-
-
-.tabsBackground {
-  background-color: transparent; /* Background for Tabs container */
-}
-
-/* Tabs and LinkTabs */
-.tab {
-  color: White; /* Default text color for tabs */
-}
-
-h2 {
-  font-size: 6vh;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 2px;
-  margin-top:2px;
-
-}
-
-h2.pagetitle{
-  text-align: center;
-}
-
-h3 {
-  font-size: 4vh;
-  margin-bottom: 4px;
-  margin-top: 0;
-}
-
-h4 {
-  font-size: 3vh;
-  margin-bottom: 2px;
-}
-
-p {
-  margin:0;
-  font-size: 2vh;
-  font-weight: 100;
-  padding-bottom: 10px;
-}
-
-li{
-  margin-bottom: 10px;
-}
-
-.CardText{
-  padding-bottom:2px;
-  margin: 0px;
-}
-p.CardText{
-  font-size: 1rem;
-  font-weight: 100;
-}
-
-p.DateContainer{
-  font-size: 1.75vh;
-  font-weight: 100;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0px;
-}
-
-.StyledCardContent{
-  display:flex;
-  flex-direction: column;
-  gap: 10;
-  padding-top: 16px;
-  flex-grow: 1;
-  height: fit-content;
-  padding-bottom: 3vh;
-  position: relative;
-}
-
-.description{
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.indented {
-text-indent: 2vw;
-}
-
-/* Masonry Grid */
-.masonry-container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  width: 100%; /* Full width */
-  overflow: hidden; /* Prevent layout jumps */
-}
-
-.my-masonry-grid {
-  display: flex;
-  width: 100%; /* Full width */
-  align-items: flex-start; /* Align items to the top */
-  padding: 0; /* Remove padding */
-  transition: all 0.3s ease-in-out;
-  overflow: hidden; /* Prevent layout jumps */
-}
-
-.my-masonry-grid_column {
-  display: flex;
-  flex-direction: column;
-  padding: 0 5px; /* Horizontal spacing between items */
-}
-
-.my-masonry-grid_column > div {
-  margin-bottom: 20px; /* Add vertical spacing between items */
-}
-
-/* Add margin-bottom to all the tiles (card items) */
-.styledCard {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #bf00ff; /* Define this or use a color */
-  transition: background-color 0.3s;
-  box-sizing: border-box; /* Includes padding and borders in element's total width and height */
-  margin-bottom: 10px; /* Add spacing between rows */
-}
-
-.styledCard:hover {
-  background-color: #bf00ff; /* Hover background color */
-  cursor: pointer;
-}
-
-.styledCard:focus-visible {
-  outline: 3px solid hsla(210, 98%, 48%, 0.5);
-  outline-offset: 2px;
-}
-
-
-/* Modal (Image Zoomin)*/
-.modal {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  background: white;
-  background-color: rgba(82, 82, 82, 0.345);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
-  transition: all 0.5s;
-  opacity: 0; /* Default state */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Center the content vertically */
-}
-
-/* New rule for showing the modal */
-.modal.show {
-  opacity: 1; /* Visible state */
-}
-
-.responsive-image {
-  max-width: 100%;
-  max-height: 90vh; /* Adjust based on your needs */
-  object-fit: contain; /* Ensure the image scales proportionally */
-}
-
-.MainImage > * {
-  flex: 3; /* Adjust the proportion of space it takes, compared to the stacked images */
-  width: 100%;
-  height: auto;
-}
-
-
-.FeatureColumn {
-  display: flex;
-  flex-wrap: wrap; /* Ensure image and text are side by side */
-  
-}
-
-.FeatureImg {
-  width: 100%; /* Adjust width to fit next to the text */
-  object-fit: cover;
-}
-
-.StackedImg {
-  display: flex;
-}
-
-.SubImage{
-  display:none;
-}
-
-/* Layout for phone screens */
-.App-content {
-  flex: 1;
-  padding: 6em 5px 1em;
-  color: #ffffff; /* Corrected text color */
-  text-align: left; /* Ensure text is aligned to the left */
-}
-
-.row {
-  width: 100%;
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Typography Settings */
-h1 {
-  font-size: 17vw;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-}
-
-.about-me-container {
-  display: flex;
-  flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
-  align-items: flex-start; /* Aligns items at the top of the container */
-  justify-content: center; /* Center items horizontally */
-  margin: 20px;
-}
-
-.AboutMeIMG {
-  width: 100%; /* Sets a consistent image width */
-  height: 50vh; /* Sets a reasonable max height for the image */
-  object-fit: cover;
-  object-position: center; /* Ensures the image is centered within the element */
-  margin: auto; /* Centers the image inside the flex container */
-}
-
-.AboutMe {
-    float: left;
-    width: 100%;
-    max-width: 90vw;
-}
-
-.AboutMe p{
-  font-size: 1rem;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.ProjectImgs0{
-  padding: 0px;
-}
-
-button {
-  font-family: 'Roboto Mono', 'JetBrains Mono', 'Source Code Pro',
-               Consolas, Menlo, Monaco, 'Courier New', monospace;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, .2);
-  font-size: larger;
-  font-weight: 600;
-  cursor: pointer;
-  align-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: white;
-  width: 50vw;
-}
-
-.download-resume {
-  width: 100%; /* Makes the link take up full width of its container */
-  font-family: 'Roboto Mono', 'JetBrains Mono', 'Source Code Pro',
-               Consolas, Menlo, Monaco, 'Courier New', monospace;
-  text-align: center; /* Centers the link horizontally */
-  margin-top: 20px;
-  color: #000000;
-  text-decoration: none;
-}
-
-
-
-/* Layout for Tablets */
-@media only screen and (min-width:768px){
-  .App-content {
-    flex: 1;
-    padding: 6em 60px 2em;
-    color: #ffffff; /* Corrected text color */
-    text-align: left; /* Ensure text is aligned to the left */
-  }
-
-  h1 {
-    font-size: 10vw;
-    text-align: left;
-  }
-
-  .row {
-    width: 100%;
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
-  .about-me-container {
-    display: flex;
-    flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
-    align-items: flex-start; /* Aligns items at the top of the container */
-    justify-content: center; /* Center items horizontally */
-    margin: 20px;
-  }
-  
-  .AboutMeIMG {
-    width: 100%; /* Sets a consistent image width */
-    max-height: 60vh; /* Sets a reasonable max height for the image */
-    object-fit: cover;
-    object-position: center; /* Ensures the image is centered within the element */
-    margin: auto; /* Centers the image inside the flex container */
-    padding-bottom: 10px;
-  }
-  
-  .AboutMe {
-      float: left;
-      max-width: 100%;
-  }
-
-  .AboutMe p{
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
-  .ProjectImgs0{
-    padding: 4px;
-  }
-
-  .ImgColumns {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    height: auto; /* Ensure that both the main image and the stacked images are within the same height */
-  }
-  .MainImage{
-    max-height: 60vh;
-    object-fit: contain;
-  }
-  .SubImage{
-    display:none;
-  }
-
-  button {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, .2);
-    font-size: larger;
-    font-weight: 600;
-    cursor: pointer;
-    align-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white;
-    width: 30vw;
-  }
-
-  .download-resume {
-    width: 100%; /* Makes the link take up full width of its container */
-    font-family: 'Roboto Mono', 'JetBrains Mono', 'Source Code Pro',
-               Consolas, Menlo, Monaco, 'Courier New', monospace;
-    text-align: center; /* Centers the link horizontally */
-    margin-top: 20px;
-    color: #000000;
-    text-decoration: none;
-  }
-
-}
-/* Layout for Desktops */
-@media only screen and (min-width:1400px){
-a {
-  color: white;
-}
-
-
-h1 {
-  font-size: 5vw;
-}
-
-.about-me-container {
-  display: flex;
-  flex-wrap: wrap; /* Ensures no line breaks occur unless necessary */
-  align-items: flex-start; /* Aligns items at the top of the container */
-  justify-content: center; /* Center items horizontally */
-  margin: 20px;
-}
-
-.AboutMeIMG {
-  width: 55vw; /* Sets a consistent image width */
-  max-height: 60vh; /* Sets a reasonable max height for the image */
-  object-fit: cover;
-  object-position: center; /* Ensures the image is centered within the element */
-  margin: auto; /* Centers the image inside the flex container */
-  padding-bottom: 10px;
-}
-
-.about-me-text {
-  flex-grow: 1; /* Allows the text to occupy remaining space */
-  font-size: 16px;
-  line-height: 1.5;
-  max-width: 75vw; /* Prevents text from overflowing next to the image */
-}
-
-.download-resume {
-  width: 100%; /* Makes the link take up full width of its container */
-  font-family: 'Roboto Mono', 'JetBrains Mono', 'Source Code Pro',
-               Consolas, Menlo, Monaco, 'Courier New', monospace;
-  text-align: center; /* Centers the link horizontally */
-  margin-top: 20px;
-  color: #000000;
-  text-decoration: none;
-}
-
-.download-resume:hover {
-  font-family: 'Roboto Mono', 'JetBrains Mono', 'Source Code Pro',
-               Consolas, Menlo, Monaco, 'Courier New', monospace;
-  color: #000000; /* Keeps hover effect consistent */
-  text-decoration: underline;
-}
-
-
-.ProjectImgs {
-  padding-top: 20px;
-  margin-bottom:0;
-}
-
-/* ImgColumns - Top section with 3 images */
-.ImgColumns {
-  display: flex;
-  gap: 10px; /* Space between the images */
-  width: 100%;
-  height: auto;
-}
-
-.MainImage {
-  flex: 3; /* Main image takes more space */
-  width: 70vw; /* Adjust as per need */
-  height: 100%; 
-  object-fit: cover; /* Maintain aspect ratio */
-}
-
-.StackedImg {
-  flex: 1; /* Stacked images take less space */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.StackedImg > * {
-  flex: 1;
-  height: calc(50% - 5px); /* Each stacked image takes half the space */
-  object-fit: cover;
+.markdown-body th {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
 }
-
-/* FeatureImg - Image next to the features section */
-.FeatureImg {
-  float: left;
-  width: 50vw; /* Ensure image takes up 50% of the width */
-  height: 40vh;
-  object-fit: contain;
-
-}
-
-.FeatureColumn {
-  gap: 32px;
-  margin:0;
-  align-items: flex-start; /* Vertically align items if needed */
-}
-
-
-.FeatureText {
-  flex: 1; /* Take the remaining space next to the image */
-  width: 50%; /* Ensure the text section is next to the image */
-  align-self: flex-start; /* Align the text to the top left of the column */
-}
-
-.MainImage{
-  display: flex;
-  width: 100%;
-}
-
-.SubImage{
-  display: flex;
-}
-
-.ImageWrap {
-  overflow: hidden;
-  position: relative;
-}
-
-.FeatureImg {
-  float: left;
-  width: 100%; /* Make the image take up 50% of the screen width */
-  margin-right: 20px;
-  margin-bottom: 20px;
-  max-width: 50vw; /* Ensure image scales with viewport */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.description {
-  margin: 0; /* Remove any margin */
-  padding: 0; /* Remove any padding */
-}
-
-.additional h3 {
-  margin-top: 5vh;
-}
-
-.additional h4{
-  margin-top: 1vh;
-}
-
-.ImgColumns .Layout1{
-  flex: 1; /* Stacked images take less space */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70vh;
-}
-
-.ImgColumns .Layout2{
-  flex: 1; /* Stacked images take less space */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70vh;
-}
-
-.ProjectImgs .Layout1{
-  display: flex;
-  flex-wrap: wrap; /* Allow images to wrap into rows */
-  height: 70vh; /* Set height of the container */
-  width: 100%; /* Total width of the container */
-  gap: 10px; /* Add 10px gap between images */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  box-sizing: border-box; /* Ensure box-sizing includes padding/border */
-}
-
-.GridImage {
-  flex: 1 1 48%; /* Each image takes up 48% of the container's width, minus gap */
-  object-fit: contain; /* Scale image to fit */
-  object-position: center; /* Center the image */
-  display: block; /* Remove extra space below images */
-  box-sizing: border-box; /* Ensure border and padding are included in width/height */
-}
-
-h2 {
-  font-size: 6vh;
-  text-transform: uppercase;
-  font-weight: bolder;
-  margin-bottom: 2px;
-}
-
-h2.pagetitle{
-  text-align: left;
-}
-
-
- .Layout0 .ImgColumns {
-  display: flex;
-  height: 70vh; /* Adjust the height of the layout */
-  gap: 10px; /* Gap between the main image and stacked images */
-  box-sizing: border-box;
-} 
-
-.Layout0 .MainImage {
-  flex: 1 1 100%; /* Main image takes up 60% of the width */
-  height: 100%;
-  object-fit: cover; /* Make sure the image fills the container */
-  object-position: center;
-}
-
-.Layout0 .StackedImg {
-  display: flex;
-  flex-direction: column; /* Stack images vertically */
-  flex: 1 1 60%; /* Right side images take up 35% of the container */
-  gap: 10px; /* Add gap between stacked images */
-}
-
-.Layout0 .SubImage {
-  width: 100%; /* Make the images fill the width of their container */
-  height: calc(50% - 5px); /* Adjust height to fit two images inside the container */
-  object-fit: cover; /* Make sure the images cover their space */
-  object-position: center;
-}
-
-.ProjectImgs .Layout0{
-  display: flex;
-  flex-wrap: wrap; /* Allow images to wrap into rows */
-  height: 100%; /* Set height of the container */
-  width: 100%; /* Total width of the container */
-  gap: 10px; /* Add 10px gap between images */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  box-sizing: border-box; /* Ensure box-sizing includes padding/border */
-} 
 
-button {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, .2);
-  font-size: larger;
-  font-weight: 600;
-  cursor: pointer;
-  align-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: white;
-  width: 10vw;
+.markdown-detailed {
+  color: var(--text);
 }
 
 .post-thumbnail {
   display: block;
-  float: right; /* or left dynamically in JSX */
+  float: right;
   width: 15rem;
   max-height: 100%;
-  margin: 0 1rem 10px 0; /* 👈 bottom margin */
-  border-radius: 5px;
+  margin: 0 1rem 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
+.menubar a {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .App-content {
+    padding-top: 6.5rem;
+  }
+
+  .AboutMeIMG {
+    max-height: 320px;
+  }
+
+  .markdown-body figure.left,
+  .markdown-body figure.right {
+    float: none;
+    margin: 1rem auto;
+  }
+
+  .markdown-body .split-container,
+  .markdown-body .fig-row {
+    flex-direction: column;
+  }
+
+  .markdown-body .layout-figure.align-left,
+  .markdown-body .layout-figure.align-right,
+  .markdown-detailed .layout-figure.align-left,
+  .markdown-detailed .layout-figure.align-right {
+    float: none;
+    margin: 1rem auto;
+    max-width: 100%;
+  }
 }

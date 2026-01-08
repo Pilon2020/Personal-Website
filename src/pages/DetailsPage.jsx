@@ -1,11 +1,9 @@
 // src/pages/DetailsPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link }           from 'react-router-dom';
-import ReactMarkdown                 from 'react-markdown';
 import renderLayout                  from '../components/renderLayout';
 import DetailedProjectLayout         from '../components/DetailedProjectLayout';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
+import LayoutMarkdown                from '../components/LayoutMarkdown';
 
 export default function DetailsPage() {
   const { slug } = useParams();
@@ -100,12 +98,8 @@ export default function DetailsPage() {
     <div className="markdown-body" style={{ overflowX:'hidden', width:'100%'}}>
       {renderLayout(
         project,
-        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} 
-        components={{     a: ({ node, children, ...props }) => (
-      <a {...props} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>)}}>{descriptionMd}</ReactMarkdown>,
-        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{additionalMd}</ReactMarkdown>
+        <LayoutMarkdown markdown={descriptionMd} />,
+        <LayoutMarkdown markdown={additionalMd} />
       )}
     </div>
   );

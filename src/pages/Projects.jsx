@@ -28,29 +28,30 @@ export default function Projects() {
   );
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h2 className="pagetitle" style={{ margin: "0 0 1rem" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+      <h2 className="pagetitle" style={{ margin: 0 }}>
         Projects
       </h2>
-      <p style={{ textAlign: "justify", marginBottom: "1.5rem" }}>
-        These are the projects I’ve been working on…
+      <p style={{ textAlign: "justify", marginBottom: 0}}>
+        A mix of shipped work and ongoing experiments (Mostly ongoing experiments and ideas). Click any card for the full story, docs, and build logs.
       </p>
 
       {/* pinned cards in a simple responsive row */}
       {pinned.length > 0 && (
         <div
           style={{
-            display: "flex",
-            flexWrap: "wrap",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "1rem",
             marginBottom: "2rem",
+            alignItems: "stretch",
           }}
         >
           {pinned.map((p, i) => (
             <Link
               to={`/projects/${p.slug}`}
               key={p.id}
-              style={{ textDecoration: "none", flex: "1 1 300px" }}
+              style={{ textDecoration: "none" }}
             >
               <CardItem item={p} index={i} featured />
             </Link>

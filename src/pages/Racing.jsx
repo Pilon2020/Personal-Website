@@ -1,6 +1,6 @@
 import React from 'react';
 
-const racing = () => {
+const Racing = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
       {/* Header Section */}
@@ -12,4 +12,4 @@ const racing = () => {
 }
 
 
-export default racing;
+export default Racing;

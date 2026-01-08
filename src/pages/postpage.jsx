@@ -1,9 +1,7 @@
 // PostPage.jsx
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
 import { useParams } from 'react-router-dom';
+import LayoutMarkdown from '../components/LayoutMarkdown';
 import '../components/detailedproject.css';
 
 const formatDateSlug = isoString => {
@@ -21,8 +19,9 @@ export default function PostPage() {
     const [md, setMd] = useState('');
     const [modalImage, setModalImage] = useState(null);
     const [groupId, setGroupId] = useState(null);
-    const [keyimage, setkeyimage] = useState([]);
-    const [postTitle, setPostTitle] = useState([]);
+    const [keyimage, setkeyimage] = useState(null);
+    const [postTitle, setPostTitle] = useState('');
+    const postBasePath = `/projects_details/${slug}/posts/`;
 
 
   useEffect(() => {
@@ -45,28 +44,41 @@ export default function PostPage() {
     }, [slug, dateSlug]);
 
   useEffect(() => {
+    if (!groupId) return;
     fetch(`/projects_details/${slug}/posts/${groupId}.md`)
       .then(r => r.text())
       .then(setMd);
-  });
+  }, [slug, groupId]);
 
   return (
     
-    <article style={{ padding: '1rem' }}>
-        <h1><a href={`../../${slug}`}> {`< Back To ${slug}`}</a></h1>
+    <article className="detail-main" style={{ padding: '1rem' }}>
+        <h3><a href={`../../${slug}`}> {`< Back To ${slug}`}</a></h3>
         {keyimage && (<img src={`/projects_details/${slug}/media/${keyimage}`} 
-                style={{
-                width: '100%',
-                height: '50vh',
-                margin: '0 1rem 1rem 0',
-                borderRadius: '8px',
-                cursor: 'pointer'
-                }} onClick={() => setModalImage(keyimage)}
+                className="detail-hero"
+                alt={`${postTitle || slug} highlight`}
+                onClick={() => setModalImage(keyimage)}
             />)}
       <h3>{postTitle}</h3>
-        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-          {md}
-        </ReactMarkdown>
+        <LayoutMarkdown
+          markdown={md}
+          basePath={postBasePath}
+          components={{
+            img: ({ style, ...props }) => (
+              <img
+                {...props}
+                style={{
+                  display: 'block',
+                  margin: '1.5rem auto',
+                  maxWidth: '70vw ',
+                  width: '100%',
+                  height: 'auto',
+                  ...style
+                }}
+              />
+            )
+          }}
+        />
 
       {modalImage && (
           <div

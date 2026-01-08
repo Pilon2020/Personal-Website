@@ -14,7 +14,7 @@ export default function GitHubCommits({ owner, repo }) {
     <ul>
       {commits.map(c=>(
         <li key={c.sha} style={{ marginBottom:'.5rem' }}>
-          <a href={c.html_url} target="_blank" rel="noopener">
+          <a href={c.html_url} target="_blank" rel="noreferrer noopener">
             {c.commit.message.split('\n')[0]}
           </a><br/>
           <small>{new Date(c.commit.author.date).toLocaleDateString()}</small>

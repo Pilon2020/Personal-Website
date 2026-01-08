@@ -7,5 +7,14 @@
     "content":"1.md",
     "thumbnail": "Athlete_Stats.png",
     "images":""
+  },
+    {
+    "id" : 2,
+    "date": "2025-12-15T18:45:00Z",
+    "title": "Redesign Update",
+    "body": "Been working on getting a newly designed UI and updated database",
+    "content":"2.md",
+    "thumbnail": "Updated_Athlete.png",
+    "images":""
   }
 ]
