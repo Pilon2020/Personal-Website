@@ -1,14 +1,11 @@
 I have many issues with the current systems used in the cycling industry and how there are basically no standards between companies about what types of set ups are used. This makes it difficult to replace parts on bikes without needing either completely custom parts, or Jerry rigging something, which might damage your bike. If you use a fully stock set up for your bike, this is not an issue, but for many Time Trial bikes the standard setup is optimized for comfort and the general public, and is not optimized for being as aero as possible. This has lead me and many others to look at third party systems for an improved cockpit set up on our bikes. Companies like <ins>[AeroCoach](https://www.aero-coach.co.uk/store/AeroCoach-Angles-carbon-aerobar-extensions-p289290606)</ins> and <ins>[Vision](https://shop.visiontechusa.com/en/type/aerobars/aerobars/triathlon-time-trial/metron-tfe-pro)</ins> have improved aero systems which many athletes use, myself included. 
 
-[[figure src="/projects_details/media/risers/tfe_pro.png"
-  alt="Metron TFE Pro Extensions"
-  caption="Figure 1: Vision Metron TFE Pro Extensions, which I use on my bike. Source: <ins><a href='https://shop.visiontechusa.com/en/type/aerobars/aerobars/triathlon-time-trial/metron-tfe-pro' target='_blank'>Vision</a></ins>"
-  align=left
-  width=100%
-  style="margin-bottom:3rem;"
-]]
+  <figure class='left'>
+    <img src='/projects_details/media/risers/tfe_pro.png' alt='Metron TFE Pro Extensions' />
+    <figcaption>Figure 1: Vision Metron TFE Pro Extensions, which I use on my bike. Source: <ins><a href='https://shop.visiontechusa.com/en/type/aerobars/aerobars/triathlon-time-trial/metron-tfe-pro' target='_blank'>Vision</a></ins>"</figcaption>
+  </figure>
 
-Personally I use the <ins>[Metron TFE Pro Extensions](https://shop.visiontechusa.com/en/type/aerobars/aerobars/triathlon-time-trial/metron-tfe-pro)</ins> (Figure 1) which I have found to be very comfortable and are just adjustable enough that I can fit them into a very aero position. The main downside is that there is not a standard mount for it between my Trek handlebars and the extensions. 
+Personally I use the [Metron TFE Pro Extensions](https://shop.visiontechusa.com/en/type/aerobars/aerobars/triathlon-time-trial/metron-tfe-pro) (Figure 1) which I have found to be very comfortable and are just adjustable enough that I can fit them into a very aero position. The main downside is that there is not a standard mount for it between my Trek handlebars and the extensions. 
 
 My first attempt, and the most basic method was to just mount the extensions directly to the handlebars, completely neglecting to use a riser. As shown in the figure on the right, it was a little sketchy; The bars were not stable, shifting around when pulled on. Additionally my positioning was far from optimal, I had to bend way to far over to get into position so wasn't able to stay in aero for a long time without my back hurting, as well as while I was tucked nicely, was not the most aero position I could get. Over a series of attempts I adapted the risers used for the standard Trek extensions into an interface I could use with the Metron Extensions. These were definitely improvements, and I was slowly able to improve my position. 
 
